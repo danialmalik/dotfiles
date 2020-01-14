@@ -1,0 +1,77 @@
+# custom shortcut commands
+alias ..="cd .."
+alias -- -="cd -"
+alias la="ls -al"
+alias c='clear'
+alias pwd="pwd && pwd | xclip -selection c"
+# alias cat='bat'
+
+# Vnote
+alias vnote=/opt/vnote/VNote-2.3-x86_64.AppImage
+
+# notes
+alias notes='cd ~/MEGAsync/notes'
+alias cnotes='code ~/MEGAsync/notes'
+
+alias desk="cd ~/Desktop"
+alias down="cd ~/Downloads"
+
+alias work="cd ~/work"
+alias arbi="cd ~/work/arbisoft"
+alias lab="cd ~/work/the-lab"
+
+
+# git
+alias gits='git status'
+alias status='git status'
+
+alias gitd='git diff'
+alias gitdc='git diff --cached'
+
+alias pull='git pull'
+alias checkout='git checkout'
+alias branch="git branch"
+
+alias gcommit='git commit -am'
+alias amend='git commit -a --amend --no-edit'
+
+# ucsd related
+alias eucsd='cd ~/work/arbisoft/ucsd/edx/edx-platform/ && source ../../env/bin/activate'
+alias ucsd='cd ~/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activate'
+alias sucsd='subl ~/work/arbisoft/ucsd/edx/'
+alias cucsd='code ~/work/arbisoft/ucsd/edx/'
+alias cedu='code ~/work/arbisoft/ucsd/edx/edx-platform'
+
+alias pdev='git checkout develop && git pull'
+
+alias proxyssh='ssh -i ~/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
+alias ucsdssh='ssh -i ~/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
+alias servucsd='ssh ucsd-edx-dev'
+
+alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
+
+
+# philU
+alias pcode='code ~/work/arbisoft/philu/philu_devstack/devstack'
+alias philu='cd ~/work/arbisoft/philu/philu_devstack && aenv && cd devstack'
+alias phstart='cd ~/work/arbisoft/philu/philu_devstack && aenv && cd devstack &&  docker-compose -f docker-compose.yml -f docker-compose-host.yml start'
+
+alias pvcode='code ~/work/arbisoft/philu/vagrant/devstack-config'
+alias philuv='cd ~/work/arbisoft/philu/vagrant/devstack-config'
+
+
+# nodebb
+alias nodebb='cd ~/work/arbisoft/nodebb'
+alias ncode='code ~/work/arbisoft/nodebb'
+
+# edly
+alias dedly='cd /home/danial/work/arbisoft/edly/edly-devstack && aenv && cd devstack'
+alias edly='cd /home/danial/work/arbisoft/edly/edly-devstack'
+alias cedly='code /home/danial/work/arbisoft/edly/edly-devstack/edx-platform'
+
+# aenv
+alias aenv='source env/bin/activate'
+
+# wordpress
+alias lampp='cd /opt/lampp/'
+alias wpress='cd /opt/lampp/htdocs/'
