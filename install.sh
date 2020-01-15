@@ -77,6 +77,7 @@ sudo snap install postman
 sudo snap install vscode --classic
 sudo snap install insomnia
 sudo snap install skype --classic
+sudo snap install gitkraken
 
 # Install nvm
 get_latest_release() {
