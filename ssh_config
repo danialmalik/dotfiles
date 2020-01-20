@@ -11,6 +11,15 @@ Host ucsd-edx-dev
   IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
 
 
+Host ucsd-edx-platform-QA
+  HostName ucsd-qa-edx-platform.ucsd.edu
+  User ubuntu
+  ProxyJump UCSDJumpHost
+  ProxyCommand ssh jump route -T 1 exec nc %h %p
+  IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
+
+
+
 Host ucsd-edx-ecommerce-QA
   HostName ucsd-qa-edx-ecommerce.ucsd.edu
   User ubuntu
