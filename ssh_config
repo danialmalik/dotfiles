@@ -56,7 +56,7 @@ Host ucsd-edx-workers-QA
 
 
 
- 
+
 
 Host nodev
   HostName 35.171.80.239
@@ -86,7 +86,7 @@ Host philuAnon
 
 
 Host mattermost
-  Hostname 35.159.24.114
+  Hostname 52.59.229.208
   User ubuntu
 
 
