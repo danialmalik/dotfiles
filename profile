@@ -57,3 +57,7 @@ export DEVSTACK_WORKSPACE=/home/danial/work/arbisoft/ucsd/edx/
 
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
+
+# for pipenv
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
