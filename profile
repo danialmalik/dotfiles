@@ -53,8 +53,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 # edx devstack
 export OPENEDX_RELEASE=ironwood.master
-export DEVSTACK_WORKSPACE=/home/danial/work/arbisoft/ucsd/edx/
-
+# export DEVSTACK_WORKSPACE=/home/danial/work/arbisoft/ucsd/edx/
+export DEVSTACK_WORKSPACE=~/work/arbisoft/ucsd/edx/
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
 
