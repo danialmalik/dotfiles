@@ -64,6 +64,12 @@ alias philuv='cd ~/work/arbisoft/philu/vagrant/devstack-config'
 alias nodebb='cd ~/work/arbisoft/nodebb'
 alias ncode='code ~/work/arbisoft/nodebb'
 
+# postgres_mac
+alias postgres_cli='pg_ctl -D /usr/local/var/postgres'
+
+# mysql_mac
+alias mysql_cli='sudo /usr/local/mysql/support-files/mysql.server'
+
 # edly
 alias dedly='cd /home/danial/work/arbisoft/edly/edly-devstack && aenv && cd devstack'
 alias edly='cd /home/danial/work/arbisoft/edly/edly-devstack'

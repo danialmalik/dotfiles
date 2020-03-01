@@ -61,3 +61,9 @@ export DEVSTACK_WORKSPACE=~/work/arbisoft/ucsd/edx/
 # for pipenv
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# vscode mac
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# mysql_mac
+export PATH=$PATH:/usr/local/mysql/bin
