@@ -12,7 +12,7 @@ Host ucsd-edx-dev
 
 
 Host ucsd-edx-platform-QA
-  HostName ucsd-qa-edx-platform.ucsd.edu
+  HostName 10.175.142.232
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -21,7 +21,7 @@ Host ucsd-edx-platform-QA
 
 
 Host ucsd-edx-ecommerce-QA
-  HostName ucsd-qa-edx-ecommerce.ucsd.edu
+  HostName 10.175.143.245
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
