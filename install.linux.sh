@@ -123,13 +123,13 @@ sudo usermod -aG docker $USER
 pip install docker-compose
 
 
-# install wocker
-mkdir ~/progs
-cd ~/progs
-vagrant plugin install vagrant-hostsupdater
-git clone https://github.com/wckr/wocker.git && cd wocker
-vagrant up
-vagrant halt
+# # install wocker
+# mkdir ~/progs
+# cd ~/progs
+# vagrant plugin install vagrant-hostsupdater
+# git clone https://github.com/wckr/wocker.git && cd wocker
+# vagrant up
+# vagrant halt
 
 # # install watchman
 # cd ~/Downloads
