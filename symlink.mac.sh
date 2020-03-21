@@ -14,3 +14,6 @@ sudo ln -sf $dotfiles_dir/aliases ~/.zsh_aliases
 
 # ssh
 sudo ln -sf $dotfiles_dir/ssh_config ~/.ssh/config
+
+# zsh theme
+sudo ln -sf $dotfiles/zsh_theme_powerline10k.zsh ~/.p10k.zsh
