@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ubuntu release upon which the current distro is based
+UBUNTU_RELEASE='bionic'
+
 # Copy files
 cp ./images/* $HOME/Pictures/
 
@@ -105,12 +108,19 @@ sudo apt-get install \
     curl \
     gnupg-agent \
     software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# already added above
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 
+# $(lsb_release -cs) returns 'tessa','tina' or 'tricia' for mint releases
+# instead we need "bionic"
+# sudo add-apt-repository \
+#    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+#    $(lsb_release -cs) \
+#    stable"
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
+    $UBUNTU_RELEASE \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
