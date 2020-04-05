@@ -8,6 +8,16 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Load the system specific profile files
+SYSTEM=$(uname -s)
+
+if [ "$SYSTEM" = "Linux" ]; then
+	PROFILE_FILE="./profile.linux.sh"
+else
+	PROFILE_FILE="./profile.mac.sh"
+fi
+
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -36,7 +46,7 @@ export PATH="$PATH:./node_modules/.bin"
 export COMPOSE_HTTP_TIMEOUT=3000000000
 
 # android sdk tools
-export ANDROID_HOME=/home/$USER/Android/sdk
+export ANDROID_HOME=$HOME/Android/sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 
@@ -54,7 +64,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # edx devstack
 export OPENEDX_RELEASE=ironwood.master
 # export DEVSTACK_WORKSPACE=/home/danial/work/arbisoft/ucsd/edx/
-export DEVSTACK_WORKSPACE=~/work/arbisoft/ucsd/edx/
+export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/ucsd/edx/
 
 
 # alias-tips plugin for zsh
@@ -64,8 +74,6 @@ export DEVSTACK_WORKSPACE=~/work/arbisoft/ucsd/edx/
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# vscode mac
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# mysql_mac
-export PATH=$PATH:/usr/local/mysql/bin
+# System specific prifile files.
+source "$PROFILE_FILE"
