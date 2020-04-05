@@ -20,6 +20,7 @@ fi
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # For rust and cargo
+source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
@@ -43,7 +44,6 @@ export PATH=$ANDROID_HOME/tools:$PATH
 eval $(thefuck --alias)
 
 # Go lang
-
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
@@ -55,6 +55,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export OPENEDX_RELEASE=ironwood.master
 # export DEVSTACK_WORKSPACE=/home/danial/work/arbisoft/ucsd/edx/
 export DEVSTACK_WORKSPACE=~/work/arbisoft/ucsd/edx/
+
+
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
 
