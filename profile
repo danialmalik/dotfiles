@@ -8,15 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# Load the system specific profile files
-SYSTEM=$(uname -s)
-
-if [ "$SYSTEM" = "Linux" ]; then
-	PROFILE_FILE="./profile.linux.sh"
-else
-	PROFILE_FILE="./profile.mac.sh"
-fi
-
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -75,5 +66,26 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 
-# System specific prifile files.
-source "$PROFILE_FILE"
+# Load the system specific profile variables
+SYSTEM=$(uname -s)
+
+if [ "$SYSTEM" = "Linux" ]; then
+	# Linux specific settings here
+
+else # MacOS
+	# Mac specific settings here
+
+	# vscode mac
+	export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+	# mysql_mac
+	export PATH=$PATH:/usr/local/mysql/bin
+
+	# theme
+	# https://github.com/denysdovhan/spaceship-prompt
+	ZSH_THEME="powerlevel10k/powerlevel10k"
+
+	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+fi
