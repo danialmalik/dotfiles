@@ -206,7 +206,7 @@ git clean -f
 dconf load /org/cinnamon/ < ./cinnamon.conf
 
 # Finally install zsh
-sudo apt-get install zsh
+sudo apt-get -y install zsh
 
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
