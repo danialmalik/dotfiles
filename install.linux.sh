@@ -27,13 +27,18 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 # sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 
 # uget
+# TODO: Add -y option ? so that doesn't ask for enter
 sudo apt-add-repository ppa:plushuang-tw/uget-stable
 
 # parcelite
 sudo add-apt-repository ppa:rickyrockrat/parcellite-appindicator
 
 # xdm
-sudo add-apt-repository ppa:noobslab/apps
+# install manually https://subhra74.github.io/xdm/
+# sudo add-apt-repository ppa:noobslab/apps
+# sudo apt-get update && sudo apt-get xdman install
+
+
 
 sudo apt update
 
@@ -72,10 +77,8 @@ sudo apt install -y \
     virtualbox \
     virtualbox-qt \
     virtualenv virtualenvwrapper\
-    xclip \
-    xdman
-
-
+    xclip 
+    
 sudo snap install postman
 sudo snap install vscode --classic
 sudo snap install insomnia
@@ -90,18 +93,25 @@ get_latest_release() {
 }
 curl -o- https://raw.githubusercontent.com/creationix/nvm/$(get_latest_release "creationix/nvm")/install.sh | bash
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 # Install node js
 
 nvm install node
 
 # install grunt
-sudo npm install -g grunt-cli
+npm install -g grunt-cli
+
 # Install create-react-app for react js
-npm install -g create-react-app
+# now npx is used to run create-react-app
+# npm install -g create-react-app
 
 #  Install docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt-get update
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -118,19 +128,16 @@ sudo apt-key fingerprint 0EBFCD88
 #    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
 #    $(lsb_release -cs) \
 #    stable"
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-    $UBUNTU_RELEASE \
-   stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
 # Install docker-compose
-pip install docker-compose
+sudo apt-get -y install docker-compose
 
 
 # # install wocker
@@ -171,13 +178,14 @@ sudo apt-get -y install -f	# if there were missing dependencies
 # sudo ln -sf /opt/vnote/VNote-2.2-x86_64.AppImage /usr/bin/vnote
 
 # install rustp, cargo and rust
+# TODO: enter 1 for continue installation at the prompt
 curl https://sh.rustup.rs -sSf | sh
 
 
 # install rbenv for ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-    # doctor for rbenv verification
-    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+# doctor for rbenv verification
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
 
 cd $HOME/dotfiles/
