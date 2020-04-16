@@ -20,11 +20,6 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# For rust and cargo
-source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
-
 # For nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -71,6 +66,11 @@ SYSTEM=$(uname -s)
 
 if [ "$SYSTEM" = "Linux" ]; then
 	# Linux specific settings here
+
+	# For rust and cargo
+	source $HOME/.cargo/env
+	export PATH="$HOME/.cargo/bin:$PATH"
+	export PATH="$PATH:/usr/local/go/bin"
 
 else # MacOS
 	# Mac specific settings here
