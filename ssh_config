@@ -100,3 +100,9 @@ Host MITx-Bastion
 Host philuLTEJenkins
   HostName 18.197.63.147
   User ubuntu
+
+
+Host LearningPitchEncodingServer
+  HostName 18.184.188.191
+  User ubuntu
+  Port 2222
