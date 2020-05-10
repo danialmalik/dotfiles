@@ -73,6 +73,15 @@ alias aenv='source env/bin/activate'
 # Load the system specific aliases
 SYSTEM=$(uname -s)
 
+# docker-machine commands
+function dmactivate() {
+	eval $(docker-machine env $1)
+}
+
+function dmdeactivate() {
+	unset `env | grep DOCKER_ | egrep -o '^[^=]+'`
+}
+
 if [ "$SYSTEM" = "Linux" ]; then
 	# Linux specific settings here
 
@@ -83,7 +92,7 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias lampp='cd /opt/lampp/'
 	alias wpress='cd /opt/lampp/htdocs/'
 
-else 
+else
 	# brew
 	alias nbrew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
