@@ -31,11 +31,6 @@ export PATH="$PATH:./node_modules/.bin"
 # docker-compose timeout
 export COMPOSE_HTTP_TIMEOUT=3000000000
 
-# android sdk tools
-export ANDROID_HOME=$HOME/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-
 # the fuck
 eval $(thefuck --alias)
 
@@ -72,6 +67,11 @@ if [ "$SYSTEM" = "Linux" ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 	export PATH="$PATH:/usr/local/go/bin"
 
+	# android sdk tools
+	export ANDROID_HOME=$HOME/Android/sdk
+	export PATH=$ANDROID_HOME/platform-tools:$PATH
+	export PATH=$ANDROID_HOME/tools:$PATH
+
 else # MacOS
 	# Mac specific settings here
 
@@ -88,5 +88,11 @@ else # MacOS
 	# source $ZSH/oh-my-zsh.sh
 	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+	export ANDROID_HOME=$HOME/Library/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/emulator
+	export PATH=$PATH:$ANDROID_HOME/tools
+	export PATH=$PATH:$ANDROID_HOME/tools/bin
+	export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 fi
