@@ -18,6 +18,9 @@ sudo ln -sf $dotfiles_dir/aliases ~/.aliases
 # ssh
 sudo ln -sf $dotfiles_dir/ssh_config ~/.ssh/config
 
+# hosts
+sudo ln -sf $dotfiles_dir/hosts /etc/hosts
+
 # config files
 
 # https://github.com/bulletmark/libinput-gestures
