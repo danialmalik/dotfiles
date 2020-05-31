@@ -75,13 +75,13 @@ if [ "$SYSTEM" = "Linux" ]; then
 else # MacOS
 	# Mac specific settings here
 
-	# vscode mac
+	######### vscode mac #############
 	export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-	# mysql_mac
+	########### mysql_mac ##############
 	export PATH=$PATH:/usr/local/mysql/bin
 
-	# theme
+	############# zsh theme ####################
 	# have to source oh-my-zsh.sh if theme is changed in this file
 	# https://github.com/denysdovhan/spaceship-prompt
 	# ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -89,10 +89,19 @@ else # MacOS
 	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+	########### Android SDK #####################
 	export ANDROID_HOME=$HOME/Library/Android/sdk
 	export PATH=$PATH:$ANDROID_HOME/emulator
 	export PATH=$PATH:$ANDROID_HOME/tools
 	export PATH=$PATH:$ANDROID_HOME/tools/bin
 	export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+	############### PyENV ######################
+	export PYENV_ROOT="$HOME/.pyenv
+	export PATH="$PYENV_ROOT/bin:$PATH
+
+	if command -v pyenv 1>/dev/null 2>&1; then
+		eval "$(pyenv init -)"
+	fi
 
 fi
