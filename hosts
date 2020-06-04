@@ -5,45 +5,77 @@
 # when the system is booting.  Do not change this entry.
 ##
 
+# Simply for learning purposes
+# not needed anymore maybe
 # docker jenkins
 192.168.99.104 jenkinslocal
 
 
-127.0.0.1	localhost
+127.0.0.1   localhost
+::1             localhost
 
-# Philu Devstack
+255.255.255.255 broadcasthost
+
+
+##################################################################
+################## Open edX installations ########################
+##################################################################
+
+######################## Philu Devstack ####################
+
 127.0.0.1   local.philanthropyu.org
 
-# Open edX devstack
+###################### Open edX devstack ####################
 127.0.0.1   edx.devstack.elasticsearch
 127.0.0.1   edx.devstack.lms
+127.0.0.1   edx.devstack.lms.com
 127.0.0.1   edx.devstack.studio
 
-# NodeBB edX devstack
+################## NodeBB edX devstack ######################
 # 127.0.0.1   nodebb.kdx.org
 
+
+#################### Open edX edx theme site #################
 # 127.0.0.1   lms.edx.org
 # 127.0.0.1   studio.edx.org
 
-# MiT xPro devstack
-127.0.0.1   edx.odl.local
-127.0.0.1   xpro.odl.local
+#################### MiT xPro devstack #######################
+127.0.0.1   edx.odl.local    ########## Open edX site
+127.0.0.1   xpro.odl.local      ############ MiT X Pro site
 
-# No idea why this is here
-# 127.0.0.1   v2.local.evosqa.com
 
-# learning-pitch open edx
+################### learning-pitch open edx site #####################
+
 127.0.0.1   lp.devstack.lms
 
-# MiT theme for open edX devstack
-127.0.0.1   mit.devstack.lms
+################## MiT theme for open edX devstack #####################
 
-# Portus dockerhub registry
+127.0.0.1   mit.devstack.lms
+127.0.0.1   mit.devstack.lms.com
+
+
+################## edly st-luther-x theme for open edX devstack #####################
+
+127.0.0.1   estx.devstack.lms
+
+
+##################################################################
+################## OTHERS ########################
+##################################################################
+
+################ Portus dockerhub registry #########################
 127.0.0.1   dockertools.com
 
-255.255.255.255	broadcasthost
 
-::1             localhost
+
+############### No idea why this is here ################
+# 127.0.0.1   v2.local.evosqa.com
+
+
+
+##################################################################
+################## ---------------------- ########################
+##################################################################
 
 # Added by Docker Desktop
 # To allow the same kube context to work on the host and the container:
