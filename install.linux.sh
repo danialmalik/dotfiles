@@ -53,6 +53,7 @@ sudo apt install -y \
     curl \
     debhelper \
     htop \
+    ncdu \
     mysql-client mysql-server mysql-workbench \
     megacmd \
     ipython \
@@ -77,8 +78,8 @@ sudo apt install -y \
     virtualbox \
     virtualbox-qt \
     virtualenv virtualenvwrapper\
-    xclip 
-    
+    xclip
+
 sudo snap install postman
 sudo snap install vscode --classic
 sudo snap install insomnia
