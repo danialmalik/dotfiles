@@ -57,6 +57,7 @@
 ################## edly st-luther-x theme for open edX devstack #####################
 
 127.0.0.1   estx.devstack.lms
+127.0.0.1   estx.devstack.cms
 
 
 ##################################################################
