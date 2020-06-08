@@ -11,7 +11,7 @@
 192.168.99.104 jenkinslocal
 
 
-127.0.0.1   localhost
+127.0.0.1	localhost
 ::1             localhost
 
 255.255.255.255 broadcasthost
@@ -28,8 +28,12 @@
 ###################### Open edX devstack ####################
 127.0.0.1   edx.devstack.elasticsearch
 127.0.0.1   edx.devstack.lms
+127.0.0.1   edx.devstack.cms
 127.0.0.1   edx.devstack.lms.com
 127.0.0.1   edx.devstack.studio
+127.0.0.1   edx.devstack.credentials
+127.0.0.1   edx.devstack.discovery
+127.0.0.1   edx.devstack.ecommerce
 
 ################## NodeBB edX devstack ######################
 # 127.0.0.1   nodebb.kdx.org
