@@ -4,7 +4,8 @@ Host UCSDJumpHost
   IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
 
 Host ucsd-edx-dev
-  HostName ucsd-dev-edxinstance.ucsd.edu
+  # HostName ucsd-dev-edxinstance.ucsd.edu
+  HostName 10.175.142.179
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -12,7 +13,8 @@ Host ucsd-edx-dev
 
 
 Host ucsd-edx-platform-QA
-  HostName ucsd-qa-edx-platform.ucsd.edu
+  # HostName ucsd-qa-edx-platform.ucsd.edu
+  HostName 10.175.143.214
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -47,7 +49,7 @@ Host ucsd-edx-forums-QA
 
 
 Host ucsd-edx-workers-QA
-  HostName ucsd-qa-edx-workers.ucsd.edu
+  HostName 10.175.143.226
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
