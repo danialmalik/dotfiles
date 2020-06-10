@@ -14,7 +14,7 @@ Host ucsd-edx-dev
 
 Host ucsd-edx-platform-QA
   # HostName ucsd-qa-edx-platform.ucsd.edu
-  HostName 10.175.143.214
+  HostName 10.175.142.204
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -49,7 +49,8 @@ Host ucsd-edx-forums-QA
 
 
 Host ucsd-edx-workers-QA
-  HostName 10.175.143.226
+  # HostName ucsd-qa-edx-workers.ucsd.edu
+  HostName 10.175.143.204
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -92,11 +93,30 @@ Host mattermost
   User ubuntu
 
 
+
+
+
 Host MITx-Bastion
   HostName 52.207.94.143
   Port 22022
   User developer
   IdentityFile ~/.ssh/id_rsa
+  # IdentityFile ~/MEGAsync/MITx/MITx-Entry.pem
+
+
+Host MITx-Stage-EDX
+  HostName 10.0.36.31
+  User ubuntu
+  Port 22
+  ProxyJump MITx-Bastion
+  ProxyCommand ssh jump route -T 1 exec nc %h %p
+  IdentityFile ~/MEGAsync/MITx/MITx-SSH-Key.pem
+
+
+
+
+
+
 
 
 Host philuLTEJenkins
