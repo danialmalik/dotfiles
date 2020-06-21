@@ -1,4 +1,6 @@
-# custom shortcut commands
+######################################
+###### custom shortcut commands ######
+#######################################
 alias ..="cd .."
 alias -- -="cd -"
 alias la="ls -al"
@@ -6,7 +8,9 @@ alias c='clear'
 alias pwd="pwd && pwd | xclip -selection c"
 # alias cat='bat'
 
-# notes
+######################################
+############# Notes ##################
+#######################################
 alias notes='cd $HOME/MEGAsync/notes'
 alias cnotes='code $HOME/MEGAsync/notes'
 
@@ -18,7 +22,9 @@ alias arbi="cd $HOME/work/arbisoft"
 alias lab="cd $HOME/work/the-lab"
 
 
-# git
+######################################
+################ git ################
+#######################################
 alias gits='git status'
 alias status='git status'
 
@@ -32,23 +38,25 @@ alias branch="git branch"
 alias gcommit='git commit -am'
 alias amend='git commit -a --amend --no-edit'
 
-# ucsd related
+################################################
+############# UCSD/Open edX devstack ##############
+################################################
 alias eucsd='cd $HOME/work/arbisoft/ucsd/edx/edx-platform/ && source ../../env/bin/activate'
 alias ucsd='cd $HOME/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activate'
 alias sucsd='subl $HOME/work/arbisoft/ucsd/edx/'
 alias cucsd='code $HOME/work/arbisoft/ucsd/edx/'
 alias cedu='code $HOME/work/arbisoft/ucsd/edx/edx-platform'
 
-alias pdev='git checkout develop && git pull'
-
-alias proxyssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
-alias ucsdssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
+# alias proxyssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
+# alias ucsdssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
 alias servucsd='ssh ucsd-edx-dev'
 
-alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
+# alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
 
 
-# philU
+######################################
+############## PhillU ###############
+#######################################
 alias pcode='code $HOME/work/arbisoft/philu/philu_devstack/devstack'
 alias philu='cd $HOME/work/arbisoft/philu/philu_devstack && aenv && cd devstack'
 alias phstart='cd $HOME/work/arbisoft/philu/philu_devstack && aenv && cd devstack &&  docker-compose -f docker-compose.yml -f docker-compose-host.yml start'
@@ -57,15 +65,24 @@ alias pvcode='code $HOME/work/arbisoft/philu/vagrant/devstack-config'
 alias philuv='cd $HOME/work/arbisoft/philu/vagrant/devstack-config'
 
 
-# nodebb
+######################################
+############## NodeBB ###############
+#######################################
 alias nodebb='cd $HOME/work/arbisoft/nodebb'
 alias ncode='code $HOME/work/arbisoft/nodebb'
 
-# edly
+
+######################################
+############## edly #################
+#######################################
 alias dedly='cd $HOME/work/arbisoft/edly/edly-devstack && aenv && cd devstack'
 alias edly='cd $HOME/work/arbisoft/edly/edly-devstack'
 alias cedly='code $HOME/work/arbisoft/edly/edly-devstack/edx-platform'
 
+
+######################################
+############### General ##############
+#######################################
 # aenv
 alias aenv='source env/bin/activate'
 
@@ -81,6 +98,10 @@ function dmactivate() {
 function dmdeactivate() {
 	unset `env | grep DOCKER_ | egrep -o '^[^=]+'`
 }
+
+######################################
+############ OS Specific #############
+#######################################
 
 if [ "$SYSTEM" = "Linux" ]; then
 	# Linux specific settings here
