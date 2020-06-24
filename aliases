@@ -53,6 +53,8 @@ alias servucsd='ssh ucsd-edx-dev'
 
 # alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
 
+alias exi='export OPENEDX_RELEASE="ironwood.master"'
+alias exj='export OPENEDX_RELEASE="juniper.master"'
 
 ######################################
 ############## PhillU ###############

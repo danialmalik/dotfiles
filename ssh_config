@@ -31,7 +31,7 @@ Host ucsd-edx-ecommerce-QA
 
 
 Host ucsd-edx-credentials-discovery-QA
-  HostName ucsd-qa-edx-credentials-discovery.ucsd.edu
+  HostName ucsd-qa-edx-credsdiscov.ucsd.edu
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
