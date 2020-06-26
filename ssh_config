@@ -1,3 +1,7 @@
+###########################################################
+###################### UCSD ################################
+###########################################################
+
 Host UCSDJumpHost
   HostName 34.222.115.221
   User ubuntu
@@ -57,8 +61,18 @@ Host ucsd-edx-workers-QA
   IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
 
 
+### Grader
+
+Host ucsd-grader
+  HostName ec2-52-41-141-1.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile ~/MEGAsync/ucsd/grader/test.pem
 
 
+
+###########################################################
+###################### NodeBB PhilU #######################
+###########################################################
 
 
 Host nodev
@@ -77,15 +91,13 @@ Host vagrant_philu
   IdentitiesOnly yes
   LogLevel FATAL
 
-Host synagie
-  HostName app2.synagie.com
-  User ubuntu
-
-
-
 Host philuAnon
   Hostname 3.123.108.219
   User ubuntu
+
+###########################################################
+###################### Mattermost (ended) #############
+###########################################################
 
 
 Host mattermost
@@ -93,8 +105,9 @@ Host mattermost
   User ubuntu
 
 
-
-
+###########################################################
+###################### MIT OLL ############################
+###########################################################
 
 Host MITx-Bastion
   HostName 52.207.94.143
@@ -111,6 +124,7 @@ Host MITx-Stage-EDX
   ProxyJump MITx-Bastion
   ProxyCommand ssh jump route -T 1 exec nc %h %p
   IdentityFile ~/MEGAsync/MITx/MITx-SSH-Key.pem
+
 
 
 
