@@ -43,9 +43,8 @@ alias amend='git commit -a --amend --no-edit'
 ################################################
 alias eucsd='cd $HOME/work/arbisoft/ucsd/edx/edx-platform/ && source ../../env/bin/activate'
 alias ucsd='cd $HOME/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activate'
-alias sucsd='subl $HOME/work/arbisoft/ucsd/edx/'
-alias cucsd='code $HOME/work/arbisoft/ucsd/edx/'
-alias cedu='code $HOME/work/arbisoft/ucsd/edx/edx-platform'
+
+#################### UCSD #############################
 
 # alias proxyssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
 # alias ucsdssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
@@ -53,8 +52,19 @@ alias servucsd='ssh ucsd-edx-dev'
 
 # alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
 
+################### general #########################
+
 alias exi='export OPENEDX_RELEASE="ironwood.master"'
 alias exj='export OPENEDX_RELEASE="juniper.master"'
+
+alias siwd='exi && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias sjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+
+alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
+alias jpr='exi && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
+
+alias eiwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/edx-platform && source ../../env/bin/activate'
+alias ejpr='exi && cd $HOME/work/arbisoft/open-edx/juniper/edx/edx-platform && source ../../env/bin/activate'
 
 ######################################
 ############## PhillU ###############
@@ -89,9 +99,6 @@ alias cedly='code $HOME/work/arbisoft/edly/edly-devstack/edx-platform'
 alias aenv='source env/bin/activate'
 
 
-# Load the system specific aliases
-SYSTEM=$(uname -s)
-
 # docker-machine commands
 function dmactivate() {
 	eval $(docker-machine env $1)
@@ -104,6 +111,9 @@ function dmdeactivate() {
 ######################################
 ############ OS Specific #############
 #######################################
+
+# Load the system specific aliases
+SYSTEM=$(uname -s)
 
 if [ "$SYSTEM" = "Linux" ]; then
 	# Linux specific settings here
