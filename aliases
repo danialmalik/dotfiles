@@ -41,8 +41,6 @@ alias amend='git commit -a --amend --no-edit'
 ################################################
 ############# UCSD/Open edX devstack ##############
 ################################################
-alias eucsd='cd $HOME/work/arbisoft/ucsd/edx/edx-platform/ && source ../../env/bin/activate'
-alias ucsd='cd $HOME/work/arbisoft/ucsd/edx/devstack/ && source ../../env/bin/activate'
 
 #################### UCSD #############################
 
@@ -54,10 +52,13 @@ alias servucsd='ssh ucsd-edx-dev'
 
 ################### general #########################
 
+alias exdi='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
+alias exdp='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
+
 alias exi='export OPENEDX_RELEASE="ironwood.master"'
 alias exj='export OPENEDX_RELEASE="juniper.master"'
 
-alias siwd='exi && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias siwd='exi && MONGO_VERSION=3.2.16 make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias sjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
 alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
