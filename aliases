@@ -65,10 +65,10 @@ alias siwd='exi && MONGO_VERSION=3.2.16 make dev.up.lms+studio+ecommerce+discove
 alias sjpr='exj && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
 alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
-alias jpr='exi && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
+alias jpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
 
 alias eiwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/edx-platform && source ../../env/bin/activate'
-alias ejpr='exi && cd $HOME/work/arbisoft/open-edx/juniper/edx/edx-platform && source ../../env/bin/activate'
+alias ejpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/edx-platform && source ../../env/bin/activate'
 
 ######################################
 ############## PhillU ###############
