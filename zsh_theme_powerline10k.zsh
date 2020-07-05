@@ -35,8 +35,6 @@
     # os_icon                 # os identifier
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     dir                     # current directory
-    # =========================[ Line #2 ]=========================
-    newline                 # \n
     vcs                     # git status
     # =========================[ Line #3 ]=========================
     newline                 # \n
