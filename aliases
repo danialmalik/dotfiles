@@ -52,23 +52,47 @@ alias servucsd='ssh ucsd-edx-dev'
 
 ################### general #########################
 
+######## export devstack workspace
 alias exdi='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
 alias exdp='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
+alias exdl='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/latest/edx/'
 
+######## export release
+# alias exi='exdi && export OPENEDX_RELEASE="ironwood.master"'
+# alias exj='exdp && export OPENEDX_RELEASE="juniper.master"'
+# alias exl='exdl && export OPENEDX_RELEASE="latest"'
 alias exi='export OPENEDX_RELEASE="ironwood.master"'
 alias exj='export OPENEDX_RELEASE="juniper.master"'
+alias exl='export OPENEDX_RELEASE="latest"'
 
+######## Start devstack using nfs
 alias sniwd='exi && MONGO_VERSION=3.2.16 make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias snjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias snlts='exl && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
+######## Start devstack
 alias siwd='exi && MONGO_VERSION=3.2.16 make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias sjpr='exj && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias slts='exl && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
+######## Open devstack
+alias devstack='cd $HOME/work/arbisoft/open-edx/devstack && source ../../env/bin/activate'
+
+######## Open and activate devstack
+# alias iwd='exi && devstack'
+# alias jpr='exj && devstack'
+# alias lts='exl && devstack'
+
+######## Open and activate devstack
 alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
 alias jpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
+alias lts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/devstack && source ../../env/bin/activate'
 
+
+######## Open edx-platform
 alias eiwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/edx-platform && source ../../env/bin/activate'
 alias ejpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/edx-platform && source ../../env/bin/activate'
+alias elts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/edx-platform && source ../../env/bin/activate'
 
 ######################################
 ############## PhillU ###############
