@@ -76,7 +76,7 @@ alias snjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+f
 alias snlts='exl && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
 ######## Start devstack
-alias siwd='exi && MONGO_VERSION=3.2.16 make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias siwd='exi && MONGO_VERSION=3.2.16 make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias sjpr='exj && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias slts='exl && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
