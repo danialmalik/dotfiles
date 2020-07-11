@@ -9,6 +9,22 @@ alias c='clear'
 # alias cat='bat'
 
 ######################################
+############### General ##############
+#######################################
+# aenv
+alias aenv='source env/bin/activate'
+
+
+# docker-machine commands
+function dmactivate() {
+	eval $(docker-machine env $1)
+}
+
+function dmdeactivate() {
+	unset `env | grep DOCKER_ | egrep -o '^[^=]+'`
+}
+
+######################################
 ############# Notes ##################
 #######################################
 alias notes='cd $HOME/MEGAsync/notes'
@@ -54,7 +70,7 @@ alias servucsd='ssh ucsd-edx-dev'
 
 ######## export devstack workspace
 alias exdi='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
-alias exdp='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
+alias exdj='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
 alias exdl='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/latest/edx/'
 
 ####### export project names
@@ -63,17 +79,22 @@ alias excj='export COMPOSE_PROJECT_NAME="devstack-juniper.master"'
 alias excl='export COMPOSE_PROJECT_NAME="devstack-latest"'
 
 ######## export release
-# alias exi='exdi && export OPENEDX_RELEASE="ironwood.master" && exci'
-# alias exj='exdp && export OPENEDX_RELEASE="juniper.master" && excj'
-# alias exl='exdl && unset OPENEDX_RELEASE && excl'
-alias exi='export OPENEDX_RELEASE="ironwood.master"'
-alias exj='export OPENEDX_RELEASE="juniper.master"'
-alias exl='unset OPENEDX_RELEASE && excl'
+alias exi='exdi && export OPENEDX_RELEASE="ironwood.master" && exci'
+alias exj='exdj && export OPENEDX_RELEASE="juniper.master" && excj'
+alias exl='exdl && unset OPENEDX_RELEASE && excl'
+# alias exi='export OPENEDX_RELEASE="ironwood.master"'
+# alias exj='export OPENEDX_RELEASE="juniper.master"'
+# alias exl='unset OPENEDX_RELEASE && excl'
 
 ######## Start devstack using nfs
 alias sniwd='exi && MONGO_VERSION=3.2.16 make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias snjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 alias snlts='exl && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+
+######## Start devstack using sync
+alias ssiwd='exi && MONGO_VERSION=3.2.16 make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias ssjpr='exj && make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
+alias sslts='exl && make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
 ######## Start devstack
 alias siwd='exi && MONGO_VERSION=3.2.16 make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
@@ -81,15 +102,15 @@ alias sjpr='exj && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+
 alias slts='exl && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
 
 ######## Open devstack
-alias devstack='cd $HOME/work/arbisoft/open-edx/devstack && source ../../env/bin/activate'
+alias devstack='cd $HOME/work/arbisoft/open-edx/devstack && aenv'
 
 ######## Open and activate devstack
-# alias iwd='exi && devstack'
-# alias jpr='exj && devstack'
-# alias lts='exl && devstack'
-alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
-alias jpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
-alias lts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/devstack && source ../../env/bin/activate'
+alias iwd='exi && devstack'
+alias jpr='exj && devstack'
+alias lts='exl && devstack'
+# alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
+# alias jpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
+# alias lts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/devstack && source ../../env/bin/activate'
 
 
 ######## Open edx-platform
@@ -122,22 +143,6 @@ alias dedly='cd $HOME/work/arbisoft/edly/edly-devstack && aenv && cd devstack'
 alias edly='cd $HOME/work/arbisoft/edly/edly-devstack'
 alias cedly='code $HOME/work/arbisoft/edly/edly-devstack/edx-platform'
 
-
-######################################
-############### General ##############
-#######################################
-# aenv
-alias aenv='source env/bin/activate'
-
-
-# docker-machine commands
-function dmactivate() {
-	eval $(docker-machine env $1)
-}
-
-function dmdeactivate() {
-	unset `env | grep DOCKER_ | egrep -o '^[^=]+'`
-}
 
 ######################################
 ############ OS Specific #############
