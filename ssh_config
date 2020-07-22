@@ -18,7 +18,7 @@ Host ucsd-edx-dev
 
 Host ucsd-edx-platform-QA
   # HostName ucsd-qa-edx-platform.ucsd.edu
-  HostName 10.175.142.163
+  HostName 10.175.143.148
   User ubuntu
   ProxyJump UCSDJumpHost
   ProxyCommand ssh jump route -T 1 exec nc %h %p
@@ -61,7 +61,16 @@ Host ucsd-edx-workers-QA
   IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
 
 
-### Grader
+Host ucsd-qa-xqueue
+  # HostName ucsd-qa-xqueue.ucsd.edu
+  HostName 10.175.143.249
+  User ubuntu
+  ProxyJump UCSDJumpHost
+  ProxyCommand ssh jump route -T 1 exec nc %h %p
+  IdentityFile ~/MEGAsync/ucsd/dev-ucsd.pem
+
+
+######## Grader ############
 
 Host ucsd-grader
   HostName ec2-52-41-141-1.us-west-2.compute.amazonaws.com
