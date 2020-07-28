@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # variables
-dotfiles_dir=~/dotfiles
+dotfiles_dir=~/dotfiles/dotfiles
 
 
 # create dirs
