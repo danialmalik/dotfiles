@@ -60,11 +60,8 @@ alias amend='git commit -a --amend --no-edit'
 
 #################### UCSD #############################
 
-# alias proxyssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@34.222.115.221 -L 2222:10.175.142.136:22'
-# alias ucsdssh='ssh -i $HOME/work/arbisoft/ucsd/dev-ucsd.pem ubuntu@localhost -p 2222'
 alias servucsd='ssh ucsd-edx-dev'
-
-# alias test_transformers="paver test_system -t openedx/features/caliper_tracking/tests/tests.py::CaliperTransformationTestCase::test_caliper_transformers --fasttest"
+alias ucon='cd $HOME/work/arbisoft/open-edx/ucsd-configurations'
 
 ################### general #########################
 
