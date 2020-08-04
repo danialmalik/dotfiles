@@ -17,34 +17,44 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+## zsh settings
+# disable auto correct
+unsetopt correct_all
+unsetopt correct
+
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
 
 # For nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 # for nodemodules bin
 export PATH="$PATH:./node_modules/.bin"
+
 
 # docker-compose timeout
 export COMPOSE_HTTP_TIMEOUT=3000000000
 
+
 # the fuck
 eval $(thefuck --alias)
+
 
 # Go lang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 
 # edx devstack
-export OPENEDX_RELEASE=ironwood.master
-# export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/ucsd/edx/
+# export OPENEDX_RELEASE=ironwood.master
 
 
 # alias-tips plugin for zsh
