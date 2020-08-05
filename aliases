@@ -54,14 +54,26 @@ alias branch="git branch"
 alias gcommit='git commit -am'
 alias amend='git commit -a --amend --no-edit'
 
-################################################
-############# UCSD/Open edX devstack ##############
-################################################
-
+#######################################################
 #################### UCSD #############################
+#######################################################
 
 alias servucsd='ssh ucsd-edx-dev'
 alias ucon='cd $HOME/work/arbisoft/open-edx/ucsd-configurations'
+
+# proxy for running jenkins
+alias ucsdsprox='ssh UCSDJumpHost -D 8080'
+
+#######################################################
+#################### MIT #############################
+#######################################################
+
+# proxy for running jenkins
+alias mitsprox='ssh MITx-Bastion -D 8080'
+
+################################################
+############# Open edX devstack ################
+################################################
 
 ################### general #########################
 
