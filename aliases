@@ -77,6 +77,8 @@ alias mitsprox='ssh MITx-Bastion -D 8080'
 
 ################### general #########################
 
+alias edx='cd $HOME/work/arbisoft/open-edx'
+
 ######## export devstack workspace
 alias exdi='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
 alias exdj='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
