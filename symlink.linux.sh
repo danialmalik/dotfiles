@@ -2,10 +2,10 @@
 
 # variables
 dotfiles_dir=~/dotfiles/dotfiles
-
+dotfiles_secure_dir=~/dotfiles/secure_dotfiles
 
 # create dirs
-mkdir ~/.config/terminator/
+# mkdir ~/.config/terminator/
 
 # create symlinks
 sudo ln -sf $dotfiles_dir/vimrc ~/.vimrc
@@ -16,10 +16,10 @@ sudo ln -sf $dotfiles_dir/aliases ~/.bash_aliases
 sudo ln -sf $dotfiles_dir/aliases ~/.aliases
 
 # ssh
-sudo ln -sf $dotfiles_dir/ssh_config ~/.ssh/config
+sudo ln -sf $dotfiles_secure_dir/ssh_config ~/.ssh/config
 
 # hosts
-sudo ln -sf $dotfiles_dir/hosts /etc/hosts
+sudo ln -sf $dotfiles_secure_dir/hosts /etc/hosts
 
 # config files
 
