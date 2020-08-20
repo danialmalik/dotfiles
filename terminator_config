@@ -1,12 +1,37 @@
 [global_config]
-  enabled_plugins = TestPlugin, LaunchpadCodeURLHandler, LaunchpadBugURLHandler
-  homogeneous_tabbar = False
+  window_state = maximise
   scroll_tabbar = True
+  homogeneous_tabbar = False
+  title_hide_sizetext = True
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, TestPlugin
   suppress_multiple_term_dialog = True
   title_font = Sans 22
-  title_hide_sizetext = True
-  window_state = maximise
 [keybindings]
+  copy = <Primary><Shift>c
+  switch_to_tab_1 = <Primary>1
+  switch_to_tab_2 = <Primary>2
+  switch_to_tab_3 = <Primary>3
+  switch_to_tab_4 = <Primary>4
+  switch_to_tab_5 = <Primary>5
+  switch_to_tab_6 = <Primary>6
+  switch_to_tab_7 = <Primary>7
+  switch_to_tab_8 = <Primary>8
+  switch_to_tab_9 = <Primary>9
+  switch_to_tab_10 = <Primary>0
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_color = "#282828"
+    background_darkness = 0.18
+    cursor_color = "#bbbbbb"
+    font = Monospace 13
+    foreground_color = "#ebdbb2"
+    scroll_on_output = True
+    scrollback_lines = 5000
+    palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
+    use_system_font = False
+    use_theme_colors = True
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -17,17 +42,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#282828"
-    background_darkness = 0.98
-    copy_on_selection = True
-    cursor_color = "#bbbbbb"
-    font = Monospace 13
-    foreground_color = "#ebdbb2"
-    icon_bell = False
-    palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
-    scroll_on_output = True
-    scrollback_lines = 5000
-    use_system_font = False
-    use_theme_colors = True
