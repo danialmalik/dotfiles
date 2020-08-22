@@ -64,6 +64,7 @@ sudo apt install -y \
     pandoc \
     shunit2 \
     curl \
+    cheese \
     debhelper \
     htop \
     lastpass-cli \
@@ -160,6 +161,11 @@ sudo usermod -aG docker $USER
 # Install docker-compose
 sudo apt-get -y install docker-compose
 
+
+# Install docker-machine
+curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+    chmod +x /tmp/docker-machine &&
+    sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 
 
 
