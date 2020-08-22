@@ -46,7 +46,15 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 # sudo add-apt-repository ppa:noobslab/apps
 # sudo apt-get update && sudo apt-get xdman install
 
+# typora
 
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+# ulauncher
 sudo add-apt-repository ppa:agornostal/ulauncher
 
 sudo apt update
@@ -83,6 +91,7 @@ sudo apt install -y \
     sublime-merge \
     terminator \
     tree \
+    typora \
     ulauncher \
     uget aria2 \
     vagrant \
@@ -104,6 +113,8 @@ sudo snap install vscode --classic
 sudo snap install insomnia
 sudo snap install skype --classic
 sudo snap install gitkraken --classic
+sudo snap install slack --classic
+
 
 # Install nvm
 get_latest_release() {

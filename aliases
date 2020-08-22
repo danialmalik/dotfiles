@@ -14,6 +14,8 @@ alias c='clear'
 # aenv
 alias aenv='source env/bin/activate'
 
+# `open` command
+alias open='xdg-open'
 
 # docker-machine commands
 function dmactivate() {
