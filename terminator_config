@@ -7,6 +7,10 @@
   suppress_multiple_term_dialog = True
   title_font = Sans 22
 [keybindings]
+  go_up = <Shift>Up
+  go_down = <Shift>Down
+  go_left = <Shift>Left
+  go_right = <Shift>Right
   copy = <Primary><Shift>c
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
