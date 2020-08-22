@@ -81,6 +81,11 @@ if [ "$SYSTEM" = "Linux" ]; then
 	export PATH=$ANDROID_HOME/platform-tools:$PATH
 	export PATH=$ANDROID_HOME/tools:$PATH
 
+	# pyenv
+	export PATH="/home/danialmalik/.pyenv/bin:$PATH"
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
+
 else # MacOS
 	# Mac specific settings here
 

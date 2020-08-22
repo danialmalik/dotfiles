@@ -134,6 +134,9 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm install node
 
+# Install pyenv
+ curl https://pyenv.run | bash
+
 # install grunt
 # npm install -g grunt-cli
 
