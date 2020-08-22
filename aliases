@@ -178,6 +178,8 @@ SYSTEM=$(uname -s)
 
 if [ "$SYSTEM" = "Linux" ]; then
 	# Linux specific settings here
+	alias install='sudo apt-get install'
+	alias remove='sudo apt-get purge'
 
 	# Vnote
 	alias vnote=/opt/vnote/VNote-2.3-x86_64.AppImage
