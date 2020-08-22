@@ -57,6 +57,9 @@ sudo add-apt-repository 'deb https://typora.io/linux ./'
 # ulauncher
 sudo add-apt-repository ppa:agornostal/ulauncher
 
+# shutter
+sudo add-apt-repository -y ppa:linuxuprising/shutter
+
 sudo apt update
 
 # calibre
@@ -89,6 +92,7 @@ sudo apt install -y \
     redis-server \
     sublime-text \
     sublime-merge \
+    shutter \
     terminator \
     tree \
     typora \
