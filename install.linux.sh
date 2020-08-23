@@ -100,7 +100,6 @@ sudo apt install -y \
     ulauncher \
     uget aria2 \
     vagrant \
-    vlc \
     vim vim-gtk3 \
     virtualbox \
     virtualbox-qt \
@@ -116,6 +115,7 @@ sudo apt-get install snapd -y
 sudo snap install postman
 sudo snap install vscode --classic
 sudo snap install insomnia
+sudo snap install vlc
 sudo snap install skype --classic
 sudo snap install gitkraken --classic
 sudo snap install slack --classic
