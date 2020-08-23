@@ -77,6 +77,7 @@ sudo apt install -y \
     curl \
     cheese \
     debhelper \
+    gparted \
     htop \
     lastpass-cli \
     ncdu \
