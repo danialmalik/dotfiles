@@ -243,6 +243,9 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-install
 # doctor for rbenv verification
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
+# Enable scroll coasting (momentum)
+sudo apt-get remove xserver-xorg-input-libinput
+sudo apt-get install xserver-xorg-input-synaptics
 
 cd $HOME/dotfiles/
 
