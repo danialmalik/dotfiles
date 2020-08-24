@@ -22,6 +22,9 @@ wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.
 # Install debs
 sudo apt install -y $HOME/Downloads/*.deb
 
+# f.lux
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
+
 # Add software sources
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
@@ -71,12 +74,15 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 
 sudo apt install -y \
     apt-transport-https \
+    ack \
     build-essential \
     pandoc \
     shunit2 \
     curl \
     cheese \
     debhelper \
+    flameshot \
+    fluxgui \
     gparted \
     htop \
     lastpass-cli \

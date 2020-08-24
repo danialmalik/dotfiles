@@ -17,6 +17,10 @@ alias aenv='source env/bin/activate'
 # `open` command
 alias open='xdg-open'
 
+# ack for search and highlighting text
+# Example usage: `cat logs.txt | ackp 'error'`
+alias ackp='ack --pasthru'
+
 # docker-machine commands
 function dmactivate() {
 	eval $(docker-machine env $1)
