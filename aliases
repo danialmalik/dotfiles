@@ -19,7 +19,7 @@ alias open='xdg-open'
 
 # ack for search and highlighting text
 # Example usage: `cat logs.txt | ackp 'error'`
-alias ackp='ack --pasthru'
+alias ackp='ack --passthru'
 
 # docker-machine commands
 function dmactivate() {
