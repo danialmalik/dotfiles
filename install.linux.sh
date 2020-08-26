@@ -6,13 +6,16 @@ UBUNTU_RELEASE='bionic'
 # Copy files
 cp ./images/* $HOME/Pictures/
 
+# TODO: use script to install latest versions
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_20.04_amd64.deb
 wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget -P $HOME/Downloads https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
 wget -P $HOME/Downloads https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 wget -P $HOME/Downloads https://downloads.mongodb.com/compass/mongodb-compass_1.19.3_amd64.deb
+
+wget -P $HOME/Downloads https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
 wget -P $HOME/Downloads https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.3/kse-5.4.3.deb
+wget -P $HOME/Downloads https://github.com/barnumbirr/delta-debian/releases/download/0.4.1-1/delta-diff_0.4.1-1_amd64_debian_buster.deb
 
 # Autokey
 wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-common_0.95.10-0_all.deb
@@ -89,6 +92,7 @@ sudo apt install -y \
     curl \
     cheese \
     debhelper \
+    fd-find \
     flameshot \
     fluxgui \
     gparted \
@@ -102,6 +106,7 @@ sudo apt install -y \
     python-dev \
     python3-dev \
     python3-pip \
+    ripgrep \
     ranger \
     ruby-full \
     redis-server \
@@ -245,6 +250,9 @@ sudo apt-get -y install -f
 # TODO: enter 1 for continue installation at the prompt
 curl https://sh.rustup.rs -sSf | sh
 
+# Install Cargo packages
+cargo install exa
+cargo install gitui
 
 # install rbenv for ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash

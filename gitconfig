@@ -1,0 +1,18 @@
+[user]
+	name = danialmalik
+	email = danialmalik321@gmail.com
+	signingkey = 3B0EB68FCFCA9357
+[gpg]
+	program = /usr/bin/gpg
+[commit]
+	gpgsign = true
+
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  side-by-side = true
+  line-numbers-left-format = ""
+  line-numbers-right-format = "│ "
+  syntax-theme = Dracula

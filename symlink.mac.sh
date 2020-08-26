@@ -12,5 +12,8 @@ sudo ln -sf $dotfiles_dir/zshrc ~/.zshrc
 sudo ln -sf $dotfiles_dir/aliases ~/.bash_aliases
 sudo ln -sf $dotfiles_dir/aliases ~/.aliases
 
+#git
+sudo ln -sf $dotfiles_dir/gitconfig ~/.gitconfig
+
 # zsh theme
 sudo ln -sf $dotfiles/zsh_theme_powerline10k.zsh ~/.p10k.zsh
