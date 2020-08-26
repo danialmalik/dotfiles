@@ -15,6 +15,9 @@ sudo ln -sf $dotfiles_dir/zshrc ~/.zshrc
 sudo ln -sf $dotfiles_dir/aliases ~/.bash_aliases
 sudo ln -sf $dotfiles_dir/aliases ~/.aliases
 
+#git
+sudo ln -sf $dotfiles_dir/gitconfig ~/.gitconfig
+
 # ssh
 sudo ln -sf $dotfiles_secure_dir/ssh_config ~/.ssh/config
 
