@@ -24,6 +24,7 @@ wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.
 sudo apt install -y $HOME/Downloads/*.deb
 
 # f.lux
+# doesn't support focal yet
 sudo add-apt-repository ppa:nathan-renniewaldock/flux
 
 # Add software sources
@@ -251,7 +252,6 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-install
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
 # Enable scroll coasting (momentum)
-sudo apt-get remove xserver-xorg-input-libinput
 sudo apt-get install xserver-xorg-input-synaptics
 
 cd $HOME/dotfiles/
