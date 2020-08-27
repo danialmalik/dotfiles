@@ -13,6 +13,7 @@
   diffFilter = delta --color-only
 [delta]
   side-by-side = true
-  line-numbers-left-format = ""
-  line-numbers-right-format = "│ "
+  line-numbers = true
+  # line-numbers-left-format = "-"
+  # line-numbers-right-format = "│ "
   syntax-theme = Dracula
