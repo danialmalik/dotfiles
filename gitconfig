@@ -7,6 +7,9 @@
 [commit]
 	gpgsign = true
 
+[pager]
+  branch = true
+  log = true
 [core]
   pager = delta
 [interactive]
