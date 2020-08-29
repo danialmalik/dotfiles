@@ -159,6 +159,11 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm install node
 
+# Install global npm packages
+npm i -g \
+    fx \
+    serve
+
 # Install pyenv
  curl https://pyenv.run | bash
 
