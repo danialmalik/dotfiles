@@ -115,6 +115,7 @@ sudo apt install -y \
     shutter \
     terminator \
     tree \
+    tldr \
     typora \
     ulauncher \
     uget aria2 \
