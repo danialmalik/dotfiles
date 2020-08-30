@@ -99,10 +99,12 @@ sudo apt install -y \
     htop \
     lastpass-cli \
     ncdu \
-    mysql-client mysql-server \
+    mysql-client mysql-server mycli \
     megacmd \
+    mongodb \
     numix-icon-theme-circle \
     parcellite \
+    postgresql pgcli \
     python-dev \
     python3-dev \
     python3-pip \
@@ -232,6 +234,9 @@ curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machi
 # sudo make install
 # cd ..
 
+# youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # Install Jumpapp
 cd ~/Downloads

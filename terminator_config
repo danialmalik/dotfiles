@@ -31,7 +31,6 @@
     font = Monospace 10
     foreground_color = "#839496"
     scrollback_lines = 5000
-    exit_action = hold
     palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
     use_system_font = False
     copy_on_selection = True
