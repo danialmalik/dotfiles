@@ -209,6 +209,8 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias lampp='cd /opt/lampp/'
 	alias wpress='cd /opt/lampp/htdocs/'
 
+	alias ctl='sudo systemctl'
+	alias ydl='youtube-dl --no-check-certificate'
 else
 	# brew
 	alias nbrew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
