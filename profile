@@ -17,10 +17,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-## zsh settings
-# disable auto correct
-unsetopt correct_all
-unsetopt correct
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
@@ -118,5 +114,10 @@ else # MacOS
 	if command -v pyenv 1>/dev/null 2>&1; then
 		eval "$(pyenv init -)"
 	fi
+
+	##################### zsh ###################
+	# disable auto correct
+	unsetopt correct_all
+	unsetopt correct
 
 fi
