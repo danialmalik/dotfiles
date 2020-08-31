@@ -91,6 +91,7 @@ sudo apt install -y \
     shunit2 \
     curl \
     cheese \
+    direnv \
     debhelper \
     fd-find \
     flameshot \
@@ -108,6 +109,7 @@ sudo apt install -y \
     python-dev \
     python3-dev \
     python3-pip \
+    python3-venv \
     ripgrep \
     ranger \
     ruby-full \

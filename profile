@@ -66,6 +66,14 @@ export LANG=en_US.UTF-8
 eval "$(direnv hook zsh)"
 
 
+################# ZSH #####################
+# disable auto correct
+	unsetopt correct_all
+	unsetopt correct
+
+
+##################### System specific #####################
+
 # Load the system specific profile variables
 SYSTEM=$(uname -s)
 
@@ -121,8 +129,5 @@ else # MacOS
 	fi
 
 	##################### zsh ###################
-	# disable auto correct
-	unsetopt correct_all
-	unsetopt correct
 
 fi
