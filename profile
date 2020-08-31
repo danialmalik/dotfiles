@@ -56,9 +56,14 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
 
+
 # for pipenv
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+
+# direnv
+eval "$(direnv hook zsh)"
 
 
 # Load the system specific profile variables
