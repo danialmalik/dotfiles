@@ -110,6 +110,8 @@ sudo apt install -y \
     python3-dev \
     python3-pip \
     python3-venv \
+    ipython3 \
+    bpython \
     ripgrep \
     ranger \
     ruby-full \
