@@ -68,8 +68,8 @@ eval "$(direnv hook zsh)"
 
 ################# ZSH #####################
 # disable auto correct
-	unsetopt correct_all
-	unsetopt correct
+unsetopt correct_all
+unsetopt correct
 
 
 ##################### System specific #####################
