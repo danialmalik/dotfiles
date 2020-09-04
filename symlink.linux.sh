@@ -27,6 +27,6 @@ sudo ln -sf $dotfiles_secure_dir/hosts /etc/hosts
 # config files
 
 # https://github.com/bulletmark/libinput-gestures
-ln -sf ~/dotfiles/config_files/libinput-gestures.conf ~/.config/libinput-gestures.conf
+ln -sf $dotfiles_dir/config_files/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 ln -sf $dotfiles_dir/terminator_config ~/.config/terminator/config
