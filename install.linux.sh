@@ -3,6 +3,8 @@
 # Ubuntu release upon which the current distro is based
 UBUNTU_RELEASE='bionic'
 
+DOTFILES=$HOME/dotfiles/dotfiles
+
 # Copy files
 cp ./images/* $HOME/Pictures/
 
@@ -218,6 +220,24 @@ curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machi
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 
 
+# Install libinput-gestures and gestures
+sudo gpasswd -a $USER input
+su - ${USER}
+sudo apt install libinput-tools
+
+git clone https://github.com/bulletmark/libinput-gestures.git /tmp/libinput-gestures
+cd /tmp/libinput-gestures
+sudo make install
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start
+
+sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject
+git clone https://gitlab.com/cunidev/gestures /tmp/gestures
+cd /tmp/gestures
+sudo python3 setup.py install
+
+cd $DOTFILES
 
 # # install wocker
 # mkdir ~/progs
@@ -277,7 +297,7 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 # Enable scroll coasting (momentum)
 sudo apt-get install xserver-xorg-input-synaptics
 
-cd $HOME/dotfiles/
+cd $DOTFILES
 
 # Clear downloaded debs
 rm $HOME/Downloads/*.deb
