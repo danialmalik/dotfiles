@@ -96,6 +96,7 @@ sudo apt install -y \
     direnv \
     debhelper \
     fd-find \
+    fonts-firacode \
     flameshot \
     fluxgui \
     gparted \
