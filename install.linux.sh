@@ -103,6 +103,7 @@ sudo apt install -y \
     htop \
     lastpass-cli \
     ncdu \
+    meld \
     mysql-client mysql-server mycli \
     megacmd \
     mongodb \
