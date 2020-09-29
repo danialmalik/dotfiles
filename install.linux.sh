@@ -173,6 +173,7 @@ nvm install node
 npm i -g \
     fx \
     serve
+    gitmoji-cli
 
 # Install pyenv
  curl https://pyenv.run | bash
