@@ -85,7 +85,7 @@ alias servucsd='ssh ucsd-edx-dev'
 alias ucon='cd $HOME/work/arbisoft/open-edx/ucsd-configurations'
 
 # proxy for running jenkins
-alias ucsdsprox='ssh UCSDJumpHost -D 8080'
+alias ucsdsprox='ssh ucsd-jenkins-dev -D 8080'
 
 #######################################################
 #################### MIT #############################
