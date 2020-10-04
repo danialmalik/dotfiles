@@ -15,6 +15,8 @@ wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_
 wget -P $HOME/Downloads https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 wget -P $HOME/Downloads https://downloads.mongodb.com/compass/mongodb-compass_1.19.3_amd64.deb
 
+# wget -P $HOME/Downloads https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_arm64.deb
+
 wget -P $HOME/Downloads https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
 wget -P $HOME/Downloads https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.3/kse-5.4.3.deb
 wget -P $HOME/Downloads https://github.com/barnumbirr/delta-debian/releases/download/0.4.1-1/delta-diff_0.4.1-1_amd64_debian_buster.deb
