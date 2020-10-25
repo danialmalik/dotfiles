@@ -1,7 +1,7 @@
 [user]
 	name = danialmalik
 	email = danialmalik321@gmail.com
-	signingkey = 3B0EB68FCFCA9357
+	signingkey = 43ACECA45E40B1CF
 [gpg]
 	program = /usr/bin/gpg
 [commit]
