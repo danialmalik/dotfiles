@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Export cinnamon settings
-dconf dump /org/cinnamon/ > cinnamon.conf
-# dconf dump /org/gnome/ > gnome.conf
+if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
+    dconf dump /org/gnome/ > gnome.conf
+else
+    # Export cinnamon settings
+    dconf dump /org/cinnamon/ > cinnamon.conf
+fi
 
 git add .
 DATE="$(date)"
