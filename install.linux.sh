@@ -1,16 +1,20 @@
 #!/bin/bash
+set -e
 
 # Ubuntu release upon which the current distro is based
-UBUNTU_RELEASE='bionic'
+UBUNTU_RELEASE='groovy'
 
 DOTFILES=$HOME/dotfiles/dotfiles
 
 # Copy files
-cp ./images/* $HOME/Pictures/
+# cp ./images/* $HOME/Pictures/
 
 # TODO: use script to install latest versions
 # Download debs
-wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_20.04_amd64.deb
+wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megacmd_1.4.0-2.1_amd64.deb
+wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/dolphin-megasync_4.1.1+4.1_amd64.deb
+wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megasync_4.3.5-5.1_amd64.deb
+
 wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -P $HOME/Downloads https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 wget -P $HOME/Downloads https://downloads.mongodb.com/compass/mongodb-compass_1.19.3_amd64.deb
@@ -38,11 +42,11 @@ sudo add-apt-repository ppa:nathan-renniewaldock/flux
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 # not required any more in linux mint 20
-# wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
-# Sublime merge
+# Sublime
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 
 # uget
 # TODO: Add -y option ? so that doesn't ask for enter
@@ -84,8 +88,8 @@ sudo apt update
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
 
-# \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \
-
+# \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui
+ 
 
 sudo apt install -y \
     apt-transport-https \
@@ -100,7 +104,6 @@ sudo apt install -y \
     fd-find \
     fonts-firacode \
     flameshot \
-    fluxgui \
     gparted \
     htop \
     lastpass-cli \
@@ -108,7 +111,6 @@ sudo apt install -y \
     meld \
     mysql-client mysql-server mycli \
     megacmd \
-    mongodb \
     numix-icon-theme-circle \
     parcellite \
     postgresql pgcli \
@@ -138,6 +140,9 @@ sudo apt install -y \
     virtualenv virtualenvwrapper\
     xclip
 
+if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
+  sudo apt-get install gnome-tweak-tool
+fi
 
 # for linux mint 20. Have to delete this file to be able to install snap.
 sudo rm /etc/apt/preferences.d/nosnap.pref
@@ -178,7 +183,7 @@ npm i -g \
     gitmoji-cli
 
 # Install pyenv
- curl https://pyenv.run | bash
+curl https://pyenv.run | bash
 
 # install grunt
 # npm install -g grunt-cli
@@ -228,7 +233,7 @@ curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machi
 # Install libinput-gestures and gestures
 sudo gpasswd -a $USER input
 su - ${USER}
-sudo apt install libinput-tools
+sudo apt install libinput-tools -y
 
 git clone https://github.com/bulletmark/libinput-gestures.git /tmp/libinput-gestures
 cd /tmp/libinput-gestures
@@ -268,17 +273,13 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
 # Install Jumpapp
-cd ~/Downloads
+cd /tmp/
 git clone https://github.com/mkropat/jumpapp.git
 cd jumpapp
 make deb
 sudo dpkg -i jumpapp*all.deb
 make clean
 cd ..
-
-# if there were missing dependencies
-sudo apt-get -y install -f
-
 
 # install vnote
 # wget -P $HOME/Downloads  https://github.com/tamlok/vnote/releases/download/v2.2/VNote-2.2-x86_64.AppImage
@@ -316,8 +317,13 @@ sudo apt-get install -f
 git clean -f
 
 # Import gnome desktop settings
-# dconf load /org/gnome/ < ./gnome.conf
-dconf load /org/cinnamon/ < ./cinnamon.conf
+
+if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
+    dconf load /org/gnome/ < ./gnome.conf
+else
+    dconf load /org/cinnamon/ < ./cinnamon.conf
+fi
+
 
 # Finally install zsh
 sudo apt-get -y install zsh
@@ -327,5 +333,3 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 # install ZSH plugins
 ./install_zsh_plugins.sh
-
-echo "YOU ARE DONE :)"
