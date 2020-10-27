@@ -1,7 +1,7 @@
 [user]
 	name = danialmalik
 	email = danialmalik321@gmail.com
-	signingkey = 43ACECA45E40B1CF
+	signingkey = 3B0EB68FCFCA9357
 [gpg]
 	program = /usr/bin/gpg
 [commit]
@@ -32,4 +32,4 @@
     file-style = bold yellow ul
     file-decoration-style = none
 [credential]
-	helper = cache --timeout=3600
+	helper = cache --timeout=2592000 # 30 days
