@@ -95,6 +95,11 @@ if [ "$SYSTEM" = "Linux" ]; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
 
+	# only for gnome
+	# to show snap apps in overview
+	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
+
+
 else # MacOS
 	# Mac specific settings here
 

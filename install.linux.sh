@@ -149,8 +149,8 @@ sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt-get update
 sudo apt-get install snapd -y
 
-sudo snap install postman
 sudo snap install vscode --classic
+sudo snap install postman
 sudo snap install insomnia
 sudo snap install vlc
 sudo snap install skype --classic
