@@ -13,7 +13,7 @@ DOTFILES=$HOME/dotfiles/dotfiles
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megacmd_1.4.0-2.1_amd64.deb
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/dolphin-megasync_4.1.1+4.1_amd64.deb
-wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megasync_4.3.5-5.1_amd64.deb
+wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megasync_4.3.5-7.1_amd64.deb
 
 wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -P $HOME/Downloads https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
@@ -36,7 +36,7 @@ sudo apt install -y $HOME/Downloads/*.deb
 
 # f.lux
 # doesn't support focal yet
-sudo add-apt-repository ppa:nathan-renniewaldock/flux
+# sudo add-apt-repository ppa:nathan-renniewaldock/flux
 
 # Add software sources
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -164,7 +164,7 @@ get_latest_release() {
     grep '"tag_name":' |                                            # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
-curl -o- https://raw.githubusercontent.com/creationix/nvm/$(get_latest_release "creationix/nvm")/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -179,7 +179,7 @@ nvm install node
 # Install global npm packages
 npm i -g \
     fx \
-    serve
+    serve \
     gitmoji-cli
 
 # Install pyenv
