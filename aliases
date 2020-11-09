@@ -232,3 +232,9 @@ else
 	alias ossl_pyenv=CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv
 
 fi
+
+###################################################################
+########################### Selfdecode ############################
+###################################################################
+
+alias sd='cd ~/work/selfdecode'

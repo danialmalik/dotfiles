@@ -36,10 +36,6 @@ export PATH="$PATH:./node_modules/.bin"
 export COMPOSE_HTTP_TIMEOUT=3000000000
 
 
-# the fuck
-eval $(thefuck --alias)
-
-
 # Go lang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -136,3 +132,10 @@ else # MacOS
 	##################### zsh ###################
 
 fi
+
+
+############## Should be done after OS specific steps ######################
+
+
+# the fuck
+eval $(thefuck --alias)
