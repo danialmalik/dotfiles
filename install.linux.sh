@@ -89,7 +89,7 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 
 
 # \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui
- 
+
 
 sudo apt install -y \
     apt-transport-https \
@@ -229,6 +229,8 @@ curl -L https://github.com/docker/machine/releases/download/v0.16.2/docker-machi
     chmod +x /tmp/docker-machine &&
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 
+# install lazy docker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 # Install libinput-gestures and gestures
 sudo gpasswd -a $USER input
