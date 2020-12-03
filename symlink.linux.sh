@@ -5,7 +5,7 @@ dotfiles_dir=~/dotfiles/dotfiles
 dotfiles_secure_dir=~/dotfiles/secure_dotfiles
 
 # create dirs
-mkdir ~/.config/terminator/
+mkdir ~/.config/terminator/ 2>/dev/null
 
 # shell symlinks
 ln -sf $dotfiles_dir/bashrc ~/.bashrc
