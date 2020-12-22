@@ -180,7 +180,8 @@ nvm install node
 npm i -g \
     fx \
     serve \
-    gitmoji-cli
+    gitmoji-cli \
+    semantic-git-commit-cli
 
 # Install pyenv
 curl https://pyenv.run | bash
