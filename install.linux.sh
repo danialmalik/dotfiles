@@ -186,6 +186,10 @@ npm i -g \
 # Install pyenv
 curl https://pyenv.run | bash
 
+# Install python 3
+pyenv install 3.5.3
+pyenv install 3.8.3
+
 # install grunt
 # npm install -g grunt-cli
 
