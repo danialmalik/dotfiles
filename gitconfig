@@ -12,6 +12,7 @@
   log = true
 [core]
   pager = delta
+	excludesFile = $HOME/.gitignore_global
 
 [interactive]
   diffFilter = delta --color-only
