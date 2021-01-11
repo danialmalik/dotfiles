@@ -208,6 +208,9 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias install='sudo apt-get install'
 	alias remove='sudo apt-get purge'
 
+
+
+
 	# Vnote
 	alias vnote=/opt/vnote/VNote-2.3-x86_64.AppImage
 
@@ -242,6 +245,9 @@ fi
 
 alias sd='cd ~/work/selfdecode'
 alias sdr='cd ~/work/selfdecode/sd-reports'
+alias sda='cd ~/work/selfdecode/sd-accounts'
 alias sdf='cd ~/work/selfdecode/sd-selfdecode-frontend'
 alias sdk='cd ~/work/selfdecode/sd-sdk'
 alias sdc='cd ~/work/selfdecode/sd-component-library'
+
+alias sdd='cd ~/work/selfdecode/sd-devstack'
