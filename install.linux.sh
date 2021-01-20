@@ -127,6 +127,7 @@ sudo apt install -y \
     sublime-text \
     sublime-merge \
     shutter \
+    stress \
     terminator \
     tree \
     tldr \
