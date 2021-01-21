@@ -117,6 +117,7 @@ if [ "$SYSTEM" = "Linux" ]; then
 	# to show snap apps in overview
 	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
 
+	# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 else # MacOS
 	# Mac specific settings here
