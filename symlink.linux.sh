@@ -37,3 +37,6 @@ ln -sf $dotfiles_dir/config_files/libinput-gestures.conf ~/.config/libinput-gest
 
 # terminator
 ln -sf $dotfiles_dir/terminator_config ~/.config/terminator/config
+
+# pwerline10k theme
+ln -sf $dotfiles/zsh_theme_powerline10k.zsh ~/.p10k.zsh
