@@ -208,7 +208,8 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias install='sudo apt-get install'
 	alias remove='sudo apt-get purge'
 
-
+	# POP OS (Asus tuf a15)
+	alias wt="watch -n 0.1  'sensors | tail -n 12 | head -n 2'"
 
 
 	# Vnote
