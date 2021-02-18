@@ -97,6 +97,7 @@ sudo apt install -y \
     build-essential \
     pandoc \
     shunit2 \
+    cpulimit \
     curl \
     cheese \
     direnv \
