@@ -2,18 +2,19 @@
 
 # variables
 dotfiles_dir=~/dotfiles/dotfiles
+config_files_dir=$dotfiles_dir/config_files
 
 
 # create symlinks
-ln -sf $dotfiles_dir/vimrc ~/.vimrc
-ln -sf $dotfiles_dir/bashrc ~/.bashrc
-ln -sf $dotfiles_dir/profile ~/.profile
-ln -sf $dotfiles_dir/zshrc ~/.zshrc
-ln -sf $dotfiles_dir/aliases ~/.bash_aliases
-ln -sf $dotfiles_dir/aliases ~/.aliases
+ln -sf $config_files_dir/vimrc ~/.vimrc
+ln -sf $config_files_dir/bashrc ~/.bashrc
+ln -sf $config_files_dir/profile ~/.profile
+ln -sf $config_files_dir/zshrc ~/.zshrc
+ln -sf $config_files_dir/aliases ~/.bash_aliases
+ln -sf $config_files_dir/aliases ~/.aliases
 
 #git
-ln -sf $dotfiles_dir/gitconfig ~/.gitconfig
+ln -sf $config_files_dir/gitconfig ~/.gitconfig
 
 # zsh theme
-ln -sf $dotfiles/zsh_theme_powerline10k.zsh ~/.p10k.zsh
+ln -sf $config_files_dir/zsh_theme_powerline10k.zsh ~/.p10k.zsh
