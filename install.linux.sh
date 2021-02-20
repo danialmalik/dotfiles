@@ -113,6 +113,7 @@ sudo apt install -y \
     mysql-client mysql-server mycli \
     megacmd \
     numix-icon-theme-circle \
+    neovim
     parcellite \
     postgresql pgcli \
     python-dev \

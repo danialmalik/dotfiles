@@ -20,14 +20,14 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
-"Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-"Plug 'scrooloose/nerdcommenter'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'tmhedberg/SimpylFold'
-"Plug 'mattn/emmet-vim'
-"Plug 'powerman/vim-plugin-autosess'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tmhedberg/SimpylFold'
+Plug 'mattn/emmet-vim'
+Plug 'powerman/vim-plugin-autosess'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -117,4 +117,3 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " Emmet Vim config
 "let g:user_emmet_leader_key='\<Space>'
-
