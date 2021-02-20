@@ -1,2 +1,0 @@
-# TODO:
-# postgres installation scripts
