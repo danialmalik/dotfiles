@@ -176,7 +176,6 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Install node js
-
 nvm install node
 
 # Install global npm packages
