@@ -7,6 +7,7 @@ dotfiles_secure_dir=~/dotfiles/secure_dotfiles
 
 # create dirs
 mkdir ~/.config/terminator/ 2>/dev/null
+mkdir ~/.config/nvim/ 2>/dev/null
 
 # shell symlinks
 ln -sf $config_files_dir/bashrc ~/.bashrc
@@ -17,6 +18,7 @@ ln -sf $config_files_dir/aliases ~/.aliases
 
 # vim
 ln -sf $config_files_dir/vimrc ~/.vimrc
+ln -sf $config_files_dir/nvim_init.vim ~/.config/nvim/init.vim
 
 # docker
 ln -sf $config_files_dir/docker-config.json ~/.docker/config.json
