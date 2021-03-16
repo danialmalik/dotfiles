@@ -100,7 +100,7 @@
 
 # Node Package Manager cache
 .npm
-node_modules
+node_modules/
 
 # Node Version Manager
 .nvm
