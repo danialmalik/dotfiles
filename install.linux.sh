@@ -192,6 +192,7 @@ npm i -g \
 
 # Install pyenv
 curl https://pyenv.run | bash
+sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject
 
 # Install python 3
 pyenv install 3.5.3
