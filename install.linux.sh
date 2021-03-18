@@ -113,7 +113,7 @@ sudo apt install -y \
     mysql-client mysql-server mycli \
     megacmd \
     numix-icon-theme-circle \
-    neovim
+    neovim \
     parcellite \
     postgresql pgcli \
     python-dev \
@@ -144,15 +144,20 @@ sudo apt install -y \
     xclip
 
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
-  sudo apt-get install gnome-tweak-tool
+  sudo apt-get -y install gnome-tweak-tool
 fi
+
+# vscode
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
 
 # for linux mint 20. Have to delete this file to be able to install snap.
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt-get update
 sudo apt-get install snapd -y
 
-sudo snap install vscode --classic
+# sudo snap install vscode --classic
 sudo snap install postman
 sudo snap install insomnia
 sudo snap install vlc

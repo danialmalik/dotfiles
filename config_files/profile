@@ -100,8 +100,7 @@ if [ "$SYSTEM" = "Linux" ]; then
 
 	# For rust and cargo
 	source $HOME/.cargo/env
-	export PATH="$HOME/.cargo/bin:$PATH"
-	export PATH="$PATH:/usr/local/go/bin"
+		export PATH="$PATH:/usr/local/go/bin"
 
 	# android sdk tools
 	export ANDROID_HOME=$HOME/Android/sdk
@@ -162,3 +161,4 @@ fi
 
 # the fuck
 eval $(thefuck --alias)
+source "$HOME/.cargo/env"
