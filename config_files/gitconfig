@@ -12,6 +12,7 @@
 [pager]
   branch = true
   log = true
+
 [core]
   pager = delta
 	excludesFile = $HOME/.gitignore_global
