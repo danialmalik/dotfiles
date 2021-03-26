@@ -130,6 +130,7 @@ sudo apt install -y \
     sublime-merge \
     shutter \
     stress \
+    tilix \
     terminator \
     tree \
     tldr \
