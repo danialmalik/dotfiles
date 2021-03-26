@@ -335,11 +335,13 @@ git clean -f
 # Import gnome desktop settings
 
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
-    dconf load /org/gnome/ < ./gnome.conf
+    dconf load /org/gnome/ < ./config_files/gnome.conf
 else
-    dconf load /org/cinnamon/ < ./cinnamon.conf
+    dconf load /org/cinnamon/ < ./config_files/cinnamon.conf
 fi
 
+# load tilix config
+dconf load /com/gexperts/Tilix/ < ./config_files/tilix.dconf
 
 # Finally install zsh
 sudo apt-get -y install zsh
