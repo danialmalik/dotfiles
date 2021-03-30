@@ -92,6 +92,7 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 
 
 sudo apt install -y \
+    apache2-utils \
     apt-transport-https \
     ack \
     build-essential \
