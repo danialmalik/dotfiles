@@ -11,6 +11,10 @@ alias c='clear'
 ######################################
 ############### General ##############
 #######################################
+
+alias desk="cd $HOME/Desktop"
+alias down="cd $HOME/Downloads"
+
 # aenv
 alias aenv='source env/bin/activate'
 
@@ -56,14 +60,6 @@ fi
 alias notes='cd $HOME/MEGAsync/notes'
 alias cnotes='code $HOME/MEGAsync/notes'
 
-alias desk="cd $HOME/Desktop"
-alias down="cd $HOME/Downloads"
-
-alias work="cd $HOME/work"
-alias arbi="cd $HOME/work/arbisoft"
-alias lab="cd $HOME/work/the-lab"
-
-
 ######################################
 ################ git ################
 #######################################
@@ -83,119 +79,6 @@ alias amend='git commit -a --amend --no-edit'
 # gitmoji
 alias gmc='gitmoji -c'
 
-#######################################################
-#################### UCSD #############################
-#######################################################
-
-alias servucsd='ssh ucsd-edx-dev'
-alias ucon='cd $HOME/work/arbisoft/open-edx/ucsd-configurations'
-
-# proxy for running jenkins
-alias ucsdsprox='ssh ucsd-jenkins-dev -D 8080'
-
-#######################################################
-#################### MIT #############################
-#######################################################
-
-# proxy for running jenkins
-alias mitsprox='ssh MITx-Bastion -D 8080'
-
-################################################
-############# Open edX devstack ################
-################################################
-
-################### general #########################
-
-alias edx='cd $HOME/work/arbisoft/open-edx'
-
-######## export devstack workspace
-alias exdi='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
-alias exdir='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/ironwood/edx/'
-alias exdj='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/juniper/edx/'
-alias exdl='export DEVSTACK_WORKSPACE=$HOME/work/arbisoft/open-edx/latest/edx/'
-
-####### export project names
-alias exci='export COMPOSE_PROJECT_NAME="devstack-ironwood.master"'
-alias excir='export COMPOSE_PROJECT_NAME="devstack-ironwood.redhouse"'
-alias excj='export COMPOSE_PROJECT_NAME="devstack-juniper.master"'
-alias excl='export COMPOSE_PROJECT_NAME="devstack-latest"'
-
-######## export release
-alias exi='exdi && export OPENEDX_RELEASE="ironwood.master" && exci'
-alias exir='exdir && export OPENEDX_RELEASE="ironwood.master" && excir'
-alias exj='exdj && export OPENEDX_RELEASE="juniper.master" && excj'
-alias exl='exdl && unset OPENEDX_RELEASE && excl'
-
-# alias exi='export OPENEDX_RELEASE="ironwood.master"'
-# alias exir='export OPENEDX_RELEASE="ironwood.master"'
-# alias exj='export OPENEDX_RELEASE="juniper.master"'
-# alias exl='unset OPENEDX_RELEASE && excl'
-
-######## Start devstack using nfs
-alias sniwd='exi && MONGO_VERSION=3.2.16 make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias sniwdr='exir && MONGO_VERSION=3.2.16 make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias snjpr='exj && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias snlts='exl && make dev.nfs.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-
-
-######## Start devstack using sync
-alias ssiwd='exi && MONGO_VERSION=3.2.16 make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias ssiwdr='exir && MONGO_VERSION=3.2.16 make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias ssjpr='exj && make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias sslts='exl && make dev.sync.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-
-######## Start devstack
-alias siwd='exi && MONGO_VERSION=3.2.16 make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias siwdr='exir && MONGO_VERSION=3.2.16 make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias sjpr='exj && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-alias slts='exl && make dev.up.lms+studio+ecommerce+discovery+credentials+forum+elasticsearch+devpi'
-
-######## Open devstack
-alias devstack='cd $HOME/work/arbisoft/open-edx/devstack && aenv'
-
-######## Open and activate devstack
-alias iwd='exi && devstack'
-alias iwdr='exir && devstack'
-alias jpr='exj && devstack'
-alias lts='exl && devstack'
-# alias iwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
-# alias iwdr='exir && cd $HOME/work/arbisoft/open-edx/ironwood/edx/devstack && source ../../env/bin/activate'
-# alias jpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/devstack && source ../../env/bin/activate'
-# alias lts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/devstack && source ../../env/bin/activate'
-
-
-######## Open edx-platform
-alias eiwd='exi && cd $HOME/work/arbisoft/open-edx/ironwood/edx/edx-platform && source ../../env/bin/activate'
-alias eiwdr='exir && cd $HOME/work/arbisoft/open-edx/ironwood/edx/edx-platform && source ../../env/bin/activate'
-alias ejpr='exj && cd $HOME/work/arbisoft/open-edx/juniper/edx/edx-platform && source ../../env/bin/activate'
-alias elts='exl && cd $HOME/work/arbisoft/open-edx/latest/edx/edx-platform && source ../../env/bin/activate'
-
-######################################
-############## PhillU ###############
-#######################################
-alias pcode='code $HOME/work/arbisoft/philu/philu_devstack/devstack'
-alias philu='cd $HOME/work/arbisoft/philu/philu_devstack && aenv && cd devstack'
-alias phstart='cd $HOME/work/arbisoft/philu/philu_devstack && aenv && cd devstack &&  docker-compose -f docker-compose.yml -f docker-compose-host.yml start'
-
-alias pvcode='code $HOME/work/arbisoft/philu/vagrant/devstack-config'
-alias philuv='cd $HOME/work/arbisoft/philu/vagrant/devstack-config'
-
-
-######################################
-############## NodeBB ###############
-#######################################
-alias nodebb='cd $HOME/work/arbisoft/nodebb'
-alias ncode='code $HOME/work/arbisoft/nodebb'
-
-
-######################################
-############## edly #################
-#######################################
-alias dedly='cd $HOME/work/arbisoft/edly/edly-devstack && aenv && cd devstack'
-alias edly='cd $HOME/work/arbisoft/edly/edly-devstack'
-alias cedly='code $HOME/work/arbisoft/edly/edly-devstack/edx-platform'
-
-
 ######################################
 ############ OS Specific #############
 #######################################
@@ -210,14 +93,6 @@ if [ "$SYSTEM" = "Linux" ]; then
 
 	# POP OS (Asus tuf a15)
 	alias wt="watch -n 0.1  'sensors | tail -n 12 | head -n 2'"
-
-
-	# Vnote
-	alias vnote=/opt/vnote/VNote-2.3-x86_64.AppImage
-
-	# wordpress
-	alias lampp='cd /opt/lampp/'
-	alias wpress='cd /opt/lampp/htdocs/'
 
 	alias ctl='sudo systemctl'
 	alias ydl='youtube-dl --no-check-certificate'
@@ -239,16 +114,3 @@ else
 	alias ossl_pyenv=CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv
 
 fi
-
-###################################################################
-########################### Selfdecode ############################
-###################################################################
-
-alias sd='cd ~/work/selfdecode'
-alias sdr='cd ~/work/selfdecode/sd-reports'
-alias sda='cd ~/work/selfdecode/sd-accounts'
-alias sdf='cd ~/work/selfdecode/sd-selfdecode-frontend'
-alias sdk='cd ~/work/selfdecode/sd-sdk'
-alias sdc='cd ~/work/selfdecode/sd-component-library'
-
-alias sdd='cd ~/work/selfdecode/sd-devstack'
