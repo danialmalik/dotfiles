@@ -1,5 +1,7 @@
 [/]
+control-scroll-zoom=true
 copy-on-select=true
+enable-wide-handle=true
 prompt-on-close=true
 quake-specific-monitor=0
 recent-session-files=['/home/danialmalik/MEGAsync/tilix/tilix_session.conf.json']
@@ -9,6 +11,8 @@ terminal-title-show-when-single=true
 terminal-title-style='small'
 theme-variant='system'
 use-tabs=true
+window-save-state=true
+window-state=43908
 window-style='normal'
 
 [keybindings]
@@ -44,6 +48,7 @@ background-transparency-percent=0
 badge-color='#AC7EA8'
 badge-color-set=false
 bold-color-set=false
+cell-width-scale=1.0
 cursor-colors-set=false
 cursor-shape='block'
 dim-transparency-percent=0
