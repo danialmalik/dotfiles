@@ -25,6 +25,7 @@ ln -sf $config_files_dir/docker-config.json ~/.docker/config.json
 
 #git
 ln -sf $config_files_dir/gitconfig ~/.gitconfig
+ln -sf $config_files_dir/gitignore_global ~/.gitignore_global
 
 # ssh
 ln -sf $dotfiles_secure_dir/ssh_config ~/.ssh/config
