@@ -157,6 +157,10 @@ else # MacOS
 
 fi
 
+############## Should be done after OS specific steps ######################
+
+
+
 ### ZNT's installer added snippet ###
 fpath=( "$fpath[@]" "$HOME/.config/znt/zsh-navigation-tools" )
 autoload n-aliases n-cd n-env n-functions n-history n-kill n-list n-list-draw n-list-input n-options n-panelize n-help
@@ -169,9 +173,8 @@ setopt AUTO_PUSHD HIST_IGNORE_DUPS PUSHD_IGNORE_DUPS
 zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 ### END ###
 
-
-############## Should be done after OS specific steps ######################
-
+### Tilix vte activation
+source /etc/profile.d/vte-2.91.sh
 
 # the fuck
 #eval $(thefuck --alias)
