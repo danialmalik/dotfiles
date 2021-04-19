@@ -108,6 +108,7 @@ sudo apt install -y \
     flameshot \
     gparted \
     htop \
+    kazam \
     lastpass-cli \
     ncdu \
     meld \
