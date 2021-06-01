@@ -28,6 +28,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tmhedberg/SimpylFold'
 Plug 'mattn/emmet-vim'
 Plug 'powerman/vim-plugin-autosess'
+Plug 'rking/ag.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
