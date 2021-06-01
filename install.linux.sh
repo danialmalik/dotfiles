@@ -128,6 +128,7 @@ sudo apt install -y \
     ranger \
     ruby-full \
     redis-server \
+    silversearcher-ag \
     sublime-text \
     sublime-merge \
     shutter \
