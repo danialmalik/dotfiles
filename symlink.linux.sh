@@ -43,3 +43,8 @@ ln -sf $config_files_dir/terminator_config ~/.config/terminator/config
 
 # pwerline10k theme
 ln -sf $config_files_dir/zsh_theme_powerline10k.zsh ~/.p10k.zsh
+
+# MPV media player
+mkdir -p ~/.config/mpv
+ln -sf $config_files_dir/config_files/mpv/input.conf ~/.config/mpv/input.conf
+ln -sf $config_files_dir/config_files/mpv/mpv.conf ~/.config/mpv/mpv.conf
