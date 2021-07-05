@@ -8,8 +8,8 @@ alias c='clear'
 # alias pwd="pwd && pwd | xclip -selection c"
 # alias cat='bat'
 
-######################################
-############### General ##############
+#######################################
+############### General / Tools #######
 #######################################
 
 alias desk="cd $HOME/Desktop"
@@ -50,9 +50,13 @@ if [ "$(command -v exa)" ]; then
 fi
 
 
-## bat
+#################### bat ######################
 # TODO: install themes
 # alias bat='bat -pp --theme="Nord"'
+
+##################### portainer ##################
+alias start_portainer="docker run -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce"
+alias stop_portainer="docker stop portainer"
 
 ######################################
 ############# Notes ##################
