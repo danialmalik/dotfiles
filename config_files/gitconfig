@@ -35,5 +35,6 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+
 [credential]
 	helper = cache --timeout=2592000 # 30 days
