@@ -37,6 +37,8 @@ function dmdeactivate() {
 alias v="code"
 alias s="subl"
 
+alias "v."="code ."
+alias "s."="subl ."
 
 ################### exa ####################
 
