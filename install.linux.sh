@@ -41,6 +41,10 @@ sudo apt install -y $HOME/Downloads/*.deb
 # Add software sources
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
+# brave browser
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
 # not required any more in linux mint 20
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
@@ -96,6 +100,7 @@ sudo apt install -y \
     apt-transport-https \
     ack \
     build-essential \
+    brave-browser \
     pandoc \
     shunit2 \
     cpulimit \
