@@ -3,7 +3,6 @@
 # variables
 dotfiles_dir=~/dotfiles/dotfiles
 config_files_dir=$dotfiles_dir/config_files
-dotfiles_secure_dir=~/dotfiles/secure_dotfiles
 
 # create dirs
 mkdir ~/.config/terminator/ 2>/dev/null
@@ -26,12 +25,6 @@ ln -sf $config_files_dir/docker-config.json ~/.docker/config.json
 #git
 ln -sf $config_files_dir/gitconfig ~/.gitconfig
 ln -sf $config_files_dir/gitignore_global ~/.gitignore_global
-
-# ssh
-ln -sf $dotfiles_secure_dir/ssh_config ~/.ssh/config
-
-# hosts
-sudo ln -sf $dotfiles_secure_dir/hosts /etc/hosts
 
 # config files
 
