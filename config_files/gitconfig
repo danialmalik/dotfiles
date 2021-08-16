@@ -10,11 +10,11 @@
 	gpgsign = true
 
 [pager]
-  # branch = true
-  # log = true
+  branch = true
+  log = true
 
 [core]
-  # pager = delta
+  pager = delta
 	excludesFile = $HOME/.gitignore_global
 
 [interactive]
