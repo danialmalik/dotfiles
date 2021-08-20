@@ -236,7 +236,7 @@ pyenv install 3.5.3
 pyenv install 3.8.3
 
 ## asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
 
 ##  docker
 sudo apt-get remove docker docker-engine docker.io containerd runc

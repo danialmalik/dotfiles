@@ -6,14 +6,17 @@
 
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# umask 022
 
+###################################################################
+############################## General ############################
+###################################################################
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+			. "$HOME/.bashrc"
     fi
 fi
 
@@ -21,13 +24,19 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+# for nodemodules bin
+export PATH="$PATH:./node_modules/.bin"
 
-# For nvm
+###################################################################
+################### Applications / utilities ######################
+###################################################################
+
+## nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# nvm auto-switch node version if `.nvmrc` file is found
+## nvm auto-switch node version if `.nvmrc` file is found
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
@@ -49,39 +58,35 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+## asdf
+source $HOME/.asdf/asdf.sh
 
-# for nodemodules bin
-export PATH="$PATH:./node_modules/.bin"
+## Go lang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
+## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# the fuck
+eval $(thefuck --alias)
+
+###################################################################
+####################### Configurations ############################
+###################################################################
 
 # docker-compose timeout
 export COMPOSE_HTTP_TIMEOUT=3000000000
 
-
-# Go lang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-
-# edx devstack
-# export OPENEDX_RELEASE=ironwood.master
-
-
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
-
 
 # for pipenv
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-
-# direnv
-eval "$(direnv hook zsh)"
 
 
 ################# ZSH #####################
@@ -157,12 +162,10 @@ else # MacOS
 
 fi
 
-############## Should be done after OS specific steps ######################
+
+###################################################################
+####################### Last steps ############################
+###################################################################
 
 ### Tilix vte activation
 source /etc/profile.d/vte-2.91.sh
-
-# the fuck
-#eval $(thefuck --alias)
-
-
