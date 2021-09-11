@@ -323,7 +323,7 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 # cd ~/progs
 # vagrant plugin install vagrant-hostsupdater
 # git clone https://github.com/wckr/wocker.git && cd wocker
-# vagrant up
+# vagrant up --provider virtualbox
 # vagrant halt
 
 ## install watchman
