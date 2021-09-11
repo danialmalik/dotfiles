@@ -303,6 +303,14 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-install
 ## doctor for rbenv verification
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
+## wocker
+mkdir ~/progs
+cd ~/progs
+vagrant plugin install vagrant-hostsupdater
+git clone https://github.com/wckr/wocker.git && cd wocker
+vagrant up --provider virtualbox
+vagrant halt
+
 ################ disabled ####################
 ## libinput-gestures and gestures
 # sudo gpasswd -a $USER input
@@ -317,14 +325,6 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 # git clone https://gitlab.com/cunidev/gestures /tmp/gestures
 # cd /tmp/gestures
 # sudo python3 setup.py install
-
-## wocker
-# mkdir ~/progs
-# cd ~/progs
-# vagrant plugin install vagrant-hostsupdater
-# git clone https://github.com/wckr/wocker.git && cd wocker
-# vagrant up --provider virtualbox
-# vagrant halt
 
 ## install watchman
 # cd ~/Downloads
