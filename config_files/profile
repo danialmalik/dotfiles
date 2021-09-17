@@ -98,6 +98,7 @@ unsetopt correct
 # have to source oh-my-zsh.sh if theme is changed in this file
 # https://github.com/denysdovhan/spaceship-prompt
 # ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="fwalch"
 # source $ZSH/oh-my-zsh.sh
 
 
@@ -140,9 +141,6 @@ else # MacOS
 	########### mysql_mac ##############
 	export PATH=$PATH:/usr/local/mysql/bin
 
-	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-	# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 	########### Android SDK #####################
 	export ANDROID_HOME=$HOME/Library/Android/sdk
 	export PATH=$PATH:$ANDROID_HOME/emulator
@@ -159,6 +157,8 @@ else # MacOS
 	fi
 
 	##################### zsh ###################
+	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+	# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 fi
 
