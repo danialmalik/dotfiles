@@ -19,12 +19,8 @@ ln -sf $config_files_dir/aliases ~/.aliases
 ln -sf $config_files_dir/vimrc ~/.vimrc
 ln -sf $config_files_dir/nvim_init.vim ~/.config/nvim/init.vim
 
-# docker
-ln -sf $config_files_dir/docker-config.json ~/.docker/config.json
-
 #git
 ln -sf $config_files_dir/gitconfig ~/.gitconfig
-ln -sf $config_files_dir/gitignore_global ~/.gitignore_global
 
 # config files
 

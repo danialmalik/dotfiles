@@ -59,7 +59,7 @@ fi
 ##################### portainer ##################
 function _start_portainer () {
 	docker volume inspect portainer_data >/dev/null || docker volume create portainer_data
-	docker run -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+	docker run --rm -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 }
 alias start_portainer="_start_portainer"
 alias stop_portainer="docker stop portainer"
@@ -69,6 +69,7 @@ alias stop_portainer="docker stop portainer"
 #######################################
 alias notes='cd $HOME/MEGAsync/notes'
 alias cnotes='code $HOME/MEGAsync/notes'
+alias snotes='subl $HOME/MEGAsync/notes'
 
 ######################################
 ################ git ################
