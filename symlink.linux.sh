@@ -25,7 +25,7 @@ ln -sf $config_files_dir/gitconfig ~/.gitconfig
 # config files
 
 # https://github.com/bulletmark/libinput-gestures
-ln -sf $config_files_dir/config_files/libinput_gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
+ln -sf $config_files_dir/libinput_gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 # terminator
 ln -sf $config_files_dir/terminator_config ~/.config/terminator/config
@@ -35,5 +35,5 @@ ln -sf $config_files_dir/zsh_theme_powerline10k.zsh ~/.p10k.zsh
 
 # MPV media player
 mkdir -p ~/.config/mpv
-ln -sf $config_files_dir/config_files/mpv/input.conf ~/.config/mpv/input.conf
-ln -sf $config_files_dir/config_files/mpv/mpv.conf ~/.config/mpv/mpv.conf
+ln -sf $config_files_dir/mpv/input.conf ~/.config/mpv/input.conf
+ln -sf $config_files_dir/mpv/mpv.conf ~/.config/mpv/mpv.conf
