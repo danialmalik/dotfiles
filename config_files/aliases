@@ -127,17 +127,14 @@ else
 fi
 
 
-
-
-
-
-
-
 ########################################
-############## TEMP ################
+################ TEMP ##################
 ########################################
+
+# Disable/Enable laptop's internal keyboard
 alias ddd='xinput disable "AT Translated Set 2 keyboard"'
 alias dde='xinput enable "AT Translated Set 2 keyboard"'
 
+# Disable/Enable 's' key
 alias ddkd="xmodmap -e 'keycode 39 = 0x0000'"
 alias ddke="xmodmap -e 'keycode 39 = s S s S'"
