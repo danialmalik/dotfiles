@@ -182,7 +182,11 @@ sudo apt install -y \
 
 # Gnome
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
-  sudo apt-get -y install gnome-tweak-tool
+  sudo apt-get -y install \
+    gnome-tweak-tool \
+    openvpn \
+    network-manager-openvpn \
+    network-manager-openvpn-gnome
 fi
 
 ################# Snap ########################
