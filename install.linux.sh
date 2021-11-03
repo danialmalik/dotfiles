@@ -5,7 +5,7 @@ set -e
 #################### Configurations / variables ############################
 ############################################################################
 # Ubuntu release upon which the current distro is based
-UBUNTU_RELEASE='groovy'
+UBUNTU_RELEASE='hirsute'
 
 DOTFILES=$HOME/dotfiles/dotfiles
 
@@ -199,6 +199,7 @@ sudo apt-get install snapd -y
 # sudo snap install vscode --classic
 sudo snap install postman
 sudo snap install insomnia
+sudo snap install discord
 sudo snap install vlc
 sudo snap install skype --classic
 sudo snap install gitkraken --classic
@@ -385,3 +386,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 # install ZSH plugins
 ./install_zsh_plugins.sh
+
+
+######### Some Post install manual things to do
+# grub
+#
