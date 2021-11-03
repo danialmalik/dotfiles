@@ -390,4 +390,10 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 ######### Some Post install manual things to do
 # grub
-#
+# screen recorder (peek or SimpleScreenRecorder)
+# timeshift
+# Tor
+# Transmission
+# Webapps (cinnamon)
+# warpinator
+# XDM
