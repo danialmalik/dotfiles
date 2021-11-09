@@ -172,6 +172,7 @@ sudo apt install -y \
     tldr \
     typora \
     ulauncher \
+    unison \
     uget aria2 \
     vagrant \
     vim vim-gtk3 \
