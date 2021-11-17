@@ -77,7 +77,9 @@ sudo add-apt-repository ppa:agornostal/ulauncher
 # shutter
 sudo add-apt-repository -y ppa:linuxuprising/shutter
 
-sudo apt update
+# Github CLI
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
 # calibre
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
@@ -121,6 +123,8 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 
 # \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui
 
+sudo apt update
+
 ################# apt-get ############################
 sudo apt install -y \
     apache2-utils \
@@ -140,6 +144,7 @@ sudo apt install -y \
     fonts-firacode \
     flameshot \
     gparted \
+    gh \
     htop \
     kazam \
     lastpass-cli \
