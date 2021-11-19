@@ -6,7 +6,7 @@ set -e
 ############################################################################
 # Ubuntu release upon which the current distro is based
 UBUNTU_RELEASE='hirsute'
-
+USERNAME=danialmalik
 DOTFILES=$HOME/dotfiles/dotfiles
 
 ############################################################################
@@ -146,6 +146,7 @@ sudo apt install -y \
     gparted \
     gh \
     htop \
+    incron \
     kazam \
     lastpass-cli \
     ncdu \
@@ -383,6 +384,9 @@ fi
 
 # load tilix config
 dconf load /com/gexperts/Tilix/ < ./config_files/tilix.dconf
+
+# Allow the user to use incron
+sudo echo $USERNAME >> /etc/incron.allow
 
 # Finally install zsh
 sudo apt-get -y install zsh
