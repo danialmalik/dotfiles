@@ -62,7 +62,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 
 ## typora
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
@@ -103,7 +103,8 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 # sudo add-apt-repository -y ppa:rickyrockrat/parcellite-appindicator
 
 # xdm
-# install manually https://subhra74.github.io/xdm/
+# # install manually https://subhra74.github.io/xdm/
+#
 # sudo add-apt-repository ppa:noobslab/apps
 # sudo apt-get update && sudo apt-get xdman install
 #
@@ -123,10 +124,10 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 
 # \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui
 
-sudo apt update
+sudo apt-get update
 
 ################# apt-get ############################
-sudo apt install -y \
+sudo apt-get install -y \
     apache2-utils \
     apt-transport-https \
     ack \
