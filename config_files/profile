@@ -95,12 +95,17 @@ unsetopt correct_all
 unsetopt correct
 
 ############# zsh theme ####################
-# have to source oh-my-zsh.sh if theme is changed in this file
-# https://github.com/denysdovhan/spaceship-prompt
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# have to source oh-my-zsh.sh if theme is changed in this file. Otherwise
+# set theme in ~/.zshrc
+#
+# https://github.com/romkatv/powerlevel10k
 # ZSH_THEME="fwalch"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 # source $ZSH/oh-my-zsh.sh
 
+# UNCOMMENT if powerlevel10k theme is set.
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ##################### System specific #####################
 
@@ -130,7 +135,6 @@ if [ "$SYSTEM" = "Linux" ]; then
 	# to show snap apps in overview
 	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
 
-	# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 else # MacOS
 	# Mac specific settings here
@@ -155,10 +159,6 @@ else # MacOS
 	if command -v pyenv 1>/dev/null 2>&1; then
 		eval "$(pyenv init -)"
 	fi
-
-	##################### zsh ###################
-	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-	# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 fi
 
