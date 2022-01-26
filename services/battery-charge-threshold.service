@@ -3,6 +3,14 @@ Description=Set the battery charge threshold
 After=multi-user.target
 StartLimitBurst=0
 
+
+# Sets the battery charging threshold. Only works on ASUS
+# `ls /sys/class/power_supply` to see what filename is being used
+# for battery. e.g. BAT0, BAT1 or BATC.
+#
+# update the `ExecStart` line below with your threshold (80 currently)
+# and your filename (BAT1) currently.
+
 [Service]
 Type=oneshot
 Restart=on-failure
