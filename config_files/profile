@@ -27,6 +27,10 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # for nodemodules bin
 export PATH="$PATH:./node_modules/.bin"
 
+
+# For info
+source /etc/os-release
+
 ###################################################################
 ################### Applications / utilities ######################
 ###################################################################
