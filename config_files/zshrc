@@ -76,6 +76,7 @@ plugins=(
   docker-compose
   git
   wd
+  copypath
   alias-tips
   zsh-syntax-highlighting
   zsh-autosuggestions

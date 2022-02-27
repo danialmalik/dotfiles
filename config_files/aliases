@@ -15,6 +15,12 @@ alias c='clear'
 alias desk="cd $HOME/Desktop"
 alias down="cd $HOME/Downloads"
 
+# ZSH `copypath` plugin
+alias cpwd="copypath"
+
+# reload zsh
+alias rld="exec zsh"
+
 # aenv
 alias aenv='source env/bin/activate'
 
