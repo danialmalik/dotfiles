@@ -133,6 +133,7 @@ sudo apt-get install -y \
     ack \
     build-essential \
     brave-browser \
+    exa \
     pandoc \
     shunit2 \
     code \
@@ -308,7 +309,7 @@ cd ..
 curl https://sh.rustup.rs -sSf | sh
 
 ## Cargo packages
-cargo install exa
+# cargo install exa
 cargo install gitui
 
 ## rbenv for ruby
