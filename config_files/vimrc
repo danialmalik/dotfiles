@@ -93,7 +93,7 @@ nnoremap GR :grep -R '\b<cword>\b' %:p:h/*<CR>
 
 " onoremap in( :<c-u>normal! /(vi(<cr>
 " Custom abbreviations
-iabbrev @@ muhammadosamaarshad@gmail.com
+iabbrev @@ danial@motoinsight.com
 
 " Autocommand groups
 augroup filetype_vim
