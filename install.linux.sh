@@ -244,6 +244,7 @@ npm i -g \
     fx \
     serve \
     gitmoji-cli \
+    git-stats \
     semantic-git-commit-cli
 
 ## pyenv
