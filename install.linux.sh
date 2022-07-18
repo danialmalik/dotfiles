@@ -92,6 +92,11 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
+# Syncthing
+sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+
+
 
 ########################## Disabled ##########################
 ### Brave
@@ -179,6 +184,7 @@ sudo apt-get install -y \
     sublime-merge \
     shutter \
     stress \
+    syncthing \
     tilix \
     terminator \
     tree \
