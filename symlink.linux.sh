@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # variables
-DOTFILES_DIR=~/dotfiles/dotfiles
-CONFIG_FILES_DIR=$DOTFILES_DIR/config_files
-SERVICES_DIR=$DOTFILES_DIR/services
+export DOTFILES_DIR=~/dotfiles/dotfiles
+export CONFIG_FILES_DIR=$DOTFILES_DIR/config_files
+export SERVICES_DIR=$DOTFILES_DIR/services
+export SCRIPTS_DIR=$DOTFILES_DIR/scripts
 
 # create dirs
 mkdir ~/.config/terminator/ 2>/dev/null
@@ -41,3 +42,8 @@ ln -sf $CONFIG_FILES_DIR/mpv/mpv.conf ~/.config/mpv/mpv.conf
 
 # Systemd services
 sudo ln -sf $SERVICES_DIR/battery-charge-threshold.service /etc/systemd/system/battery-charge-threshold.service
+
+# Create nemo scripts link
+sudo rm -rf $HOME/.local/share/nemo/scripts
+ln -sf $SCRIPTS_DIR/nemo/ $HOME/.local/share/nemo/scripts
+chmod +x $SCRIPTS_DIR/nemo/*
