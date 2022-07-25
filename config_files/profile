@@ -22,7 +22,7 @@ fi
 
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotfiles/dotfiles/scripts/usr:$PATH"
 
 # for nodemodules bin
 export PATH="$PATH:./node_modules/.bin"
