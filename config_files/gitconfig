@@ -15,18 +15,18 @@
 
 [core]
   pager = delta
-	excludesFile = $HOME/.gitignore_global
 	editor = subl -w
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features=interactive
 
 [delta]
+  navigate = true  # use n and N to move between diff sections
   # features = side-by-side line-numbers decorations
   decorations = true
   whitespace-error-style = 22 reverse
   # width = 400
-  # side-by-side = true
+  side-by-side = true
   line-numbers = true
   # line-numbers-left-format = "-"
   # line-numbers-right-format = "│ "
@@ -39,3 +39,9 @@
 
 [credential]
 	helper = cache --timeout=2592000 # 30 days
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
