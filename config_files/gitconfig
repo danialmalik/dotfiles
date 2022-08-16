@@ -21,7 +21,6 @@
   diffFilter = delta --color-only --features=interactive
 
 [delta]
-  navigate = true  # use n and N to move between diff sections
   # features = side-by-side line-numbers decorations
   decorations = true
   whitespace-error-style = 22 reverse
