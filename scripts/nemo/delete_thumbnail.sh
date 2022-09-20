@@ -13,7 +13,7 @@ delete_thumbnail () {
     rm -rf ~/.cache/thumbnails/*
 
 
-    # Area that needs to be fixed.
+    # This portion of code needs to be fixed to delete the specific thumb.
     filename=$1
     if [[ $filename != /* ]]
     then
