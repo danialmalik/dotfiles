@@ -117,6 +117,11 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias ctl='sudo systemctl'
 	alias ydl='youtube-dl --no-check-certificate'
 
+	################ Usefull commands #################
+	alias check-hw-logs="sudo dmesg -Hw"
+	alias wifi-events="sudo iwevent"
+	alias check-wifi-logs="sudo dmesg | grep iwlwifi"
+
 else
 	# brew
 	alias nbrew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
