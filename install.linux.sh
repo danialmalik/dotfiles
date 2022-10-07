@@ -198,6 +198,7 @@ sudo apt-get install -y \
     virtualbox \
     virtualbox-qt \
     virtualenv virtualenvwrapper\
+    wavemon \
     xclip
 
 # Gnome
