@@ -5,6 +5,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Encoding
+set encoding=UTF-8
+
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
@@ -17,18 +21,25 @@ Plug 'alvan/vim-closetag'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
 Plug 'valloric/youcompleteme'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tmhedberg/SimpylFold'
 Plug 'mattn/emmet-vim'
 Plug 'powerman/vim-plugin-autosess'
 Plug 'rking/ag.vim'
+Plug 'preservim/nerdtree'
+Plug 'scrooloose/nerdtree'
+" NerdTree Plugin
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'airblade/vim-gitgutter'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
