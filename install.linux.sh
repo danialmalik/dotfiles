@@ -180,6 +180,7 @@ sudo apt-get install -y \
     ruby-full \
     redis-server \
     silversearcher-ag \
+    stacer \
     sublime-text \
     sublime-merge \
     shutter \
