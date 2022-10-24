@@ -1,11 +1,13 @@
 #!/bin/bash
 set -e
 
+# TODOs:
+# add mainline kernel installer.
+
+
 ############################################################################
 #################### Configurations / variables ############################
 ############################################################################
-# Ubuntu release upon which the current distro is based
-UBUNTU_RELEASE='hirsute'
 USERNAME=danialmalik
 DOTFILES=$HOME/dotfiles/dotfiles
 
