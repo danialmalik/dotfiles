@@ -66,8 +66,9 @@ load-nvmrc
 source $HOME/.asdf/asdf.sh
 
 ## Go lang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=/usr/local/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

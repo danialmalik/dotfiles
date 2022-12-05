@@ -333,6 +333,13 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-install
 ## doctor for rbenv verification
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
+########## Go Lang ##############
+GO_VERSION=1.19.3
+cd /tmp/
+wget https://dl.google.com/go/go"$GO_VERSION".linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go"$GO_VERSION".linux-amd64.tar.gz
+
+
 ## wocker
 mkdir ~/progs
 cd ~/progs
