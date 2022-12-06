@@ -67,7 +67,7 @@ source $HOME/.asdf/asdf.sh
 
 ## Go lang
 # export GOPATH=/usr/local/go
-export GOROOT=/usr/local/go
+export GOROOT=$HOME/.go/go
 export PATH=$PATH:$GOROOT/bin
 
 ## rbenv
