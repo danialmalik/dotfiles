@@ -153,6 +153,7 @@ if [ "$SYSTEM" = "Linux" ]; then
 	# pyenv
 	export PATH=/home/danialmalik/.pyenv/bin:$PATH
 	eval "$(pyenv init -)"
+	eval "$(pyenv init --path)"
 	eval "$(pyenv virtualenv-init -)"
 
 	# only for gnome
