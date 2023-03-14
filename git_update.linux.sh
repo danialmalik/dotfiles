@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dconf dump /com/gexperts/Tilix/ > tilix.dconf
+dconf dump /com/gexperts/Tilix/ > config_files/tilix.dconf
 
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
     dconf dump /org/gnome/ > config_files/gnome.conf
