@@ -53,8 +53,8 @@ if [ "$(command -v exa)" ]; then
     # unalias -m 'l'
     # unalias -m 'la'
     unalias -m 'ls'
-    alias ls='exa -G  --color auto --icons -a -s type'
-    alias ll='exa -lhHg --color always --icons -a -s type'
+    alias ls='exa -G  --color auto --icons -a -s type -b'
+    alias ll='exa -lhHgbuUm --color always --icons -a -s type -b'
 fi
 
 
