@@ -144,8 +144,12 @@ sudo apt-get install -y \
     apt-transport-https \
     ack \
     build-essential \
+    bpytop \
     brave-browser \
+    duf \
     exa \
+    exiftool \
+    fzf \
     pandoc \
     shunit2 \
     code \
@@ -160,6 +164,7 @@ sudo apt-get install -y \
     gparted \
     gh \
     htop \
+    hstr \
     incron \
     kazam \
     lastpass-cli \
@@ -327,6 +332,9 @@ curl https://sh.rustup.rs -sSf | sh
 ## Cargo packages
 # cargo install exa
 cargo install gitui
+
+# Dua CLI (Disk usage analyzer)
+cargo install dua-cli
 
 ## rbenv for ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
