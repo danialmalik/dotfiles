@@ -192,5 +192,8 @@ fi
 ####################### Last steps ############################
 ###################################################################
 
+#### Source scripts
+source $HOME/dotfiles/dotfiles/scripts/utils/helpers.sh
+
 ### Tilix vte activation
 source /etc/profile.d/vte-2.91.sh
