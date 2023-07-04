@@ -160,6 +160,10 @@ if [ "$SYSTEM" = "Linux" ]; then
 	# to show snap apps in overview
 	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
 
+	# Dotnet
+	export PATH=$PATH:$HOME/.dotnet
+	export DOTNET_ROOT=$HOME/.dotnet
+
 
 else # MacOS
 	# Mac specific settings here
