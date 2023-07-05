@@ -350,8 +350,12 @@ cd /tmp/
 wget https://dl.google.com/go/go"$GO_VERSION".linux-amd64.tar.gz
 rm -rf $GOROOT/go && tar -C $GOROOT -xzf go"$GO_VERSION".linux-amd64.tar.gz
 
+########## GOENV
+# Installation and upgrade: https://github.com/syndbg/goenv/blob/master/INSTALL.md
+git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 
-## wocker
+
+############ wocker ##################
 mkdir ~/progs
 cd ~/progs
 vagrant plugin install vagrant-hostsupdater
