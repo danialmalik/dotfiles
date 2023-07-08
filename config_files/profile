@@ -104,11 +104,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 
-################# ZSH #####################
-# disable auto correct
-unsetopt correct_all
-unsetopt correct
-
 ############# zsh theme ####################
 # have to source oh-my-zsh.sh if theme is changed in this file. Otherwise
 # set theme in ~/.zshrc
@@ -119,6 +114,13 @@ source $ZSH/oh-my-zsh.sh
 # UNCOMMENT if powerlevel10k theme is set.
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+################# ZSH #####################
+# disable auto correct
+unsetopt correct_all
+unsetopt correct
+
 
 ############# Anaconda ####################
 # Installation:: https://docs.anaconda.com/free/anaconda/install/linux/
