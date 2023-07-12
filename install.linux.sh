@@ -141,6 +141,8 @@ sudo apt-get update
 
 ################# apt-get ############################
 sudo apt-get install -y \
+    libreadline-dev \
+    libncurses5-dev \
     apache2-utils \
     apt-transport-https \
     ack \
