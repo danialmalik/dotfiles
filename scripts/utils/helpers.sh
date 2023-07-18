@@ -18,3 +18,39 @@ show_git_alias_cheatsheet() {
 
 EOF
 }
+
+
+## Usage: list-aws-instances.sh  mi-qa qa app
+
+list_aws_instances() {
+    PROFILE="${1}"
+    ENV="${2}"
+    NAME="${3}"
+    REGION="${4:-ca-central-1}"
+
+    # display error if any of the parameters are not sent
+    if [ -z "${PROFILE}" ] || [ -z "${ENV}" ] || [ -z "${NAME}" ]; then
+        echo "Usage: list-aws-instances.sh <profile> <env> <name> [region]"
+        return 1
+    # else print passed values of parameters
+    else
+        echo "Profile: ${PROFILE}"
+        echo "Environment: ${ENV}"
+        echo "Name: ${NAME}"
+        echo "Region: ${REGION}"
+    fi
+
+    aws ec2 describe-instances \
+    --filters "Name=tag:Environment,Values="${ENV}"" \
+    --profile "${PROFILE}" \
+    --region "${REGION}" \
+    | jq '.Reservations[].Instances[]
+        | {
+        instance_id: .InstanceId,
+        name: .Tags[]
+            | select(.Key == "Name")
+            | select(.Value | match('\"${NAME}\"')) | .Value,
+        launch_time: .LaunchTime,
+        state: .State.Name
+        }'
+}
