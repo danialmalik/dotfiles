@@ -357,6 +357,25 @@ rm -rf $GOROOT/go && tar -C $GOROOT -xzf go"$GO_VERSION".linux-amd64.tar.gz
 git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 
 
+##############################################
+############ etet ##########################
+##############################################
+pushd /tmp/
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+chmod +x ./dotnet-install.sh
+# ./dotnet-install.sh --version latest
+./dotnet-install.sh --channel 7.0
+
+# runtime
+./dotnet-install.sh --version latest --runtime aspnetcore
+
+### EF tools
+dotnet tool install --global dotnet-ef
+
+
+###############################################
+###############################################
+
 ############ wocker ##################
 mkdir ~/progs
 cd ~/progs
