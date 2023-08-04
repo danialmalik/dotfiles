@@ -15,6 +15,7 @@
 
 [core]
   pager = delta
+	autocrlf = true
 #	editor = subl -w
 
 [interactive]
