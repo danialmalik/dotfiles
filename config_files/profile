@@ -27,6 +27,9 @@ PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotfiles/dotfiles/scripts/usr:$PATH"
 # for nodemodules bin
 export PATH="$PATH:./node_modules/.bin"
 
+# Editor
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # For info
 source /etc/os-release
