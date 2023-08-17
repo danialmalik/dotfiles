@@ -54,3 +54,17 @@ list_aws_instances() {
         state: .State.Name
         }'
 }
+
+
+## For tempo mat
+activateTempomat() {
+    PROFILE="${1}"
+    if [ -z "${PROFILE}" ]; then
+        echo "Usage: activateTempomat <profile>"
+        return 1
+    fi
+    rm ~/.tempomat_back 2> /dev/null
+    mv ~/.tempomat ~/.tempomat_back 2> /dev/null
+
+    cp ~/.tempomat_${PROFILE} ~/.tempomat
+}
