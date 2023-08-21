@@ -185,6 +185,7 @@ sudo apt-get install -y \
     python3-venv \
     ipython3 \
     bpython \
+    qbittorrent \
     ripgrep \
     ranger \
     ruby-full \
