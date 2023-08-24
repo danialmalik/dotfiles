@@ -176,8 +176,8 @@ if [ "$SYSTEM" = "Linux" ]; then
 	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
 
 	# Dotnet
-	export PATH=$PATH:$HOME/.dotnet
-	export PATH="$PATH:/home/danialmalik/.dotnet/tools"
+	export PATH=$HOME/.dotnet/tools:$PATH
+	export PATH=$HOME/.dotnet:$PATH
 	export DOTNET_ROOT=$HOME/.dotnet
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
