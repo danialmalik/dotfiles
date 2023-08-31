@@ -26,7 +26,7 @@
   decorations = true
   whitespace-error-style = 22 reverse
   # width = 400
-  side-by-side = true
+  # side-by-side = true
   line-numbers = true
   # line-numbers-left-format = "-"
   # line-numbers-right-format = "│ "
