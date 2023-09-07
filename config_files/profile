@@ -90,7 +90,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(direnv hook zsh)"
 
 # the fuck
-# eval $(thefuck --alias)
+eval $(thefuck --alias f)
 
 ###################################################################
 ####################### Configurations ############################
