@@ -49,26 +49,20 @@ alias "s."="subl ."
 ################### exa ####################
 
 if [ "$(command -v exa)" ]; then
-    unalias -m 'll'
-    # unalias -m 'l'
-    # unalias -m 'la'
     unalias -m 'ls'
-    alias ls='exa -G  --color auto --icons -a -s type -b'
-    alias ll='exa -lhHgbuUm --color always --icons -a -s type -b'
+    unalias -m 'll'
+    unalias -m 'l'
+    # unalias -m 'la'
+	alias l='ls'
+    alias ls='exa -b -F -a -s type --color=always --icons -G'
+    alias ll='exa -b -F -a -s type --color=always --icons -l -hHUm'
+	alias lll='ll -g -u --octal-permissions -@'
 fi
 
 
 #################### bat ######################
 # TODO: install themes
 # alias bat='bat -pp --theme="Nord"'
-
-##################### portainer ##################
-function _start_portainer () {
-	docker volume inspect portainer_data >/dev/null || docker volume create portainer_data
-	docker run --rm -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-}
-alias start_portainer="_start_portainer"
-alias stop_portainer="docker stop portainer"
 
 ######################################
 ############# Notes ##################
