@@ -213,6 +213,9 @@ sudo apt-get install -y \
     wavemon \
     xclip
 
+# Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Gnome
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
   sudo apt-get -y install \

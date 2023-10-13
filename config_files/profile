@@ -191,6 +191,10 @@ if [ "$SYSTEM" = "Linux" ]; then
 	export DOTNET_ROOT=$HOME/.dotnet
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+	# Homebrew (Linux)
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	export HOMEBREW_NO_ANALYTICS=1
+
 else # MacOS
 	# Mac specific settings here
 
