@@ -40,22 +40,32 @@ config.colors = {
 ------------------------ Configs --------------------------------
 
 ------------------------ Event handlers --------------------------
-wezterm.on('launch-1', function (window, pane)
-  -- window:perform_action(
-  --   act.SpawnCommandInNewWindow {
-  --     args = { 'vim', name },
-  --   },
-  --   pane
-  -- )
-
-  local pane1_2 = pane:split {
+wezterm.on('launch-1', function (window, pane1_1)
+  local pane1_2 = pane1_1:split {
     direction = 'Bottom',
     size = 0.333
   }
-  local pane_1_3 = pane:split {
+  local pane1_3 = pane1_1:split {
     direction = 'Bottom',
     size = 0.5
   }
+
+  pane1_1:split {
+    direction = 'Right',
+    size = 0.5
+  }
+
+  pane1_2:split {
+    direction = 'Right',
+    size = 0.5
+  }
+
+  pane1_3:split {
+    direction = 'Right',
+    size = 0.5
+  }
+
+
 end)
 
 ------------------------ Keybindings -----------------------------
