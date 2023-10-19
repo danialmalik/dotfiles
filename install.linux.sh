@@ -199,7 +199,6 @@ sudo apt-get install -y \
     stress \
     syncthing \
     tilix \
-    terminator \
     tree \
     tldr \
     typora \
@@ -212,7 +211,10 @@ sudo apt-get install -y \
     virtualbox-qt \
     virtualenv virtualenvwrapper\
     wavemon \
-    xclip
+    xclip \
+    ## Disabled
+    # terminator \
+
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

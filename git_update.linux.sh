@@ -1,6 +1,9 @@
 #!/bin/bash
 
-dconf dump /com/gexperts/Tilix/ > config_files/tilix.dconf
+# First check if Tilix config exist in dconf
+if [[ $(dconf list /com/gexperts/Tilix/) != "" ]]; then
+    dconf dump /com/gexperts/Tilix/ > config_files/tilix.dconf
+fi
 
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
     dconf dump /org/gnome/ > config_files/gnome.conf

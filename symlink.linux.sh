@@ -32,8 +32,8 @@ ln -sf $CONFIG_FILES_DIR/libinput_gestures/libinput-gestures.conf ~/.config/libi
 # terminator
 ln -sf $CONFIG_FILES_DIR/terminator_config ~/.config/terminator/config
 
-# Tabby
-ln -sf $CONFIG_FILES_DIR/tabby_config.yml ~/.config/tabby/config.yaml
+# Wezterm
+ln -sf $CONFIG_FILES_DIR/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 
 # pwerline10k theme
 ln -sf $CONFIG_FILES_DIR/zsh_theme_powerline10k.zsh ~/.p10k.zsh
