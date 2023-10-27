@@ -41,11 +41,6 @@ config.colors = {
 
 ------------------------ Event handlers --------------------------
 wezterm.on('launch-1', function (window, pane1_1)
-  pane1_1:performCommand {
-    args = { 'cd', '~/Projects' },
-    cwd = '~/Projects',
-  }
-
   local pane1_2 = pane1_1:split {
     direction = 'Bottom',
     size = (1-0.333)
