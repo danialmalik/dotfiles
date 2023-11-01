@@ -96,8 +96,10 @@ eval $(thefuck --alias f)
 ####################### Configurations ############################
 ###################################################################
 
+################ Docker ####################
 # docker-compose timeout
 export COMPOSE_HTTP_TIMEOUT=3000000000
+export DOCKER_BUILDKIT=1
 
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
