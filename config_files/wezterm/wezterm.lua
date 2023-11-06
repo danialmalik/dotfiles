@@ -49,22 +49,25 @@ end
 -- Later This Evening
 config.color_scheme = 'Builtin Dark'
 config.color_scheme = 'Kolorit'
+config.color_scheme = 'Galaxy'
+config.color_scheme = 'Gnometerm (terminal.sexy)'
 
--- config.colors = {background = 'black'}
 
--- config.window_background_image = '/path/to/wallpaper.jpg'
+-- config.colors = {background = '#000000'}
 
--- config.window_background_image_hsb = {
---   -- Darken the background image by reducing it to 1/3rd
---   brightness = 0.3,
+config.window_background_image = '/home/danialmalik/MEGAsync/imgs/1139110.jpg'
 
---   -- You can adjust the hue by scaling its value.
---   -- a multiplier of 1.0 leaves the value unchanged.
---   hue = 1.0,
+config.window_background_image_hsb = {
+  -- Darken the background image by reducing it to 1/3rd
+  brightness = 0.1,
 
---   -- You can adjust the saturation also.
---   saturation = 1.0,
--- }
+  -- You can adjust the hue by scaling its value.
+  -- a multiplier of 1.0 leaves the value unchanged.
+  hue = 1.0,
+
+  -- You can adjust the saturation also.
+  saturation = 0.4,
+}
 
 ------------------------ Configs --------------------------------
 
