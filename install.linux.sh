@@ -25,12 +25,11 @@ DOTFILES=$HOME/dotfiles/dotfiles
 # TODO: use script to install latest versions
 # Download debs
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megacmd_1.4.0-2.1_amd64.deb
-wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/dolphin-megasync_4.1.1+4.1_amd64.deb
+# wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/dolphin-megasync_4.1.1+4.1_amd64.deb
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megasync_4.3.5-7.1_amd64.deb
 
-wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# wget -P $HOME/Downloads https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget -P $HOME/Downloads https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-wget -P $HOME/Downloads https://downloads.mongodb.com/compass/mongodb-compass_1.19.3_amd64.deb
 
 # wget -P $HOME/Downloads https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_arm64.deb
 
@@ -42,7 +41,6 @@ wget -P $HOME/Downloads https://github.com/barnumbirr/delta-debian/releases/down
 wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-common_0.95.10-0_all.deb
 wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-gtk_0.95.10-0_all.deb
 
-# wget -P $HOME/Downloads ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
 
 ############################################################################
 ########################## Add PPAs/keys ##################################
@@ -68,31 +66,24 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 ## typora
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+# wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 
 # add Typora's repository
-sudo add-apt-repository 'deb https://typora.io/linux ./'
+# sudo add-apt-repository 'deb https://typora.io/linux ./'
 
 ## ulauncher
 sudo add-apt-repository ppa:agornostal/ulauncher
 
 # shutter
-sudo add-apt-repository -y ppa:linuxuprising/shutter
+# sudo add-apt-repository -y ppa:linuxuprising/shutter
 
 # Github CLI
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
-# calibre
-sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
-
 # vscode
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-
-# vagrant
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
 # Syncthing
 # Setting up: https://docs.syncthing.net/users/autostart.html#how-to-set-up-a-user-service
@@ -101,11 +92,11 @@ echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://
 
 
 
-########################## Disabled ##########################
 ### Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
+########################## Disabled ##########################
 
 # uget
 # TODO: Add -y option ? so that doesn't ask for enter
@@ -123,21 +114,15 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 # sudo apt-get update && sudo apt-get xdman install
 #
 
-# albert
-# echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-# curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home:manuelschneid3r.gpg > /dev/null
-# sudo apt update
-# sudo apt install albert
-
-
 ############################################################################
 ########################## Install Apps ##################################
 ############################################################################
 
 ################# Disabled ###########################
 
-# \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui
+# \ # mysql-workbench \ # ipython \ # ipython3 \ python-pip \ mongodb \ fluxgui \ pandoc
 
+# stacer # System monitor
 sudo apt-get update
 
 ################# apt-get ############################
@@ -154,7 +139,6 @@ sudo apt-get install -y \
     exa \
     exiftool \
     fzf \
-    pandoc \
     shunit2 \
     code \
     cpulimit \
@@ -171,50 +155,31 @@ sudo apt-get install -y \
     hstr \
     incron \
     kazam \
-    lastpass-cli \
     ncdu \
     meld \
-    mysql-client mysql-server mycli \
     megacmd \
-    numix-icon-theme-circle \
     neovim \
-    parcellite \
-    postgresql pgcli \
     python-dev \
     python3-dev \
     python3-pip \
     python3-venv \
-    ipython3 \
     bpython \
     qbittorrent \
     ripgrep \
-    ranger \
-    ruby-full \
-    redis-server \
-    silversearcher-ag \
-    stacer \
     sublime-text \
     sublime-merge \
     shutter \
-    stress \
     syncthing \
-    tilix \
     tree \
     tldr \
-    typora \
     ulauncher \
     unison \
     uget aria2 \
-    vagrant \
     vim vim-gtk3 \
     virtualbox \
     virtualbox-qt \
-    virtualenv virtualenvwrapper\
     wavemon \
     xclip \
-    ## Disabled
-    # terminator \
-
 
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -237,12 +202,8 @@ sudo apt-get install snapd -y
 
 # sudo snap install vscode --classic
 sudo snap install postman
-sudo snap install insomnia
 sudo snap install discord
-sudo snap install vlc
-sudo snap install skype --classic
-sudo snap install gitkraken --classic
-sudo snap install slack --classic
+# sudo snap install slack --classic
 
 
 ######################## Custom Installations #######################
@@ -277,11 +238,10 @@ curl https://pyenv.run | bash
 sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject
 
 # pyenv -> python 3
-pyenv install 3.5.3
 pyenv install 3.8.3
 
 ## asdf
-git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
+# git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
 
 ##  docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -344,20 +304,20 @@ curl https://sh.rustup.rs -sSf | sh
 cargo install gitui
 
 # Dua CLI (Disk usage analyzer)
-cargo install dua-cli
+# cargo install dua-cli
 
 ## rbenv for ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 ## doctor for rbenv verification
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
-########## GoLang ##############
-GO_VERSION=1.19.3
-GOROOT=$HOME/.go
-mkdir -p $GOROOT
-cd /tmp/
-wget https://dl.google.com/go/go"$GO_VERSION".linux-amd64.tar.gz
-rm -rf $GOROOT/go && tar -C $GOROOT -xzf go"$GO_VERSION".linux-amd64.tar.gz
+# ########## GoLang ##############
+# GO_VERSION=1.19.3
+# GOROOT=$HOME/.go
+# mkdir -p $GOROOT
+# cd /tmp/
+# wget https://dl.google.com/go/go"$GO_VERSION".linux-amd64.tar.gz
+# rm -rf $GOROOT/go && tar -C $GOROOT -xzf go"$GO_VERSION".linux-amd64.tar.gz
 
 ########## GOENV
 # Installation and upgrade: https://github.com/syndbg/goenv/blob/master/INSTALL.md
@@ -365,7 +325,7 @@ git clone https://github.com/syndbg/goenv.git $HOME/.goenv
 
 
 ##############################################
-############ etet ##########################
+############ dotnet ##########################
 ##############################################
 pushd /tmp/
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
@@ -383,15 +343,17 @@ dotnet tool install --global dotnet-ef
 ###############################################
 ###############################################
 
-############ wocker ##################
-mkdir ~/progs
-cd ~/progs
-vagrant plugin install vagrant-hostsupdater
-git clone https://github.com/wckr/wocker.git && cd wocker
-vagrant up --provider virtualbox
-vagrant halt
-
 ################ disabled ####################
+
+# ############ wocker ##################
+# mkdir ~/progs
+# cd ~/progs
+# vagrant plugin install vagrant-hostsupdater
+# git clone https://github.com/wckr/wocker.git && cd wocker
+# vagrant up --provider virtualbox
+# vagrant halt
+
+
 ## libinput-gestures and gestures
 # sudo gpasswd -a $USER input
 # su - ${USER}
