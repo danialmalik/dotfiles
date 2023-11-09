@@ -76,7 +76,15 @@ config.window_background_image_hsb = {
 config.leader = {key = 'k', mods = 'CTRL', timeout_milliseconds = 3000}
 
 config.keys = {
+
     {key = 'p', mods = 'CTRL', action = act.ActivateCommandPalette},
+
+    ------------- Disabled
+    -- {
+    --     key = 'LeftArrow',
+    --     mods = 'ALT',
+    --     action = act.DisableDefaultAssignment
+    -- },
     ------------- Appearance related
     { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
 
