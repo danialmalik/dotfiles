@@ -131,7 +131,8 @@ config.keys = {
     ----------- Custom Events
     {key = '1', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-tier3'},
     {key = '2', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-unhaggle'},
-    {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'}
+    {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'},
+    {key = '4', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'}
 }
 
 ---------------------- Change tab switch key
