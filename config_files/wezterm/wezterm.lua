@@ -13,6 +13,9 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 ------------------------ Appearance ------------------------------
+config.font = wezterm.font 'Fira Code'
+config.harfbuzz_features = { 'liga=1' }
+
 ---cycle through builtin dark schemes in dark mode,
 ---and through light schemes in light mode
 local function themeCycler(window, _)
@@ -132,7 +135,8 @@ config.keys = {
     {key = '1', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-tier3'},
     {key = '2', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-unhaggle'},
     {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'},
-    {key = '4', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'}
+    {key = '4', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'},
+    {key = '5', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-core-utils'}
 }
 
 ---------------------- Change tab switch key
