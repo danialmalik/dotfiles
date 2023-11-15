@@ -13,6 +13,8 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 ------------------------ Appearance ------------------------------
+config.enable_scroll_bar = true
+
 config.font = wezterm.font 'Fira Code'
 config.harfbuzz_features = { 'liga=1' }
 
