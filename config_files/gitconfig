@@ -15,6 +15,7 @@
 
 [core]
   pager = delta
+	editor = code --wait
 # autocrlf = true
 #	editor = subl -w
 
