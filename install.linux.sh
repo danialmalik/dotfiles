@@ -74,6 +74,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 ## ulauncher
 sudo add-apt-repository ppa:agornostal/ulauncher
 
+## Diodon clipboard manager
+sudo add-apt-repository ppa:diodon-team/stable
+
 # shutter
 # sudo add-apt-repository -y ppa:linuxuprising/shutter
 
@@ -135,6 +138,7 @@ sudo apt-get install -y \
     build-essential \
     bpytop \
     brave-browser \
+    diodon \
     duf \
     exa \
     exiftool \
@@ -159,6 +163,7 @@ sudo apt-get install -y \
     meld \
     megacmd \
     neovim \
+    opera-stable \
     python-dev \
     python3-dev \
     python3-pip \
