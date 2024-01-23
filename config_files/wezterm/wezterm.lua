@@ -14,8 +14,8 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 ------------------------ Appearance ------------------------------
 config.enable_scroll_bar = true
-
-config.font = wezterm.font 'Fira Code'
+config.window_decorations = "NONE"
+config.font = wezterm.font('Fira Code')
 config.harfbuzz_features = { 'liga=1' }
 
 ---cycle through builtin dark schemes in dark mode,
