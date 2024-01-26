@@ -16,6 +16,7 @@
 [core]
   pager = delta
 	editor = code --wait
+	excludesFile = /home/danialmalik/dotfiles/dotfiles/config_files/global.gitignore
 # autocrlf = true
 #	editor = subl -w
 
@@ -39,7 +40,7 @@
     file-decoration-style = none
 
 [credential]
-	helper = cache --timeout=2592000 # 30 days
+	helper = cache --timeout=300 # 5 minutes
 
 [merge]
     conflictstyle = diff3
