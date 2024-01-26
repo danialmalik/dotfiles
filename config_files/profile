@@ -24,9 +24,6 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotfiles/dotfiles/scripts/usr:$PATH"
 
-# for nodemodules bin
-export PATH="$PATH:./node_modules/.bin"
-
 # Editor
 export VISUAL="vim"
 export EDITOR="$VISUAL"
@@ -43,8 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## nvm auto-switch node version if `.nvmrc` file is found
-autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
@@ -62,8 +57,6 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 
 ## asdf
 source $HOME/.asdf/asdf.sh
@@ -86,9 +79,6 @@ export PATH="$PATH:$GOPATH/bin"
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # the fuck
 eval $(thefuck --alias f)
 
@@ -101,30 +91,9 @@ eval $(thefuck --alias f)
 export COMPOSE_HTTP_TIMEOUT=3000000000
 export DOCKER_BUILDKIT=1
 
-# alias-tips plugin for zsh
-# export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
-
 # for pipenv
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-
-############# zsh theme ####################
-# have to source oh-my-zsh.sh if theme is changed in this file. Otherwise
-# set theme in ~/.zshrc
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-# source $ZSH/oh-my-zsh.sh
-
-# https://github.com/romkatv/powerlevel10k
-# UNCOMMENT if powerlevel10k theme is set.
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-################# ZSH #####################
-# disable auto correct
-unsetopt correct_all
-unsetopt correct
 
 
 ############# Anaconda ####################
@@ -158,7 +127,45 @@ alias start_portainer="_start_portainer"
 alias stop_portainer="docker stop portainer"
 
 
+
+###########################################################
+########################### ZSH ###########################
+###########################################################
+
+# disable auto correct
+unsetopt correct_all
+unsetopt correct
+
+# If found in a directory, ZSH sources it.
+ZSH_DOTENV_FILE=.dotenv
+
+## nvm auto-switch node version if `.nvmrc` file is found
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# alias-tips plugin for zsh
+# export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
+
+
+############# zsh theme ####################
+# have to source oh-my-zsh.sh if theme is changed in this file. Otherwise
+# set theme in ~/.zshrc
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# source $ZSH/oh-my-zsh.sh
+
+# https://github.com/romkatv/powerlevel10k
+# UNCOMMENT if powerlevel10k theme is set.
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+###########################################################
 ##################### System specific #####################
+###########################################################
 
 # Load the system specific profile variables
 SYSTEM=$(uname -s)
