@@ -137,7 +137,7 @@ unsetopt correct_all
 unsetopt correct
 
 # If found in a directory, ZSH sources it.
-ZSH_DOTENV_FILE=.dotenv
+export ZSH_DOTENV_FILE=.dotenv
 
 ## nvm auto-switch node version if `.nvmrc` file is found
 autoload -U add-zsh-hook
