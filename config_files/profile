@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 # umask 022
 
+DOTFILES_DIR=$HOME/dotfiles/dotfiles
+SECURE_DOTFILES_DIR=$HOME/dotfiles/secure_dotfiles
+
 ###################################################################
 ############################## General ############################
 ###################################################################
@@ -22,7 +25,7 @@ fi
 
 
 # set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$HOME/dotfiles/dotfiles/scripts/usr:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$DOTFILES_DIR/scripts/usr:$PATH"
 
 # Editor
 export VISUAL="vim"
@@ -238,9 +241,12 @@ fi
 ####################### Last steps ############################
 ###################################################################
 
+#### Env
+source $SECURE_DOTFILES_DIR/config_files/shared.env
+
 #### Source scripts
-source $HOME/dotfiles/dotfiles/scripts/utils/helpers.sh
-source $HOME/dotfiles/secure_dotfiles/scripts/helpers.sh
+source $DOTFILES_DIR/scripts/utils/helpers.sh
+source $SECURE_DOTFILES_DIR/scripts/helpers.sh
 
 ### Tilix vte activation
 source /etc/profile.d/vte-2.91.sh
