@@ -77,6 +77,9 @@ sudo add-apt-repository ppa:agornostal/ulauncher
 ## Diodon clipboard manager
 sudo add-apt-repository ppa:diodon-team/stable
 
+## GDU: Disk Usage analyzer
+sudo add-apt-repository ppa:daniel-milde/gdu
+
 # shutter
 # sudo add-apt-repository -y ppa:linuxuprising/shutter
 
@@ -135,6 +138,7 @@ sudo apt-get install -y \
     apache2-utils \
     apt-transport-https \
     ack \
+    bmon \
     build-essential \
     bpytop \
     brave-browser \
@@ -143,6 +147,7 @@ sudo apt-get install -y \
     exa \
     exiftool \
     fzf \
+    gdu \
     shunit2 \
     code \
     cpulimit \
@@ -260,6 +265,11 @@ sudo apt-get install -y \
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 
+# Dry: Docker manager
+curl -sSf https://moncho.github.io/dry/dryup.sh | sudo sh
+sudo chmod 755 /usr/local/bin/dry
+
+
 # $(lsb_release -cs) returns 'tessa','tina' or 'tricia' for mint releases
 # instead we need "bionic"
 # sudo add-apt-repository \
@@ -291,6 +301,13 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
+## Lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+
+
 ## Jumpapp
 cd /tmp/
 git clone https://github.com/mkropat/jumpapp.git
@@ -310,6 +327,9 @@ cargo install gitui
 
 # Dua CLI (Disk usage analyzer)
 # cargo install dua-cli
+
+# Bottom: Task monitor
+# cargo install bottom
 
 ## rbenv for ruby
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
