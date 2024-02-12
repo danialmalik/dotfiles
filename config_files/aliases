@@ -24,6 +24,9 @@ alias rld="exec zsh"
 # aenv
 alias aenv='source env/bin/activate'
 
+# fd-find
+alias fd='fdfind'
+
 # `open` command
 alias open='xdg-open'
 
