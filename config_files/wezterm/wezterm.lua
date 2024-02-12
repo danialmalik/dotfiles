@@ -87,11 +87,11 @@ config.keys = {
     {key = 'p', mods = 'CTRL', action = act.ActivateCommandPalette},
 
     ------------- Disabled
-    {
-        key = 'f1',
-        mods = '',
-        action = act.DisableDefaultAssignment
-    },
+    -- {
+    --     key = 'LeftArrow',
+    --     mods = 'ALT',
+    --     action = act.DisableDefaultAssignment
+    -- },
     ------------- Appearance related
     { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
 
