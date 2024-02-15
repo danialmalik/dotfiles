@@ -17,4 +17,4 @@ ln -sf $config_files_dir/aliases ~/.aliases
 ln -sf $config_files_dir/gitconfig ~/.gitconfig
 
 # zsh theme
-ln -sf $config_files_dir/zsh_theme_powerline10k.zsh ~/.p10k.zsh
+ln -sf $config_files_dir/zsh_themes/zsh_theme_powerline10k.zsh ~/.p10k.zsh

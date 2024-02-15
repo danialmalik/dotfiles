@@ -1,14 +1,21 @@
-plugins_dir=~/dotfiles/plugins
+ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
-mkdir $plugins_dir
-cd $plugins_dir
+PLUGINS_DIR=$ZSH_CUSTOM/plugins
+THEMES_DIR=$ZSH_CUSTOM/themes
+
+mkdir -p $PLUGINS_DIR
+mkdir -p $THEMES_DIR
+
+####### Install Plugins
+cd $PLUGINS_DIR
 
 git clone https://github.com/djui/alias-tips.git
 git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zdharma/history-search-multi-word.git
 
-cd ..
-mv $plugins_dir/* ~/.oh-my-zsh/custom/plugins
+######## Install Themes
+cd $THEMES_DIR
 
-rm -rf $plugins_dir
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"

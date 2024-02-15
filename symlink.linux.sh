@@ -35,8 +35,8 @@ ln -sf $CONFIG_FILES_DIR/terminator_config ~/.config/terminator/config
 # Wezterm
 ln -sf $CONFIG_FILES_DIR/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 
-# pwerline10k theme
-ln -sf $CONFIG_FILES_DIR/zsh_theme_powerline10k.zsh ~/.p10k.zsh
+# Zsh Themes
+ln -sf $CONFIG_FILES_DIR/zsh_themes/zsh_theme_powerline10k.zsh ~/.p10k.zsh
 
 # MPV media player
 mkdir -p ~/.config/mpv
