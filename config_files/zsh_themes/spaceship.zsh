@@ -72,3 +72,8 @@ SPACESHIP_VENV_COLOR="yellow"
 
 ########## git ################
 SPACESHIP_GIT_PREFIX=""
+
+
+######## Docker Compose ##########
+SPACESHIP_DOCKER_COMPOSE_PREFIX=""
+SPACESHIP_DOCKER_COMPOSE_SYMBOL="🐳🎵"
