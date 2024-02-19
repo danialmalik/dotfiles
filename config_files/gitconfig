@@ -15,24 +15,22 @@
 
 [core]
   pager = delta
-	editor = code --wait
-	excludesFile = /home/danialmalik/dotfiles/dotfiles/config_files/global.gitignore
-# autocrlf = true
-#	editor = subl -w
+  editor = code --wait
+  excludesFile = /home/danialmalik/dotfiles/dotfiles/config_files/global.gitignore
+  autocrlf = true
 
 [interactive]
-  diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --features=interactive
 
 [delta]
-  # features = side-by-side line-numbers decorations
   decorations = true
   whitespace-error-style = 22 reverse
   # width = 400
   # side-by-side = true
   line-numbers = true
   # line-numbers-left-format = "-"
-  # line-numbers-right-format = "│ "
-  syntax-theme = Dracula
+  line-numbers-right-format = "│"
+  syntax-theme = Sublime Snazzy
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
