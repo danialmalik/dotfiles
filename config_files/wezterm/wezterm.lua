@@ -141,9 +141,10 @@ config.keys = {
 
     {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'},
     {key = '4', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'},
-    {key = '5', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-core-utils'},
 
-    {key = '6', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-atx-crm'}
+    {key = '5', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-platform'}
+    -- {key = '', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-core-utils'},
+    -- {key = '', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-atx-crm'}
 }
 
 ---------------------- Change tab switch key
