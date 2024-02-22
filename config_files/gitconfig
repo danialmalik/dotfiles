@@ -17,7 +17,7 @@
   pager = delta
   editor = code --wait
   excludesFile = /home/danialmalik/dotfiles/dotfiles/config_files/global.gitignore
-  autocrlf = true
+  # autocrlf = true
 
 [interactive]
   diffFilter = delta --features=interactive
