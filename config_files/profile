@@ -99,6 +99,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 
+############## Terraform ###################
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
 ############# Anaconda ####################
 # Installation:: https://docs.anaconda.com/free/anaconda/install/linux/
 # >>> conda initialize >>>
