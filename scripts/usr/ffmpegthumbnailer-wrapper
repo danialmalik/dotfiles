@@ -6,6 +6,9 @@ input_file=$1
 output_file=$2
 size=$3
 
+echo "Thumbnail generated for $input_file at $output_file" >> /tmp/ffmpegthumbnailer.log
+
 ffmpegthumbnailer -i "$input_file" -o "$output_file" -s "$size" -t 25 -f
+
 # Generate thumbnails on random intervals.
 # ffmpegthumbnailer -i "$input_file" -o "$output_file" -s "$size" -t $(($RANDOM % 80 + 20)) -f

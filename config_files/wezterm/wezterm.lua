@@ -136,13 +136,15 @@ config.keys = {
         action = act.SplitVertical {domain = 'CurrentPaneDomain'}
     }, {key = 'X', mods = 'CTRL|SHIFT', action = act.TogglePaneZoomState},
     ----------- Custom Events
-    {key = '1', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-tier3'},
-    {key = '2', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-unhaggle'},
+    {key = 'd', mods = 'LEADER', action = act.EmitEvent 'launch-dotfiles'},
 
-    {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'},
-    {key = '4', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'},
+    {key = '1', mods = 'LEADER', action = act.EmitEvent 'launch-tier3'},
+    {key = '2', mods = 'LEADER', action = act.EmitEvent 'launch-unhaggle'},
 
-    {key = '5', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-platform'}
+    {key = '1', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asc'},
+    {key = '2', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-asl'},
+    {key = '3', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-platform'}
+
     -- {key = '', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-as-core-utils'},
     -- {key = '', mods = 'LEADER|CTRL', action = act.EmitEvent 'launch-atx-crm'}
 }
