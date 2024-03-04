@@ -173,6 +173,8 @@ sudo apt-get install -y \
     python3-dev \
     python3-pip \
     python3-venv \
+    qemu-user \
+    qemu-system \
     bpython \
     qbittorrent \
     ripgrep \
