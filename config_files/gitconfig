@@ -20,17 +20,17 @@
   # autocrlf = true
 
 [interactive]
-  diffFilter = delta --features=interactive
+  diffFilter = delta --color-only --features=interactive
 
 [delta]
   decorations = true
   whitespace-error-style = 22 reverse
   # width = 400
-  # side-by-side = true
+  side-by-side = true
   line-numbers = true
   # line-numbers-left-format = "-"
   line-numbers-right-format = "│"
-  syntax-theme = Sublime Snazzy
+  syntax-theme = Dracula
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
