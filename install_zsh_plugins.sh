@@ -1,3 +1,4 @@
+#!/bin/bash
 ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
 PLUGINS_DIR=$ZSH_CUSTOM/plugins
@@ -19,3 +20,5 @@ cd $THEMES_DIR
 
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+git clone https://github.com/romkatv/powerlevel10k --depth=1

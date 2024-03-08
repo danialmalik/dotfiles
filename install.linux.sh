@@ -24,6 +24,7 @@ DOTFILES=$HOME/dotfiles/dotfiles
 
 # TODO: use script to install latest versions
 # Download debs
+
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megacmd_1.4.0-2.1_amd64.deb
 # wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/dolphin-megasync_4.1.1+4.1_amd64.deb
 wget -P $HOME/Downloads https://mega.nz/linux/MEGAsync/xUbuntu_20.10/amd64/megasync_4.3.5-7.1_amd64.deb
@@ -41,6 +42,8 @@ wget -P $HOME/Downloads https://github.com/barnumbirr/delta-debian/releases/down
 wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-common_0.95.10-0_all.deb
 wget -P $HOME/Downloads https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-gtk_0.95.10-0_all.deb
 
+# Warp terminal
+wget -P $HOME/Downloads https://app.warp.dev/download?package=deb -O warp.deb
 
 ############################################################################
 ########################## Add PPAs/keys ##################################
@@ -190,6 +193,7 @@ sudo apt-get install -y \
     vim vim-gtk3 \
     virtualbox \
     virtualbox-qt \
+    wezterm \
     wavemon \
     xclip \
 
