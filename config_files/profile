@@ -157,15 +157,20 @@ eval "$(direnv hook zsh)"
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
 
-############################################
-############# zsh theme ####################
-############################################
+######################## zsh theme
 
 # have to source oh-my-zsh.sh if theme is changed in this file. Otherwise
 # set theme in ~/.zshrc
 
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 # source $ZSH/oh-my-zsh.sh
+
+######################## apps
+# HSTR configuration - add this to ~/.zshrc
+alias hh=hstr                    # hh to be alias for hstr
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor       # get more colors
+# bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 ###########################################################
 ##################### System specific #####################
