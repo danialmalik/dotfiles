@@ -40,8 +40,10 @@ list_aws_instances() {
         echo "Region: ${REGION}"
     fi
 
+    echo "[INFO]: Not using enviornment filter, as some instances may not have the tag"
+
+    # --filters "Name=tag:Environment,Values="${ENV}"" \
     aws ec2 describe-instances \
-    --filters "Name=tag:Environment,Values="${ENV}"" \
     --profile "${PROFILE}" \
     --region "${REGION}" \
     | jq '.Reservations[].Instances[]
