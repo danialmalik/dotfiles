@@ -8,6 +8,7 @@ export SCRIPTS_DIR=$DOTFILES_DIR/scripts
 
 # create dirs
 mkdir ~/.config/terminator/ 2>/dev/null
+mkdir ~/.config/warp-terminal 2>/dev/null
 mkdir ~/.config/nvim/ 2>/dev/null
 
 # shell symlinks
@@ -34,6 +35,10 @@ ln -sf $CONFIG_FILES_DIR/terminator_config ~/.config/terminator/config
 
 # Wezterm
 ln -sf $CONFIG_FILES_DIR/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
+
+# Warp-terminal
+ln -sf $CONFIG_FILES_DIR/warp-terminal/keybindings.yaml ~/.config/warp-terminal/keybindings.yaml
+ln -sf $CONFIG_FILES_DIR/warp-terminal/user_preferences.json ~/.config/warp-terminal/user_preferences.json
 
 # Zsh Themes
 ln -sf $CONFIG_FILES_DIR/zsh_themes/zsh_theme_powerline10k.zsh ~/.p10k.zsh

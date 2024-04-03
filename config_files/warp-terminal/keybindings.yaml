@@ -1,0 +1,13 @@
+---
+"pane_group:navigate_left": alt-shift-left
+"pane_group:resize_left": ctrl-alt-shift-left
+"pane_group:resize_right": ctrl-alt-shift-right
+"pane_group:navigate_up": alt-shift-up
+"editor_view:select_right_by_subword": none
+"pane_group:resize_up": ctrl-alt-shift-up
+"editor_view:select_left_by_subword": none
+"pane_group:add_down": ctrl-alt-d
+"pane_group:navigate_right": alt-shift-right
+"pane_group:navigate_down": alt-shift-down
+"pane_group:resize_down": ctrl-alt-shift-down
+"pane_group:add_right": ctrl-alt-e
