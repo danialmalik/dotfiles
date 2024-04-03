@@ -1,0 +1,16 @@
+{
+  "prefs": {
+    "AliasExpansionBannerSeen": "true",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-03-12T17:03:20.519343Z\"}",
+    "ExperimentId": "a63b1e00-f223-4276-8973-037ded07838d",
+    "Shortcuts": "true",
+    "ChangelogVersions": "{\"v0.2024.03.05.08.02.stable_01\":true,\"v0.2024.03.12.08.02.stable_02\":true}",
+    "WorkflowsBoxOpen": "true",
+    "TelemetryEnabled": "false",
+    "HasAutoOpenedWelcomeFolder": "true",
+    "AutosuggestionAcceptedCount": "2",
+    "WelcomeTipsFeaturesUsed": "[{\"Action\":\"CommandSearch\"},{\"Hint\":\"BlockSelect\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"SplitPane\"},{\"Action\":\"AiCommandSearch\"},{\"Hint\":\"CreateBlock\"}]",
+    "CrashReportingEnabled": "false"
+  }
+}
