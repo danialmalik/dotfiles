@@ -1,14 +1,14 @@
 {
   "prefs": {
-    "CrashReportingEnabled": "false",
-    "ReceivedReferralTheme": "\"Inactive\"",
-    "AliasExpansionBannerSeen": "true",
-    "Shortcuts": "true",
     "AutosuggestionAcceptedCount": "2",
     "ExperimentId": "12abb3cb-dc5c-42bb-8549-bb2270e794fc",
+    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-04-04T09:01:33.153122Z\"}",
     "TelemetryEnabled": "false",
-    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-04-04T09:01:33.153122096Z\"}",
-    "WelcomeTipsFeaturesUsed": "[{\"Action\":\"SplitPane\"},{\"Hint\":\"CreateBlock\"},{\"Action\":\"CommandPalette\"}]",
-    "ChangelogVersions": "{\"v0.2024.03.12.08.02.stable_02\":true}"
+    "ChangelogVersions": "{\"v0.2024.03.12.08.02.stable_02\":true}",
+    "Shortcuts": "true",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "AliasExpansionBannerSeen": "true",
+    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"CreateBlock\"},{\"Action\":\"WarpAI\"},{\"Action\":\"SplitPane\"},{\"Hint\":\"BlockSelect\"},{\"Hint\":\"BlockAction\"},{\"Action\":\"CommandSearch\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"AiCommandSearch\"}]",
+    "CrashReportingEnabled": "false"
   }
 }
