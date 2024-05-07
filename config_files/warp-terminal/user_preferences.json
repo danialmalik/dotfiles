@@ -1,16 +1,16 @@
 {
   "prefs": {
-    "HasAutoOpenedWelcomeFolder": "true",
     "TelemetryEnabled": "false",
+    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"CreateBlock\"},{\"Action\":\"WarpAI\"},{\"Action\":\"SplitPane\"},{\"Hint\":\"BlockSelect\"},{\"Hint\":\"BlockAction\"},{\"Action\":\"CommandSearch\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"AiCommandSearch\"}]",
+    "Shortcuts": "true",
+    "ChangelogVersions": "{\"v0.2024.03.12.08.02.stable_02\":true,\"v0.2024.04.09.08.01.stable_01\":true,\"v0.2024.04.23.08.01.stable_03\":true}",
+    "ExperimentId": "12abb3cb-dc5c-42bb-8549-bb2270e794fc",
+    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-04-04T09:01:33.153122Z\"}",
     "AutosuggestionAcceptedCount": "2",
     "CrashReportingEnabled": "false",
-    "ReceivedReferralTheme": "\"Inactive\"",
-    "ExperimentId": "12abb3cb-dc5c-42bb-8549-bb2270e794fc",
-    "AliasExpansionBannerSeen": "true",
     "EmacsBindingsBannerState": "\"Dismissed\"",
-    "AIAssistantRequestLimitInfo": "{\"limit\":100,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-04-04T09:01:33.153122Z\"}",
-    "ChangelogVersions": "{\"v0.2024.03.12.08.02.stable_02\":true,\"v0.2024.04.09.08.01.stable_01\":true}",
-    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"CreateBlock\"},{\"Action\":\"WarpAI\"},{\"Action\":\"SplitPane\"},{\"Hint\":\"BlockSelect\"},{\"Hint\":\"BlockAction\"},{\"Action\":\"CommandSearch\"},{\"Action\":\"CommandPalette\"},{\"Action\":\"AiCommandSearch\"}]",
-    "Shortcuts": "true"
+    "HasAutoOpenedWelcomeFolder": "true",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "AliasExpansionBannerSeen": "true"
   }
 }
