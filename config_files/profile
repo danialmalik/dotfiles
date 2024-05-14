@@ -248,7 +248,7 @@ fi
 ###################################################################
 
 #### Env
-source $SECURE_DOTFILES_DIR/config_files/shared.env
+source $SECURE_DOTFILES_DIR/env_files/shared.env
 
 #### Source scripts
 source $DOTFILES_DIR/scripts/utils/helpers.sh
