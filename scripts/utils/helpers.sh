@@ -53,7 +53,9 @@ list_aws_instances() {
             | select(.Key == "Name")
             | select(.Value | match('\"${NAME}\"')) | .Value,
         launch_time: .LaunchTime,
-        state: .State.Name
+        state: .State.Name,
+        instance_dns_name: .PrivateDnsName,
+        instance_ip: .PrivateIpAddress
         }'
 }
 
