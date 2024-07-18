@@ -145,6 +145,7 @@ sudo apt-get install -y \
     build-essential \
     bpytop \
     brave-browser \
+    clamav clamav-daemon clamtk `# ClamAV AntiVirus` \
     diodon \
     duf \
     exa \
