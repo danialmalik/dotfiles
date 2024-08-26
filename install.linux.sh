@@ -123,6 +123,11 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 # sudo apt-get update && sudo apt-get xdman install
 #
 
+### Albert launcher (Ubuntu 22.04)
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg > /dev/null
+
+
 ############################################################################
 ########################## Install Apps ##################################
 ############################################################################
@@ -141,6 +146,7 @@ sudo apt-get install -y \
     apache2-utils \
     apt-transport-https \
     ack \
+    albert \
     bmon \
     build-essential \
     bpytop \
