@@ -72,6 +72,7 @@ full_upgrade() {
 full_clean() {
     sudo apt-get autoremove
     sudo apt-get autoclean
+    sudo apt-get clean
     sudo apt-get autopurge
     docker system prune
 }
