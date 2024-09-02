@@ -10,6 +10,7 @@ set -e
 ############################################################################
 USERNAME=danialmalik
 DOTFILES=$HOME/dotfiles/dotfiles
+CONFIG_FILES_DIR=$DOTFILES/config_files
 
 ############################################################################
 ########################## Pre-processing steps ############################
@@ -445,13 +446,10 @@ git clean -f
 
 # Import gnome desktop settings
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
-    dconf load /org/gnome/ < ./config_files/gnome.conf
+    dconf load /org/gnome/ < $CONFIG_FILES_DIR/linux/gnome.conf
 else
-    dconf load /org/cinnamon/ < ./config_files/cinnamon.conf
+    dconf load /org/cinnamon/ < $CONFIG_FILES_DIR/linux/cinnamon.conf
 fi
-
-# load tilix config
-dconf load /com/gexperts/Tilix/ < ./config_files/tilix.dconf
 
 # Allow the user to use incron
 sudo echo $USERNAME >> /etc/incron.allow

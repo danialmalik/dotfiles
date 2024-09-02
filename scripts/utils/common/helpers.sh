@@ -60,32 +60,10 @@ list_aws_instances() {
 }
 
 
-full_upgrade() {
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get full-upgrade
-    sudo apt-get dist-upgrade
-    flatpak update
-    sudo snap refresh
+##################### portainer ##################
+_start_portainer () {
+	docker volume inspect portainer_data >/dev/null || docker volume create portainer_data
+	docker run --rm -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 }
-
-full_clean() {
-    sudo apt-get autoremove
-    sudo apt-get autoclean
-    sudo apt-get clean
-    sudo apt-get autopurge
-    docker system prune
-}
-
-## For tempo mat
-activateTempomat() {
-    PROFILE="${1}"
-    if [ -z "${PROFILE}" ]; then
-        echo "Usage: activateTempomat <profile>"
-        return 1
-    fi
-    rm ~/.tempomat_back 2> /dev/null
-    mv ~/.tempomat ~/.tempomat_back 2> /dev/null
-
-    cp ~/.tempomat_${PROFILE} ~/.tempomat
-}
+alias start_portainer="_start_portainer"
+alias stop_portainer="docker stop portainer"

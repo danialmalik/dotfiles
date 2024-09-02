@@ -4,7 +4,8 @@
 	signingkey = 3B0EB68FCFCA9357
 
 [gpg]
-	program = /usr/bin/gpg
+	# program = /usr/bin/gpg
+	program = gpg
 
 [commit]
 	gpgsign = true

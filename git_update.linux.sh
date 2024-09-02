@@ -1,15 +1,12 @@
 #!/bin/bash
-
-# First check if Tilix config exist in dconf
-if [[ $(dconf list /com/gexperts/Tilix/) != "" ]]; then
-    dconf dump /com/gexperts/Tilix/ > config_files/tilix.dconf
-fi
+DOTFILES_DIR=$HOME/dotfiles/dotfiles
+CONFIG_FILES_DIR=$DOTFILES_DIR/config_files
 
 if [[ $(echo $XDG_CURRENT_DESKTOP) == *"GNOME"* ]]; then
-    dconf dump /org/gnome/ > config_files/gnome.conf
+    dconf dump /org/gnome/ > $CONFIG_FILES_DIR/linux/gnome.conf
 else
     # Export cinnamon settings
-    dconf dump /org/cinnamon/ > config_files/cinnamon.conf
+    dconf dump /org/cinnamon/ > $CONFIG_FILES_DIR/linux/cinnamon.conf
 fi
 
 git add .
