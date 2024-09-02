@@ -31,38 +31,40 @@ PATH="$HOME/bin:$HOME/.local/bin:$DOTFILES_DIR/scripts/usr:$PATH"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
-# For info
-source /etc/os-release
-
 ###################################################################
 ################### Applications / utilities ######################
 ###################################################################
 
 ## nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -d "$HOME/.nvm" ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+fi
 
 load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+	local node_version="$(nvm version)"
+	local nvmrc_path="$(nvm_find_nvmrc)"
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+	if [ -n "$nvmrc_path" ]; then
+		local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
+		if [ "$nvmrc_node_version" = "N/A" ]; then
+		nvm install
+		elif [ "$nvmrc_node_version" != "$node_version" ]; then
+		nvm use
+		fi
+	elif [ "$node_version" != "$(nvm version default)" ]; then
+		echo "Reverting to nvm default version"
+		nvm use default
+	fi
 }
 
 ## asdf
-source $HOME/.asdf/asdf.sh
+if [ -d "$HOME/.asdf" ]; then
+	source $HOME/.asdf/asdf.sh
+fi
 
 #### Go lang / GoLang
 # Using GoEnv so no need for this
@@ -72,18 +74,19 @@ source $HOME/.asdf/asdf.sh
 
 #### Goenv
 # Installation and upgrade: https://github.com/syndbg/goenv/blob/master/INSTALL.md
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
-
+if [ -d "$HOME/.goenv" ]; then
+	export GOENV_ROOT="$HOME/.goenv"
+	export PATH="$GOENV_ROOT/bin:$PATH"
+	eval "$(goenv init -)"
+	export PATH="$GOROOT/bin:$PATH"
+	export PATH="$PATH:$GOPATH/bin"
+fi
 
 ## rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+if [ -d "$HOME/.rbenv" ]; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+fi
 
-# the fuck
-eval $(thefuck --alias f)
 
 ###################################################################
 ####################### Configurations ############################
@@ -123,17 +126,6 @@ complete -o nospace -C /usr/bin/terraform terraform
 # # <<< conda initialize <<<
 
 # export PATH="$HOME/anaconda3/bin:$PATH"
-
-
-##################### portainer ##################
-function _start_portainer () {
-	docker volume inspect portainer_data >/dev/null || docker volume create portainer_data
-	docker run --rm -d -p 8080:8000 -p 9000:9000 --name=portainer --rm -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-}
-alias start_portainer="_start_portainer"
-alias stop_portainer="docker stop portainer"
-
-
 
 ###########################################################
 ########################### ZSH ###########################
@@ -180,65 +172,9 @@ export HSTR_CONFIG=hicolor       # get more colors
 SYSTEM=$(uname -s)
 
 if [ "$SYSTEM" = "Linux" ]; then
-	# Linux specific settings here
-
-	# For rust and cargo
-	source $HOME/.cargo/env
-
-	# go
-	export PATH=$PATH:/usr/local/go/bin
-
-	# android sdk tools
-	export ANDROID_HOME=$HOME/Android/sdk
-	export PATH=$ANDROID_HOME/platform-tools:$PATH
-	export PATH=$ANDROID_HOME/tools:$PATH
-
-	# pyenv
-	export PATH=$HOME/.pyenv/bin:$PATH
-	eval "$(pyenv init -)"
-	eval "$(pyenv init --path)"
-	eval "$(pyenv virtualenv-init -)"
-
-	# only for gnome
-	# to show snap apps in overview
-	export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
-
-	# Dotnet
-	export PATH=$HOME/.dotnet/tools:$PATH
-	export PATH=$HOME/.dotnet:$PATH
-	export DOTNET_ROOT=$HOME/.dotnet
-	export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
-	# Homebrew (Linux)
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-	export HOMEBREW_NO_ANALYTICS=1
-
-	# AppImages
-	export PATH=$PATH:$HOME/progs/app-images
-
+	source $DOTFILES_DIR/config_files/linux/profile.sh
 else # MacOS
-	# Mac specific settings here
-
-	######### vscode mac #############
-	export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-	########### mysql_mac ##############
-	export PATH=$PATH:/usr/local/mysql/bin
-
-	########### Android SDK #####################
-	export ANDROID_HOME=$HOME/Library/Android/sdk
-	export PATH=$PATH:$ANDROID_HOME/emulator
-	export PATH=$PATH:$ANDROID_HOME/platform-tools
-	export PATH=$PATH:$ANDROID_HOME/tools
-	export PATH=$PATH:$ANDROID_HOME/tools/bin
-
-	############### PyENV ######################
-	# export PYENV_ROOT="$HOME/.pyenv
-	# export PATH="$PYENV_ROOT/bin:$PATH
-
-	if command -v pyenv 1>/dev/null 2>&1; then
-		eval "$(pyenv init -)"
-	fi
+	source $DOTFILES_DIR/config_files/macos/profile.sh
 
 fi
 
@@ -251,8 +187,6 @@ fi
 source $SECURE_DOTFILES_DIR/env_files/shared.env
 
 #### Source scripts
-source $DOTFILES_DIR/scripts/utils/helpers.sh
-source $SECURE_DOTFILES_DIR/scripts/helpers.sh
+source $DOTFILES_DIR/scripts/utils/common/helpers.sh
 
-### Tilix vte activation
-source /etc/profile.d/vte-2.91.sh
+source $SECURE_DOTFILES_DIR/scripts/helpers.sh
