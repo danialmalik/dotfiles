@@ -35,32 +35,6 @@ export EDITOR="$VISUAL"
 ################### Applications / utilities ######################
 ###################################################################
 
-## nvm
-if [ -d "$HOME/.nvm" ]; then
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-fi
-
-load-nvmrc() {
-	local node_version="$(nvm version)"
-	local nvmrc_path="$(nvm_find_nvmrc)"
-
-	if [ -n "$nvmrc_path" ]; then
-		local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-		if [ "$nvmrc_node_version" = "N/A" ]; then
-		nvm install
-		elif [ "$nvmrc_node_version" != "$node_version" ]; then
-		nvm use
-		fi
-	elif [ "$node_version" != "$(nvm version default)" ]; then
-		echo "Reverting to nvm default version"
-		nvm use default
-	fi
-}
-
 ## asdf
 if [ -d "$HOME/.asdf" ]; then
 	source $HOME/.asdf/asdf.sh
@@ -127,6 +101,12 @@ complete -o nospace -C /usr/bin/terraform terraform
 
 # export PATH="$HOME/anaconda3/bin:$PATH"
 
+################ Dotnet ####################### Dotnet
+export PATH=$HOME/.dotnet/tools:$PATH
+export PATH=$HOME/.dotnet:$PATH
+export DOTNET_ROOT=$HOME/.dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 ###########################################################
 ########################### ZSH ###########################
 ###########################################################
@@ -137,14 +117,6 @@ unsetopt correct
 
 # If found in a directory, ZSH sources it.
 export ZSH_DOTENV_FILE=.dotenv
-
-## nvm auto-switch node version if `.nvmrc` file is found
-autoload -U add-zsh-hook
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-# direnv
-eval "$(direnv hook zsh)"
 
 # alias-tips plugin for zsh
 # export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
@@ -177,6 +149,38 @@ else # MacOS
 	source $DOTFILES_DIR/config_files/macos/profile.sh
 
 fi
+
+
+##################################################################
+###################### Post system specfics ######################
+##################################################################
+
+# NVM
+load-nvmrc() {
+	local node_version="$(nvm version)"
+	local nvmrc_path="$(nvm_find_nvmrc)"
+
+	if [ -n "$nvmrc_path" ]; then
+		local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+		if [ "$nvmrc_node_version" = "N/A" ]; then
+		nvm install
+		elif [ "$nvmrc_node_version" != "$node_version" ]; then
+		nvm use
+		fi
+	elif [ "$node_version" != "$(nvm version default)" ]; then
+		echo "Reverting to nvm default version"
+		nvm use default
+	fi
+}
+
+## nvm auto-switch node version if `.nvmrc` file is found
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# direnv
+eval "$(direnv hook zsh)"
 
 
 ###################################################################

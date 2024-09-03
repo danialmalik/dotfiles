@@ -1,6 +1,9 @@
 #!/bin/bash
 # Mac specific settings here
 
+##### Brew
+export PATH="$PATH:/opt/homebrew/bin"
+
 ######### vscode mac #############
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
@@ -11,3 +14,13 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
+
+
+##### nvm
+mkdir -p  ~/.nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+###### ZSH
