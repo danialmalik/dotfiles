@@ -44,6 +44,7 @@ brew install orbstack
 brew install slack
 brew install pyenv
 brew install mpv
+brew install tree
 
 ############# TODOs
 # Install
