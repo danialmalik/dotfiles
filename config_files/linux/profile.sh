@@ -5,6 +5,14 @@
 # For info
 source /etc/os-release
 
+# nvm
+if [ -d "$HOME/.nvm" ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+fi
+
 # For rust and cargo
 source $HOME/.cargo/env
 
@@ -25,12 +33,6 @@ eval "$(pyenv virtualenv-init -)"
 # only for gnome
 # to show snap apps in overview
 export XDG_DATA_DIRS="${XDG_DATA_DIRS}:/var/lib/snapd/desktop"
-
-# Dotnet
-export PATH=$HOME/.dotnet/tools:$PATH
-export PATH=$HOME/.dotnet:$PATH
-export DOTNET_ROOT=$HOME/.dotnet
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Homebrew (Linux)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
