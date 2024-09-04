@@ -13,6 +13,7 @@ mkdir $HOME/.config/nvim/ 2>/dev/null
 # shell symlinks
 ln -sf $COMMON_CONFIG_FILES_DIR/profile $HOME/.profile
 ln -sf $COMMON_CONFIG_FILES_DIR/zshrc $HOME/.zshrc
+ln -sf $COMMON_CONFIG_FILES_DIR/zshenv $HOME/.zshenv
 ln -sf $COMMON_CONFIG_FILES_DIR/aliases $HOME/.aliases
 
 # vim

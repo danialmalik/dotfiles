@@ -61,6 +61,13 @@ if [ -d "$HOME/.rbenv" ]; then
 	export PATH="$HOME/.rbenv/bin:$PATH"
 fi
 
+######## Rust
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
+fi
+
+################ Cargo utils
+
 
 ###################################################################
 ####################### Configurations ############################
