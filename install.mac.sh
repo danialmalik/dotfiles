@@ -2,17 +2,32 @@
 set -e
 
 ####################### Manually installed
-# rcmd
-# postman
-# meganz
-# slack
-# wezterm
+# Clipy
+# Dropover (store) (Paid)
+# Dropshelf
+# Hidden bar
 # hyperkey
 # iterm
-# rectangle
-# vscode
+# lightshot
+# meganz
 # Obsidian
+# postman
+# raycast
+# rcmd (store)
+# rectangle (store)
+# shottr
+# slack
 # Sublime merge
+# vscode
+# wezterm
+
+
+######## Paid apps to be tried yet
+
+# Swish (window management using gestures)
+# Cleanshot X (SS tool)
+# Cork (homebrew GUI interface)
+
 
 ############################################################################
 #################### Configurations / variables ############################
@@ -45,20 +60,27 @@ brew install slack
 brew install pyenv
 brew install mpv
 brew install tree
+brew install unison
+brew install jq
+brew install git-delta
+brew install gitui
+brew install stats
+
+############## RUST
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+############ Cargo utils
+cargo install exa
 
 ############# TODOs
 # Install
 mpv
-notion
-ticktick
 warp-terminal
-vim
 nvim?
 nordvpn
 
 delta for github
 
 #
-setup cron jobs
-setup syncthing phone backup
-setup timemachine backup for mac
+# setup syncthing phone backup
+# setup timemachine backup for mac
