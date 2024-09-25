@@ -3,6 +3,8 @@ set -e
 
 ####################### Manually installed
 # Clipy
+# amphetiamine (keep awake util)
+#
 # Dropover (store) (Paid)
 # Dropshelf
 # Hidden bar
@@ -18,6 +20,7 @@ set -e
 # shottr
 # slack
 # Sublime merge
+# Suspicious Package (to check .pkg files)
 # vscode
 # wezterm
 
@@ -25,9 +28,12 @@ set -e
 ######## Paid apps to be tried yet
 
 # Swish (window management using gestures)
+# CleanMyMac X
 # Cleanshot X (SS tool)
 # Cork (homebrew GUI interface)
+# DaisyDisk (Disk usage cleanup)
 
+# Klack (mechanical keyboard sound XD 5USD)
 
 ############################################################################
 #################### Configurations / variables ############################
