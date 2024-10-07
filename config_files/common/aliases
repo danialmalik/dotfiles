@@ -49,16 +49,16 @@ alias s="subl"
 alias "v."="code ."
 alias "s."="subl ."
 
-################### exa ####################
+################### eza ####################
 
-if [ "$(command -v exa)" ]; then
+if [ "$(command -v eza)" ]; then
     unalias -m 'ls'
     unalias -m 'll'
     unalias -m 'l'
     # unalias -m 'la'
 	alias l='ls'
-    alias ls='exa -b -F -a -s type --color=always --icons -G'
-    alias ll='exa -b -F -a -s type --color=always --icons -l -hHUm'
+    alias ls='eza -b -F -a -s type --color=always --icons -G'
+    alias ll='eza -b -F -a -s type --color=always --icons -l -hHUm'
 	alias lll='ll -g -u --octal-permissions -@'
 fi
 
@@ -66,13 +66,6 @@ fi
 #################### bat ######################
 # TODO: install themes
 # alias bat='bat -pp --theme="Nord"'
-
-######################################
-############# Notes ##################
-#######################################
-alias notes='cd $HOME/MEGAsync/notes'
-alias cnotes='code $HOME/MEGAsync/notes'
-alias snotes='subl $HOME/MEGAsync/notes'
 
 ######################################
 ################ git ################
