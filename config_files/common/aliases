@@ -27,9 +27,6 @@ alias aenv='source env/bin/activate'
 # fd-find
 alias fd='fdfind'
 
-# `open` command
-alias open='xdg-open'
-
 # ack for search and highlighting text
 # Example usage: `cat logs.txt | ackp 'error'`
 alias ackp='ack --passthru'
@@ -94,6 +91,10 @@ alias gmc='gitmoji -c'
 SYSTEM=$(uname -s)
 
 if [ "$SYSTEM" = "Linux" ]; then
+
+	# `open` command
+	alias open='xdg-open'
+
 	# Linux specific settings here
 	alias install='sudo apt-get install'
 	alias remove='sudo apt-get purge'

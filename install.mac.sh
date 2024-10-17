@@ -5,13 +5,22 @@ set -e
 # Clipy
 # amphetiamine (keep awake util)
 #
+# Amphetamine
+# Appcleaner
+# Beekeeper studio Community
+# Google Drive
 # Dropover (store) (Paid)
 # Dropshelf
 # Hidden bar
+# Bartender 5
 # hyperkey
 # iterm
 # lightshot
+# Latest
+# Brave
+# Arc
 # meganz
+# Notion
 # Obsidian
 # postman
 # raycast
@@ -19,10 +28,22 @@ set -e
 # rectangle (store)
 # shottr
 # slack
+# NordVPN
+# Maccy
+# Keyboard clean tool
+# libre office
+# TickTick
 # Sublime merge
+# Karabinar elements
 # Suspicious Package (to check .pkg files)
+# GrandPerspective (storage analyzer)
 # vscode
 # wezterm
+# UTM (Virtual Machines)
+# AltTab (window switcher)
+# Syncthing
+# Breaktimer
+# Whatsapp
 
 
 ######## Paid apps to be tried yet
@@ -32,8 +53,15 @@ set -e
 # Cleanshot X (SS tool)
 # Cork (homebrew GUI interface)
 # DaisyDisk (Disk usage cleanup)
+# Little Snitch (Privacy tool to monitor network connections)
+# Wipr (ad blocker)
+# Lunar (brightness and volume? vcontrol)
 
 # Klack (mechanical keyboard sound XD 5USD)
+
+############# Free Apps to try
+# Hammerspoon (automation tool)
+# Hush Nag Blocker (ad blockers etc)
 
 ############################################################################
 #################### Configurations / variables ############################
@@ -59,7 +87,9 @@ sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotn
 
 # Brew packages
 brew install gpg
+brew install bitwarden-cli
 brew install nvm
+brew install eza
 brew install direnv
 brew install orbstack
 brew install slack
@@ -75,17 +105,10 @@ brew install stats
 ############## RUST
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-############ Cargo utils
-cargo install exa
+# ############ Cargo utils
+# cargo install exa
 
 ############# TODOs
-# Install
-mpv
-warp-terminal
-nvim?
-nordvpn
-
-delta for github
 
 #
 # setup syncthing phone backup
