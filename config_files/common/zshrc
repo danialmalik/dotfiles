@@ -88,7 +88,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   z
-  dotenv
+  # dotenv
   docker
   docker-compose
   git
