@@ -39,11 +39,13 @@ set -e
 # GrandPerspective (storage analyzer)
 # vscode
 # wezterm
-# UTM (Virtual Machines)
 # AltTab (window switcher)
 # Syncthing
 # Breaktimer
 # Whatsapp
+# spotify
+# CrossOver (Wine) (10usd per year)
+
 
 
 ######## Paid apps to be tried yet
