@@ -8,9 +8,9 @@ THEMES_DIR=$ZSH_CUSTOM/themes
 cd $PLUGINS_DIR
 
 git -C $PLUGINS_DIR/alias-tips pull
-git -C $PLUGINS_DIR zsh-autosuggestions
-git -C $PLUGINS_DIR zsh-syntax-highlighting
-git -C $PLUGINS_DIR history-search-multi-word
+git -C $PLUGINS_DIR/zsh-autosuggestions pull
+git -C $PLUGINS_DIR/zsh-syntax-highlighting pull
+git -C $PLUGINS_DIR/history-search-multi-word pull
 
 ######## Install Themes
 cd $THEMES_DIR
