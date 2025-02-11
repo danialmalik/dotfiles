@@ -2,7 +2,7 @@
 # Mac specific settings here
 
 ##### Brew
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 
 ######### vscode mac #############
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
