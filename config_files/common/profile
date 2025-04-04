@@ -201,3 +201,6 @@ source $SECURE_DOTFILES_DIR/env_files/shared.env
 source $DOTFILES_DIR/scripts/utils/common/helpers.sh
 
 source $SECURE_DOTFILES_DIR/scripts/helpers.sh
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/danialmalik/.lmstudio/bin"

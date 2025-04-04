@@ -12,7 +12,7 @@ set -e
 # Dropover (store) (Paid)
 # Dropshelf
 # Hidden bar
-# Bartender 5
+# Bartender 5   # ICE (free alternative)
 # hyperkey
 # iterm
 # lightshot
@@ -58,6 +58,7 @@ set -e
 # Little Snitch (Privacy tool to monitor network connections)
 # Wipr (ad blocker)
 # Lunar (brightness and volume? vcontrol)
+# DynamicLake (notch app)
 
 # Klack (mechanical keyboard sound XD 5USD)
 
@@ -107,12 +108,3 @@ brew install stats
 
 ############## RUST
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# ############ Cargo utils
-# cargo install exa
-
-############# TODOs
-
-#
-# setup syncthing phone backup
-# setup timemachine backup for mac
