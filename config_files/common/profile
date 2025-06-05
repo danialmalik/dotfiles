@@ -194,6 +194,9 @@ eval "$(direnv hook zsh)"
 ####################### Last steps ############################
 ###################################################################
 
+## Secure Profile
+source $SECURE_DOTFILES_DIR/config_files/common/profile
+
 #### Env
 source $SECURE_DOTFILES_DIR/env_files/shared.env
 
