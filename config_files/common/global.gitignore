@@ -1,3 +1,5 @@
 .dotenv
 
 gitignored/
+
+.github/copilot-instructions.md

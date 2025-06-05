@@ -6,14 +6,15 @@ set -e
 # amphetiamine (keep awake util)
 #
 # Amphetamine
-# Appcleaner
+# Appcleaner     # Closed Source. Better to use PearCleaner
 # Beekeeper studio Community
 # Google Drive
 # Dropover (store) (Paid)
 # Dropshelf
 # Hidden bar
-# Bartender 5   # ICE (free alternative)
+# Bartender 5   # Use ICE (OpenSource alternative)
 # hyperkey
+# Cmd+X
 # iterm
 # lightshot
 # Latest
@@ -44,8 +45,7 @@ set -e
 # Breaktimer
 # Whatsapp
 # spotify
-# CrossOver (Wine) (10usd per year)
-
+# CrossOver (Wine) (10usd per year) || Whisky (Free Alternative)
 
 
 ######## Paid apps to be tried yet
@@ -104,6 +104,7 @@ brew install jq
 brew install git-delta
 brew install gitui
 brew install stats
+brew install pearcleaner
 
 
 ############## RUST
