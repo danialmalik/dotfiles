@@ -90,6 +90,7 @@ sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotn
 
 # Brew packages
 brew install gpg
+brew install gh
 brew install bitwarden-cli
 brew install nvm
 brew install eza
@@ -105,6 +106,9 @@ brew install git-delta
 brew install gitui
 brew install stats
 brew install pearcleaner
+brew install rg
+# brew install opencode-ai/tap/opencode
+
 
 
 ############## RUST
