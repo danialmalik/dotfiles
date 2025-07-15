@@ -39,7 +39,6 @@ set -e
 # Suspicious Package (to check .pkg files)
 # GrandPerspective (storage analyzer)
 # vscode
-# wezterm
 # AltTab (window switcher)
 # Syncthing
 # Breaktimer
@@ -86,7 +85,7 @@ CONFIG_FILES_DIR=$DOTFILES/config_files
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Dotnet
-sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh)"
+# sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh)"
 
 # Brew packages
 brew install gpg
@@ -107,7 +106,9 @@ brew install gitui
 brew install stats
 brew install pearcleaner
 brew install rg
+# brew install --cask ghostty
 # brew install opencode-ai/tap/opencode
+# brew install --cask wezterm
 
 
 
