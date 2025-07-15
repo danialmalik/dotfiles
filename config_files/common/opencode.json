@@ -23,6 +23,7 @@
       "reasoningEffort": ""
     }
   },
+  "debug": true,
   "tui": {
     "theme": "opencode"
   },
