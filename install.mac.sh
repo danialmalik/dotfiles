@@ -32,6 +32,7 @@ set -e
 # NordVPN
 # Maccy
 # Keyboard clean tool
+# KnockKnock? # Tool to check what apps start at startup.
 # libre office
 # TickTick
 # Sublime merge
@@ -106,8 +107,10 @@ brew install gitui
 brew install stats
 brew install pearcleaner
 brew install rg
+brew install ffmpeg
+brew install yt-dlp
 # brew install --cask ghostty
-# brew install opencode-ai/tap/opencode
+# brewbrew install sst/tap/opencode
 # brew install --cask wezterm
 
 
