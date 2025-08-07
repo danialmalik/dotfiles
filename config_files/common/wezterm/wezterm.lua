@@ -32,48 +32,51 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 ------------------------ Appearance ------------------------------
 config.enable_scroll_bar = true
 -- config.window_decorations = "NONE"
--- config.font = wezterm.font('Fira Code')
+config.font = wezterm.font('Fira Code')
+config.font_size = 15.0
 config.harfbuzz_features = { 'liga=1' }
 
 
 ---cycle through builtin dark schemes in dark mode,
 ---and through light schemes in light mode
 local function themeCycler(window, _)
-    local allSchemes = wezterm.color.get_builtin_schemes()
-    local currentMode = wezterm.gui.get_appearance()
-    local currentScheme = window:effective_config().color_scheme
-    local darkSchemes = {}
-    local lightSchemes = {}
+	local allSchemes = wezterm.color.get_builtin_schemes()
+	local currentMode = wezterm.gui.get_appearance()
+	local currentScheme = window:effective_config().color_scheme
+	local darkSchemes = {}
+	local lightSchemes = {}
 
-    for name, scheme in pairs(allSchemes) do
-        local bg = wezterm.color.parse(scheme.background) -- parse into a color object
-        ---@diagnostic disable-next-line: unused-local
-        local h, s, l, a = bg:hsla() -- and extract HSLA information
-        if l < 0.4 then
-            table.insert(darkSchemes, name)
-        else
-            table.insert(lightSchemes, name)
-        end
-    end
-    local schemesToSearch = currentMode:find("Dark") and darkSchemes or lightSchemes
+	for name, scheme in pairs(allSchemes) do
+		if scheme.background then
+			local bg = wezterm.color.parse(scheme.background) -- parse into a color object
+			---@diagnostic disable-next-line: unused-local
+			local h, s, l, a = bg:hsla() -- and extract HSLA information
+			if l < 0.4 then
+				table.insert(darkSchemes, name)
+			else
+				table.insert(lightSchemes, name)
+			end
+		end
+	end
+	local schemesToSearch = currentMode:find("Dark") and darkSchemes or lightSchemes
 
-    for i = 1, #schemesToSearch, 1 do
-        if schemesToSearch[i] == currentScheme then
-            local overrides = window:get_config_overrides() or {}
-            overrides.color_scheme = schemesToSearch[i + 1]
-            wezterm.log_info("Switched to: " .. schemesToSearch[i + 1])
-            window:set_config_overrides(overrides)
-            return
-        end
-    end
+	for i = 1, #schemesToSearch, 1 do
+		if schemesToSearch[i] == currentScheme then
+			local overrides = window:get_config_overrides() or {}
+			overrides.color_scheme = schemesToSearch[i+1]
+			wezterm.log_info("Switched to: " .. schemesToSearch[i+1])
+			window:set_config_overrides(overrides)
+			return
+		end
+	end
 end
 
 -- For example, changing the color scheme:
 -- Later This Evening
-config.color_scheme = 'Builtin Dark'
-config.color_scheme = 'Kolorit'
-config.color_scheme = 'Galaxy'
-config.color_scheme = 'Gnometerm (terminal.sexy)'
+-- config.color_scheme = 'Builtin Dark'
+-- config.color_scheme = 'Kolorit'
+config.color_scheme = 'ibm3270 (Gogh)'
+-- config.color_scheme = 'Gnometerm (terminal.sexy)'
 
 
 -- config.colors = {background = '#000000'}
@@ -208,6 +211,8 @@ end
 
 local common_bindings = {
     {key = 'p', mods = meta_key, action = act.ActivateCommandPalette},
+    { key = "Escape", mods = "CTRL", action = wezterm.action.ShowDebugOverlay },
+
 
     --- CustomEventHandlers
     {key = 'd', mods = 'LEADER', action = act.EmitEvent 'launch-dotfiles'},

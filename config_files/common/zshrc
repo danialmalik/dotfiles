@@ -78,6 +78,10 @@ ENABLE_CORRECTION="true"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# With this, zsh will not add "\" when copy-pasting commands with special characters like { } or $.
+DISABLE_MAGIC_FUNCTIONS="true"
+
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
