@@ -11,6 +11,7 @@ set -e
 # Google Drive
 # Dropover (store) (Paid)
 # Dropshelf
+# DaisyDisk # (Paid, Purchased) # Disk usage analyzer
 # Hidden bar
 # Bartender 5   # Use ICE (OpenSource alternative)
 # hyperkey
@@ -31,6 +32,7 @@ set -e
 # slack
 # NordVPN
 # Maccy
+# Swish (window management using gestures)
 # Keyboard clean tool
 # KnockKnock? # Tool to check what apps start at startup.
 # libre office
@@ -50,11 +52,8 @@ set -e
 
 ######## Paid apps to be tried yet
 
-# Swish (window management using gestures)
 # CleanMyMac X
-# Cleanshot X (SS tool)
 # Cork (homebrew GUI interface)
-# DaisyDisk (Disk usage cleanup)
 # Little Snitch (Privacy tool to monitor network connections)
 # Wipr (ad blocker)
 # Lunar (brightness and volume? vcontrol)
@@ -69,9 +68,7 @@ set -e
 ############################################################################
 #################### Configurations / variables ############################
 ############################################################################
-USERNAME=danialmalik
-DOTFILES=$HOME/dotfiles/dotfiles
-CONFIG_FILES_DIR=$DOTFILES/config_files
+
 
 ############################################################################
 ########################## Pre-processing steps ############################
@@ -98,6 +95,7 @@ brew install direnv
 brew install orbstack
 brew install slack
 brew install pyenv
+brew install tfenv
 brew install mpv
 brew install tree
 brew install unison
@@ -109,11 +107,19 @@ brew install pearcleaner
 brew install rg
 brew install ffmpeg
 brew install yt-dlp
-# brew install --cask ghostty
-# brewbrew install sst/tap/opencode
+brew install --cask dbeaver-community
+brew install pnpm
+
+
+
 # brew install --cask wezterm
-
-
 
 ############## RUST
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+
+########## AI Tools
+# brew install sst/tap/opencode
+brew install codex # Open AI
+npm install -g @github/copilot
+npm install -g @anthropic-ai/claude-code
