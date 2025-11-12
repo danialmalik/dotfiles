@@ -109,7 +109,7 @@ if [ "$SYSTEM" = "Linux" ]; then
 	alias wifi-events="sudo iwevent"
 	alias check-wifi-logs="sudo dmesg | grep iwlwifi"
 
-else
+else # MacOS
 	# brew
 	alias nbrew='HOMEBREW_NO_AUTO_UPDATE=1 brew'
 
@@ -118,6 +118,8 @@ else
 	# to fix the openssl related error
 	# use command as "ossl_pyenv install 3.5.0"
 	alias ossl_pyenv=CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv
+
+	alias claude="/Users/danialmalik/.claude/local/claude"
 
 fi
 

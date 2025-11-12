@@ -2,5 +2,8 @@
 
 gitignored/
 
-.github/copilot-instructions.md
+# .github/copilot-instructions.md
 .github/prompts/
+
+# Claude local settings for projects
+.claude/settings.local.json
