@@ -197,6 +197,15 @@ load-nvmrc
 # direnv
 eval "$(direnv hook zsh)"
 
+# Codex completions
+if command -v codex >/dev/null 2>&1; then
+	eval "$(codex completion zsh)"
+fi
+
+# Claude completions
+if command -v claude >/dev/null 2>&1; then
+	# Claude completions
+fi
 
 ###################################################################
 ####################### Last steps ############################
@@ -212,6 +221,3 @@ source $SECURE_DOTFILES_DIR/env_files/shared.env
 source $DOTFILES_DIR/scripts/utils/common/helpers.sh
 
 source $SECURE_DOTFILES_DIR/scripts/helpers.sh
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/danialmalik/.lmstudio/bin"
