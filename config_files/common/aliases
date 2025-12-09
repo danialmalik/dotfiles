@@ -119,8 +119,6 @@ else # MacOS
 	# use command as "ossl_pyenv install 3.5.0"
 	alias ossl_pyenv=CFLAGS="-I$(brew --prefix openssl)/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv
 
-	alias claude="/Users/danialmalik/.claude/local/claude"
-
 fi
 
 

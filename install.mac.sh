@@ -96,6 +96,7 @@ brew install orbstack
 brew install slack
 brew install pyenv
 brew install tfenv
+brew install difftastic
 brew install mpv
 brew install tree
 brew install unison
@@ -122,4 +123,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # brew install sst/tap/opencode
 brew install codex # Open AI
 npm install -g @github/copilot
-npm install -g @anthropic-ai/claude-code
+# npm install -g @anthropic-ai/claude-code
+brew install --cask claude-code
+brew install gemini-cli

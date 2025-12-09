@@ -79,6 +79,7 @@
     terraform               # terraform workspace (https://www.terraform.io)
     # terraform_version     # terraform version (https://www.terraform.io)
     aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+    aws_session_info        # custom aws session info
     aws_eb_env              # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
     azure                   # azure account name (https://docs.microsoft.com/en-us/cli/azure)
     gcloud                  # google cloud cli account and project (https://cloud.google.com/)
@@ -1601,6 +1602,23 @@
   # User-defined prompt segments can be customized the same way as built-in segments.
   # typeset -g POWERLEVEL9K_EXAMPLE_FOREGROUND=208
   # typeset -g POWERLEVEL9K_EXAMPLE_VISUAL_IDENTIFIER_EXPANSION='⭐'
+
+  function prompt_aws_session_info() {
+    # Ensure at least the account name is present
+    [[ -n "$AWS_ACCOUNT_NAME" ]] || return
+
+    local content="${AWS_ACCOUNT_NAME}"
+    if [[ -n "$AWS_ASSUMED_ROLE" ]]; then
+      content+=":${AWS_ASSUMED_ROLE}"
+    fi
+    
+    # Display the segment with AWS orange color (208) and a cloud icon
+    p10k segment -f 208 -i '☁️' -t "$content"
+  }
+
+  function instant_prompt_aws_session_info() {
+    prompt_aws_session_info
+  }
 
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:
