@@ -126,3 +126,4 @@ npm install -g @github/copilot
 # npm install -g @anthropic-ai/claude-code
 brew install --cask claude-code
 brew install gemini-cli
+curl https://cursor.com/install -fsS | bash
