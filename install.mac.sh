@@ -120,9 +120,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
 ########## AI Tools
-# brew install sst/tap/opencode
-brew install codex # Open AI
+brew install sst/tap/opencode
 npm install -g @github/copilot
+brew install codex # Open AI
 brew install --cask claude-code
 # brew install gemini-cli
 

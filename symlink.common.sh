@@ -47,7 +47,3 @@ ln -sf $COMMON_CONFIG_FILES_DIR/ghostty-terminal/config $HOME/.config/ghostty/co
 mkdir -p $HOME/.config/mpv
 ln -sf $COMMON_CONFIG_FILES_DIR/mpv/input.conf $HOME/.config/mpv/input.conf
 ln -sf $COMMON_CONFIG_FILES_DIR/mpv/mpv.conf $HOME/.config/mpv/mpv.conf
-
-# OpenCode
-rm $HOME/.opencode.json
-ln -sf $COMMON_CONFIG_FILES_DIR/opencode.json $HOME/.opencode.json
