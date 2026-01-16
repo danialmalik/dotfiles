@@ -127,4 +127,4 @@ brew install --cask claude-code
 # brew install gemini-cli
 
 ## cursor-agent
-curl https://cursor.com/install -fsS | bash
+# curl https://cursor.com/install -fsS | bash
