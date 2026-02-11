@@ -111,6 +111,9 @@ brew install yt-dlp
 brew install --cask dbeaver-community
 brew install pnpm
 
+# Atlassian CLI
+brew tap atlassian/homebrew-acli
+brew install acli
 
 
 # brew install --cask wezterm
