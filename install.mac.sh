@@ -93,6 +93,7 @@ brew install nvm
 brew install eza
 brew install direnv
 brew install orbstack
+brew install colima
 brew install slack
 brew install pyenv
 brew install tfenv
@@ -103,6 +104,7 @@ brew install unison
 brew install jq
 brew install git-delta
 brew install gitui
+brew install git-crypt
 brew install stats
 brew install pearcleaner
 brew install rg
