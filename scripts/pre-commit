@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Pre-commit hook: detect secrets in staged files using gitleaks
+# If a file with secrets is staged, gitleaks will catch it here and block the commit.
+
+if ! command -v gitleaks &>/dev/null; then
+    echo "[pre-commit] WARNING: gitleaks not found, skipping secret detection."
+    echo "  Install with: brew install gitleaks"
+    exit 0
+fi
+
+echo "[pre-commit] Running secret detection on staged changes..."
+
+if ! gitleaks protect --staged --redact --verbose --config .gitleaks.toml; then
+    echo ""
+    echo "[pre-commit] BLOCKED: Potential secrets detected in staged files."
+    echo "  This is a public repo — do NOT commit credentials or tokens."
+    exit 1
+fi
+
+echo "[pre-commit] No secrets detected."
+exit 0
