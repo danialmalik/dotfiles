@@ -105,6 +105,7 @@ brew install jq
 brew install git-delta
 brew install gitui
 brew install git-crypt
+brew install git-filter-repo
 brew install stats
 brew install pearcleaner
 brew install rg
