@@ -221,3 +221,11 @@ source $SECURE_DOTFILES_DIR/env_files/shared.env
 source $DOTFILES_DIR/scripts/utils/common/helpers.sh
 
 source $SECURE_DOTFILES_DIR/scripts/helpers.sh
+
+
+MAILBOX="/var/mail/$USER"
+[ -e "$MAILBOX" ] || MAILBOX="/var/spool/mail/$USER"
+
+if [ -s "$MAILBOX" ]; then
+printf 'You have local cron mail. Read it with: mail\n'
+fi
