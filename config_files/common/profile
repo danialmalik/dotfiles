@@ -229,3 +229,8 @@ MAILBOX="/var/mail/$USER"
 if [ -s "$MAILBOX" ]; then
 printf 'You have local cron mail. Read it with: mail\n'
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/danialmalik/.lmstudio/bin"
+# End of LM Studio CLI section
+
