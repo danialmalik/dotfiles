@@ -103,6 +103,7 @@ brew install tree
 brew install unison
 brew install jq
 brew install git-delta
+brew install htop
 brew install gitui
 brew install git-crypt
 brew install git-filter-repo
