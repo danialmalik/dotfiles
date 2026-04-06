@@ -36,7 +36,7 @@ ln -sf $COMMON_CONFIG_FILES_DIR/wezterm/wezterm.lua $HOME/.config/wezterm/wezter
 ln -sf $COMMON_CONFIG_FILES_DIR/warp-terminal/keybindings.yaml $HOME/.config/warp-terminal/keybindings.yaml
 ln -sf $COMMON_CONFIG_FILES_DIR/warp-terminal/user_preferences.json $HOME/.config/warp-terminal/user_preferences.json
 
-# Ghostly
+# Ghostty
 ln -sf $COMMON_CONFIG_FILES_DIR/ghostty-terminal/config $HOME/.config/ghostty/config
 
 # Zsh Themes

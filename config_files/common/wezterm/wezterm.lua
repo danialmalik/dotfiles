@@ -79,9 +79,9 @@ config.color_scheme = 'ibm3270 (Gogh)'
 -- config.color_scheme = 'Gnometerm (terminal.sexy)'
 
 
--- config.colors = {background = '#000000'}
+config.colors = {background = '#000000'}
 
-config.window_background_image = '/home/danialmalik/MEGAsync/imgs/1139110.jpg'
+-- config.window_background_image = '/home/danialmalik/MEGAsync/imgs/1139110.jpg'
 
 config.window_background_image_hsb = {
   -- Darken the background image by reducing it to 1/3rd
@@ -107,6 +107,28 @@ local keys_bindings
 if is_mac then
     keys_bindings = {
         { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
+        ------------- Basic navigation
+        -- Rebind OPT-Left, OPT-Right as ALT-b, ALT-f respectively to match Terminal.app behavior
+        {
+            key = 'LeftArrow',
+            mods = 'OPT',
+            action = act.SendKey {
+                key = 'b',
+                mods = 'ALT',
+            },
+        },
+        {
+            key = 'RightArrow',
+            mods = 'OPT',
+            action = act.SendKey { key = 'f', mods = 'ALT' },
+        },
+
+        -- Cmd+Backspace to delete whole command
+        {
+            key = 'Backspace',
+            mods = 'CMD',
+            action = act.SendKey { mods = 'CTRL', key = 'u' },
+        },
 
         -------------- Pane split
         {

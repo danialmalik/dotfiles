@@ -37,6 +37,6 @@
 font-family = "Fira Code"
 font-style = Regular
 font-feature = "liga=1,clig=1,dlig=1"
-# font-size = 100
+font-size = 100
 
 theme = "Github Dark"
