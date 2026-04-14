@@ -132,7 +132,12 @@ npm install -g @github/copilot
 brew install codex # Open AI
 brew install --cask claude-code
 # brew install gemini-cli
+
 brew install rtk # Tokens saver
+## Intial setup for rtk
+# rtk init -g --codex
+# rtk init -g --claude
+# rtk init -g --opencode
 
 ## cursor-agent
 # curl https://cursor.com/install -fsS | bash
