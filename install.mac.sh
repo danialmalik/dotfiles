@@ -139,5 +139,7 @@ brew install rtk # Tokens saver
 # rtk init -g --claude
 # rtk init -g --opencode
 
+brew install beads
+
 ## cursor-agent
 # curl https://cursor.com/install -fsS | bash
