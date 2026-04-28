@@ -52,5 +52,5 @@
 	autoupdate = true
 
 # Work related config
-[includeIf "gitdir:~/work/"]
+[includeIf "gitdir:~/work/roadpost/"]
   path = ~/dotfiles/secure_dotfiles/config_files/roadpost/gitconfig-roadpost
