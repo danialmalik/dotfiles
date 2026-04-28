@@ -50,3 +50,7 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+
+# Work related config
+[includeIf "gitdir:~/work/"]
+  path = ~/dotfiles/secure_dotfiles/config_files/roadpost/gitconfig-roadpost
