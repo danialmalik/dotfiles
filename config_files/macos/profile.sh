@@ -15,6 +15,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
+################ bun ###################
+# bun completions
+[ -s "/Users/danialmalik/.bun/_bun" ] && source "/Users/danialmalik/.bun/_bun"
+
 
 ##### nvm
 mkdir -p  ~/.nvm
