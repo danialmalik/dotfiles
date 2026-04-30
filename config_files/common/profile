@@ -151,6 +151,33 @@ setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 # bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
+
+##########################################################
+################### Installed apps configs #####################
+##########################################################
+## bun
+# Check if bun is installed before adding to PATH and sourcing completions
+if command -v bun >/dev/null 2>&1; then
+	# bun completions
+	[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+	# bun path
+	export BUN_INSTALL="$HOME/.bun"
+	export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+## Vscode
+# VSCode integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+
+## Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
 ###########################################################
 ##################### System specific #####################
 ###########################################################
@@ -202,10 +229,10 @@ if command -v codex >/dev/null 2>&1; then
 	eval "$(codex completion zsh)"
 fi
 
-# Claude completions
-if command -v claude >/dev/null 2>&1; then
-	# Claude completions
-fi
+# # Claude completions
+# if command -v claude >/dev/null 2>&1; then
+# 	# Claude completions. Nothing to do?
+# fi
 
 ###################################################################
 ####################### Last steps ############################

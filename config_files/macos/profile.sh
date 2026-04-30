@@ -20,6 +20,12 @@ fi
 [ -s "/Users/danialmalik/.bun/_bun" ] && source "/Users/danialmalik/.bun/_bun"
 
 
+######### LM Studio CLI #############
+if command -v lms >/dev/null 2>&1; then
+	export PATH="$PATH:/Users/danialmalik/.lmstudio/bin"
+fi
+
+
 ##### nvm
 mkdir -p  ~/.nvm
 export NVM_DIR="$HOME/.nvm"
