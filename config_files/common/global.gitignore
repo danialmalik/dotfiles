@@ -7,3 +7,7 @@ gitignored/
 
 # Claude local settings for projects
 .claude/settings.local.json
+
+# Repowise
+.repowise/
+.repowise-*/
