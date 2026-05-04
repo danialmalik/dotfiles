@@ -11,3 +11,6 @@ gitignored/
 # Repowise
 .repowise/
 .repowise-*/
+
+# env
+.envrc
