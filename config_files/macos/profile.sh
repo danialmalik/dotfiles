@@ -33,6 +33,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
+########## bun
+
+# bun completions
+[ -s "/Users/danialmalik/.bun/_bun" ] && source "/Users/danialmalik/.bun/_bun"
+
+
 ### libpq (pg_dump and pg_restore etc)
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 

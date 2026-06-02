@@ -114,6 +114,7 @@ brew install ffmpeg
 brew install yt-dlp
 brew install --cask dbeaver-community
 brew install pnpm
+curl -fsSL https://bun.com/install | bash
 
 # Atlassian CLI
 brew tap atlassian/homebrew-acli
