@@ -19,7 +19,7 @@
   # editor = code --wait
   editor = vim
   excludesFile = /Users/danialmalik/dotfiles/dotfiles/config_files/common/global.gitignore
-	hooksPath = /Users/danialmalik/dotfiles/dotfiles/scripts/git-hooks/pre-commit
+	hooksPath = /Users/danialmalik/dotfiles/dotfiles/scripts/git-hooks
   # autocrlf = true
 
 [interactive]
