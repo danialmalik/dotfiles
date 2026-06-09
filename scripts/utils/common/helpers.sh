@@ -1,5 +1,7 @@
 #!/bin/sh
 
+############### Git related
+
 show_git_alias_cheatsheet() {
     cat << EOF
         gcb     =   git checkout -b
@@ -19,6 +21,41 @@ show_git_alias_cheatsheet() {
 EOF
 }
 
+
+# A shell utility to make a git worktree from PWD. It does the following things:
+# 1. Creates a new git worktree under $PWD/.worktrees/<given-name>
+# 2. Checks $PWD for these possible files. If found, creates a symlink to the worktree.
+#    - .envrc
+#    - .env
+#    - .docker-compose.override.yml
+make_worktree() {
+    NAME="${1}"
+    if [ -z "${NAME}" ]; then
+        echo "Usage: make_worktree <name>"
+        return 1
+    fi
+
+    # create the worktree
+    git worktree add "${PWD}/.worktrees/${NAME}"
+
+    # check for the possible files and create symlinks to the worktree
+    if [ -f "${PWD}/.envrc" ]; then
+        ln "${PWD}/.envrc" "${PWD}/.worktrees/${NAME}/.envrc"
+    fi
+    if [ -f "${PWD}/.env" ]; then
+        ln "${PWD}/.env" "${PWD}/.worktrees/${NAME}/.env"
+    fi
+    if [ -f "${PWD}/.docker-compose.override.yml" ]; then
+        ln "${PWD}/.docker-compose.override.yml" "${PWD}/.worktrees/${NAME}/.docker-compose.override.yml"
+    fi
+
+    cd "${PWD}/.worktrees/${NAME}" || exit 1
+
+    echo "Worktree created successfully. You are now in the worktree directory."
+}
+
+
+################## AWS
 
 ## Usage: list-aws-instances.sh  mi-qa qa app
 
