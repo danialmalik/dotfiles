@@ -239,6 +239,11 @@ fi
 # 	# Claude completions. Nothing to do?
 # fi
 
+## Ollama
+if command -v ollama >/dev/null 2>&1; then
+	export OLLAMA_BASE_URL=http://localhost:11434
+fi
+
 ###################################################################
 ####################### Last steps ############################
 ###################################################################
