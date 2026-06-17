@@ -21,14 +21,13 @@ show_git_alias_cheatsheet() {
 EOF
 }
 
-
 # A shell utility to make a git worktree from PWD. It does the following things:
 # 1. Creates a new git worktree under $PWD/.worktrees/<given-name>
 # 2. Checks $PWD for these possible files. If found, creates a symlink to the worktree.
 #    - .envrc
 #    - .env
 #    - .docker-compose.override.yml
-make_worktree() {
+mk_worktree() {
     NAME="${1}"
     if [ -z "${NAME}" ]; then
         echo "Usage: make_worktree <name>"
@@ -48,10 +47,11 @@ make_worktree() {
     if [ -f "${PWD}/.docker-compose.override.yml" ]; then
         ln "${PWD}/.docker-compose.override.yml" "${PWD}/.worktrees/${NAME}/.docker-compose.override.yml"
     fi
+    if [ -f "${PWD}/.mcp.json" ]; then
+        ln "${PWD}/.mcp.json" "${PWD}/.worktrees/${NAME}/.mcp.json"
+    fi
 
-    cd "${PWD}/.worktrees/${NAME}" || exit 1
-
-    echo "Worktree created successfully. You are now in the worktree directory."
+    echo "Worktree created successfully."
 }
 
 
