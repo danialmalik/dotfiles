@@ -128,6 +128,9 @@ brew install acli
 ############## RUST
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+############### Cargo utils
+cargo install dye-cli
+
 
 ########## AI Tools
 # brew install anomalyco/tap/opencode

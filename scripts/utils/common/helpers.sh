@@ -52,6 +52,8 @@ mk_worktree() {
     fi
 
     echo "Worktree created successfully."
+
+    cd "${PWD}/.worktrees/${NAME}" || exit
 }
 
 
