@@ -10,7 +10,6 @@ set -e
 # Beekeeper studio Community
 # Google Drive
 # Dropover (store) (Paid)
-# Dropshelf
 # DaisyDisk # (Paid, Purchased) # Disk usage analyzer
 # Hidden bar
 # Bartender 5   # Use ICE (OpenSource alternative)
