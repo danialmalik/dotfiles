@@ -26,7 +26,7 @@ EOF
 # 2. Checks $PWD for these possible files. If found, creates a symlink to the worktree.
 #    - .envrc
 #    - .env
-#    - .docker-compose.override.yml
+#    - docker-compose.override.yml
 mk_worktree() {
     NAME="${1}"
     if [ -z "${NAME}" ]; then
@@ -44,8 +44,8 @@ mk_worktree() {
     if [ -f "${PWD}/.env" ]; then
         ln "${PWD}/.env" "${PWD}/.worktrees/${NAME}/.env"
     fi
-    if [ -f "${PWD}/.docker-compose.override.yml" ]; then
-        ln "${PWD}/.docker-compose.override.yml" "${PWD}/.worktrees/${NAME}/.docker-compose.override.yml"
+    if [ -f "${PWD}/docker-compose.override.yml" ]; then
+        ln "${PWD}/docker-compose.override.yml" "${PWD}/.worktrees/${NAME}/docker-compose.override.yml"
     fi
     if [ -f "${PWD}/.mcp.json" ]; then
         ln "${PWD}/.mcp.json" "${PWD}/.worktrees/${NAME}/.mcp.json"
