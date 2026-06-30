@@ -40,15 +40,19 @@ mk_worktree() {
     # check for the possible files and create symlinks to the worktree
     if [ -f "${PWD}/.envrc" ]; then
         ln "${PWD}/.envrc" "${PWD}/.worktrees/${NAME}/.envrc"
+        echo "${PWD}/.envrc -> ${PWD}/.worktrees/${NAME}/.envrc ✅"
     fi
     if [ -f "${PWD}/.env" ]; then
         ln "${PWD}/.env" "${PWD}/.worktrees/${NAME}/.env"
+        echo "${PWD}/.env -> ${PWD}/.worktrees/${NAME}/.env ✅"
     fi
     if [ -f "${PWD}/docker-compose.override.yml" ]; then
         ln "${PWD}/docker-compose.override.yml" "${PWD}/.worktrees/${NAME}/docker-compose.override.yml"
+        echo "${PWD}/docker-compose.override.yml -> ${PWD}/.worktrees/${NAME}/docker-compose.override.yml ✅"
     fi
     if [ -f "${PWD}/.mcp.json" ]; then
         ln "${PWD}/.mcp.json" "${PWD}/.worktrees/${NAME}/.mcp.json"
+        echo "${PWD}/.mcp.json -> ${PWD}/.worktrees/${NAME}/.mcp.json ✅"
     fi
 
     echo "Worktree created successfully."
