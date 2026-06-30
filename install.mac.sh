@@ -136,6 +136,7 @@ cargo install dye-cli
 npm install -g @github/copilot
 brew install codex # Open AI
 brew install --cask claude-code
+brew install --cask tolaria # Memory management tool
 # brew install gemini-cli
 
 brew install rtk # Tokens saver
