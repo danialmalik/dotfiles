@@ -113,6 +113,7 @@ brew install ffmpeg
 brew install yt-dlp
 brew install --cask dbeaver-community
 brew install pnpm
+brew install --cask applite # App manager (brew based)
 
 brew install yazi fd rg fzf # File maanger TUI with deps
 curl -fsSL https://bun.com/install | bash
