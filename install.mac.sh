@@ -110,6 +110,7 @@ brew install stats
 brew install pearcleaner
 brew install rg
 brew install ffmpeg
+brew install neovim
 brew install yt-dlp
 brew install --cask dbeaver-community
 brew install pnpm
