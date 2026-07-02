@@ -14,3 +14,12 @@ gitignored/
 
 # env
 .envrc
+
+# AI
+.tokensave/
+
+# Git
+.worktrees/
+
+# Python
+__pycache__/
