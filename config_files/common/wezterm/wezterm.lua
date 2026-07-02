@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+
 local event_handlers = require 'wezterm_event_handlers'
 
 local act = wezterm.action
@@ -30,11 +31,19 @@ end
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 ------------------------ Appearance ------------------------------
+local theme = wezterm.plugin.require('https://github.com/neapsix/wezterm').main
+
 config.enable_scroll_bar = true
 -- config.window_decorations = "NONE"
 config.font = wezterm.font('Fira Code')
-config.font_size = 15.0
+config.font_size = 18.0
 config.harfbuzz_features = { 'liga=1' }
+
+config.window_background_opacity = 0.3
+config.macos_window_background_blur = 20
+
+config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "RESIZE"
 
 
 ---cycle through builtin dark schemes in dark mode,
@@ -75,11 +84,17 @@ end
 -- Later This Evening
 -- config.color_scheme = 'Builtin Dark'
 -- config.color_scheme = 'Kolorit'
-config.color_scheme = 'ibm3270 (Gogh)'
+-- config.color_scheme = 'ibm3270 (Gogh)'
+config.color_scheme = 'rose-pine-moon'
+
 -- config.color_scheme = 'Gnometerm (terminal.sexy)'
 
 
-config.colors = {background = '#000000'}
+
+if config.color_scheme == 'rose-pine-moon' then
+  config.colors = theme.colors()
+  window_frame = theme.window_frame()
+end
 
 -- config.window_background_image = '/home/danialmalik/MEGAsync/imgs/1139110.jpg'
 
