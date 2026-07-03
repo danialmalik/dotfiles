@@ -1,13 +1,15 @@
 #!/bin/bash
 set -e
 
-####################### Manually installed
+############################################################################
+#################### Manual Installs (outside Homebrew) ####################
+############################################################################
+
+# -- Installed manually --
 # Clipy
-# amphetiamine (keep awake util)
-#
-# Amphetamine
+# Amphetamine (keep awake util)
 # Appcleaner     # Closed Source. Better to use PearCleaner
-# Beekeeper studio Community
+# Beekeeper Studio Community
 # Google Drive
 # Dropover (store) (Paid)
 # DaisyDisk # (Paid, Purchased) # Disk usage analyzer
@@ -48,108 +50,139 @@ set -e
 # spotify
 # CrossOver (Wine) (10usd per year) || Whisky (Free Alternative)
 
-
-######## Paid apps to be tried yet
-
+# -- Paid apps to try --
 # CleanMyMac X
 # Cork (homebrew GUI interface)
 # Little Snitch (Privacy tool to monitor network connections)
 # Wipr (ad blocker)
 # Lunar (brightness and volume? vcontrol)
 # DynamicLake (notch app)
-
 # Klack (mechanical keyboard sound XD 5USD)
 
-############# Free Apps to try
+# -- Free apps to try --
 # Hammerspoon (automation tool)
 # Hush Nag Blocker (ad blockers etc)
 
-############################################################################
-#################### Configurations / variables ############################
-############################################################################
-
 
 ############################################################################
-########################## Pre-processing steps ############################
-############################################################################
-
-
-
-############################################################################
-########################## Install Apps ##################################
+########################## Homebrew Bootstrap ##############################
 ############################################################################
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Dotnet
-# sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh)"
 
-# Brew packages
-brew install gpg
-brew install gh
-brew install bitwarden-cli
+############################################################################
+########################## Brew Packages ###################################
+############################################################################
+
+# Version managers / runtimes
 brew install nvm
-brew install eza
-brew install direnv
-brew install orbstack
-# brew install colima
-brew install slack
 brew install pyenv
 brew install tfenv
+brew install pnpm
+
+# Dev CLI / git
+brew install gpg
+brew install gh
 brew install difftastic
-brew install mpv
-brew install tree
-brew install unison
-brew install jq
 brew install git-delta
-brew install htop
-brew install bottom
-brew install gitui
 brew install git-crypt
 brew install git-filter-repo
-brew install stats
-brew install pearcleaner
-brew install rg
-brew install ffmpeg
-brew install neovim
-brew install yt-dlp
-brew install --cask dbeaver-community
-brew install pnpm
-brew install --cask applite # App manager (brew based)
-# brew install duckdb
-
-brew install yazi fd rg fzf # File maanger TUI with deps
-curl -fsSL https://bun.com/install | bash
+brew install gitui
 
 # Atlassian CLI
 brew tap atlassian/homebrew-acli
 brew install acli
 
+# Shell utilities
+brew install eza
+brew install rg
+brew install fzf
+brew install tree
+brew install jq
+brew install htop
+brew install bottom
+brew install tmux
+brew install fd
+brew install yazi # File manager TUI (yazi + deps)
 
-# brew install --cask wezterm
+# Editors
+brew install neovim
 
-############## RUST
+# Media
+brew install mpv
+brew install ffmpeg
+brew install yt-dlp
+
+# System / infra
+brew install orbstack
+# brew install colima
+brew install unison
+brew install stats
+brew install pearcleaner
+
+# Auth / env
+brew install bitwarden-cli
+brew install direnv
+
+# Apps (cask)
+brew install --cask dbeaver-community
+brew install --cask applite  # App manager (brew based)
+# brew install duckdb
+
+# Apps
+brew install slack
+
+
+############################################################################
+########################## Language Runtimes / Tools #######################
+############################################################################
+
+# Bun
+curl -fsSL https://bun.com/install | bash
+
+# Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-############### Cargo utils
+# Cargo utils
 cargo install dye-cli
 
+# Dotnet (disabled)
+# sh -c "$(curl -fsSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh)"
 
-########## AI Tools
+
+############################################################################
+########################## AI Tools #######################################
+############################################################################
+
 # brew install anomalyco/tap/opencode
-npm install -g @github/copilot
-brew install codex # Open AI
-brew install --cask claude-code
-brew install --cask tolaria # Memory management tool
 # brew install gemini-cli
 
-brew install rtk # Tokens saver
-## Intial setup for rtk
+# npm
+npm install -g @github/copilot
+
+# brew
+brew install codex  # Open AI
+# brew install --cask wezterm
+
+# brew cask
+brew install --cask claude-code
+brew install --cask tolaria  # Memory management tool
+
+# cursor-agent
+# curl https://cursor.com/install -fsS | bash
+
+
+############################################################################
+########################## AI Token Tools #################################
+############################################################################
+
+# brew install rtk  # Tokens saver
+## Initial setup for rtk
 # rtk init -g --codex
 # rtk init -g --claude
 # rtk init -g --opencode
 
 brew install beads
 
-## cursor-agent
-# curl https://cursor.com/install -fsS | bash
+pip install "headroom-ai[all]"
