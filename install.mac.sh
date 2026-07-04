@@ -165,9 +165,13 @@ npm install -g @github/copilot
 brew install codex  # Open AI
 # brew install --cask wezterm
 
+# Terminal to manage agents
+brew install herdr
+
 # brew cask
 brew install --cask claude-code
 brew install --cask tolaria  # Memory management tool
+
 
 # cursor-agent
 # curl https://cursor.com/install -fsS | bash
