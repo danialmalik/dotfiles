@@ -174,6 +174,9 @@ brew install --cask tolaria  # Memory management tool
 # cursor-agent
 # curl https://cursor.com/install -fsS | bash
 
+# Pi (Agent harness)
+curl -fsSL https://pi.dev/install.sh | sh
+
 
 ############################################################################
 ########################## AI Token Tools #################################
