@@ -189,7 +189,7 @@ curl -fsSL https://pi.dev/install.sh | sh
 # brew install --cask cmux
 
 # Herdr - TUI for AI agents
-brew install herdr
+# brew install herdr
 
 
 ############################################################################
