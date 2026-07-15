@@ -184,6 +184,13 @@ brew install --cask tolaria  # Memory management tool
 # Pi (Agent harness)
 curl -fsSL https://pi.dev/install.sh | sh
 
+# Cmux terminal
+# brew tap manaflow-ai/cmux
+# brew install --cask cmux
+
+# Herdr - TUI for AI agents
+brew install herdr
+
 
 ############################################################################
 ########################## AI Token Tools #################################
