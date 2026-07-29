@@ -55,6 +55,11 @@ mk_worktree() {
         echo "${PWD}/.mcp.json -> ${PWD}/.worktrees/${NAME}/.mcp.json ✅"
     fi
 
+    if [ -f "${PWD}/.nvmrc" ]; then
+        ln "${PWD}/.nvmrc" "${PWD}/.worktrees/${NAME}/.nvmrc"
+        echo "${PWD}/.nvmrc -> ${PWD}/.worktrees/${NAME}/.nvmrc ✅"
+    fi
+
     echo "Worktree created successfully."
 
     cd "${PWD}/.worktrees/${NAME}" || exit
