@@ -136,6 +136,7 @@ brew install direnv
 brew install --cask dbeaver-community
 brew install --cask applite  # App manager (brew based)
 # brew install duckdb
+brew install --cask unsecretised/tap/sxitch
 
 # Apps
 brew install slack
