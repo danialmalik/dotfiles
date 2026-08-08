@@ -33,6 +33,7 @@ set -e
 # slack
 # NordVPN
 # Maccy
+# macnotch (Purchased. check emails for license)
 # Swish (window management using gestures)
 # Keyboard clean tool
 # KnockKnock? # Tool to check what apps start at startup.
