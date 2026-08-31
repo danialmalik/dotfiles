@@ -109,6 +109,8 @@ brew install fzf
 brew install tree
 brew install jq
 brew install htop
+brew install glances
+brew install btop
 brew install bottom
 brew install tmux
 brew install fd
