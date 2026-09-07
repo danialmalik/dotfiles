@@ -35,6 +35,10 @@ export EDITOR="$VISUAL"
 ################### Applications / utilities ######################
 ###################################################################
 
+## gh (github) cli
+### Set the default gh cli config path here so that other work directories can define custom config paths. This is needed for the `gh` cli to work properly with multiple work directories.
+export GH_CONFIG_DIR="$HOME/.config/gh"
+
 ## asdf
 if [ -d "$HOME/.asdf" ]; then
 	source $HOME/.asdf/asdf.sh
