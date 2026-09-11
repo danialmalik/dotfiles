@@ -204,4 +204,5 @@ curl -fsSL https://pi.dev/install.sh | sh
 
 brew install beads
 
-pip install "headroom-ai[all]"
+# pip install "headroom-ai[all]"
+uv tool install "headroom-ai[all]"
