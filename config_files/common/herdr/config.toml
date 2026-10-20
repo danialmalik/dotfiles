@@ -1,5 +1,6 @@
 onboarding = false
 
+
 [theme]
 name = "one-dark"
 auto_switch = false
