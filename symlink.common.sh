@@ -10,6 +10,7 @@ mkdir $HOME/.config/terminator/ 2>/dev/null
 mkdir $HOME/.config/warp-terminal 2>/dev/null
 mkdir $HOME/.config/ghostty 2>/dev/null
 mkdir $HOME/.config/nvim/ 2>/dev/null
+mkdir $HOME/.config/herdr/ 2>/dev/null
 
 # shell symlinks
 ln -sf $COMMON_CONFIG_FILES_DIR/profile $HOME/.profile
@@ -38,6 +39,9 @@ ln -sf $COMMON_CONFIG_FILES_DIR/warp-terminal/user_preferences.json $HOME/.confi
 
 # Ghostty
 ln -sf $COMMON_CONFIG_FILES_DIR/ghostty-terminal/config $HOME/.config/ghostty/config
+
+# herdr
+ln -sf $COMMON_CONFIG_FILES_DIR/herdr/config.toml $HOME/.config/herdr/config.toml
 
 # Zsh Themes
 # Directly use from this directory

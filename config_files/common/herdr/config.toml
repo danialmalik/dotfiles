@@ -1,0 +1,31 @@
+onboarding = false
+
+[theme]
+name = "one-dark"
+auto_switch = false
+
+[ui]
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "terminal"
+
+[[keys.command]]
+key = "prefix+p"
+type = "plugin_action"
+command = "ray.plugin-manager.open"
+description = "open plugin manager"
+
+
+[[keys.command]]
+key = "prefix+space"
+type = "shell"
+command = "herdr plugin pane open --plugin palette --entrypoint palette"
+description = "Command palette"
+
+
+[[keys.command]]
+key = "prefix+k"
+type = "plugin_action"
+command = "herdr-bar.open"
+description = "command bar"
