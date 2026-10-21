@@ -26,7 +26,7 @@ description = "Command palette"
 
 
 [[keys.command]]
-key = "prefix+k"
+key = "prefix+ctrl+k"
 type = "plugin_action"
 command = "herdr-bar.open"
 description = "command bar"
@@ -35,3 +35,12 @@ description = "command bar"
 key = "prefix+alt+r"
 type = "plugin_action"
 command = "herdr-recap.open"
+
+
+[[keys.command]]
+key = "prefix+ctrl+d"
+type = "plugin_action"
+description = "open dagr pane"
+
+# Windows preview: invoke open-dagr-windows instead
+command = "herdr plugin action invoke open-dagr --plugin herdr-dagr"
