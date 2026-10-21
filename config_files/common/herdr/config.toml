@@ -30,3 +30,8 @@ key = "prefix+k"
 type = "plugin_action"
 command = "herdr-bar.open"
 description = "command bar"
+
+[[keys.command]]
+key = "prefix+alt+r"
+type = "plugin_action"
+command = "herdr-recap.open"

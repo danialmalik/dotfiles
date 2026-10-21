@@ -31,15 +31,13 @@ end
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 ------------------------ Appearance ------------------------------
-local theme = wezterm.plugin.require('https://github.com/neapsix/wezterm').main
-
 config.enable_scroll_bar = true
--- config.window_decorations = "NONE"
+config.window_decorations = "NONE"
 config.font = wezterm.font('Fira Code')
 config.font_size = 18.0
 config.harfbuzz_features = { 'liga=1' }
 
-config.window_background_opacity = 0.3
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 
 config.hide_tab_bar_if_only_one_tab = true
@@ -47,7 +45,12 @@ config.window_decorations = "RESIZE"
 
 
 ---cycle through builtin dark schemes in dark mode,
----and through light schemes in light mode
+---and through light schemes in light mode.
+---This only previews a scheme via a per-window override; it never touches
+---the file. Any config reload (e.g. saving the file) clears the preview so
+---config.color_scheme always wins -- see the window-config-reloaded handler below.
+local suppress_override_clear = false
+
 local function themeCycler(window, _)
 	local allSchemes = wezterm.color.get_builtin_schemes()
 	local currentMode = wezterm.gui.get_appearance()
@@ -69,32 +72,56 @@ local function themeCycler(window, _)
 	end
 	local schemesToSearch = currentMode:find("Dark") and darkSchemes or lightSchemes
 
-	for i = 1, #schemesToSearch, 1 do
+	-- default to the first scheme in the bucket if currentScheme isn't in it
+	-- (e.g. it belongs to the other light/dark bucket), so this never silently no-ops
+	local nextIndex = 1
+	for i = 1, #schemesToSearch do
 		if schemesToSearch[i] == currentScheme then
-			local overrides = window:get_config_overrides() or {}
-			overrides.color_scheme = schemesToSearch[i+1]
-			wezterm.log_info("Switched to: " .. schemesToSearch[i+1])
-			window:set_config_overrides(overrides)
-			return
+			nextIndex = (i % #schemesToSearch) + 1
+			break
 		end
 	end
+
+	local nextScheme = schemesToSearch[nextIndex]
+	local overrides = window:get_config_overrides() or {}
+	overrides.color_scheme = nextScheme
+	wezterm.log_info("Previewing: " .. nextScheme)
+	suppress_override_clear = true
+	window:set_config_overrides(overrides)
 end
+
+-- set_config_overrides() itself fires window-config-reloaded, so a flag is
+-- needed to tell "we just set the preview" apart from "the file reloaded" --
+-- otherwise this would immediately clear the preview we just set.
+wezterm.on('window-config-reloaded', function(window, _)
+	if suppress_override_clear then
+		suppress_override_clear = false
+		return
+	end
+	local overrides = window:get_config_overrides()
+	if overrides and overrides.color_scheme then
+		overrides.color_scheme = nil
+		suppress_override_clear = true
+		window:set_config_overrides(overrides)
+	end
+end)
 
 -- For example, changing the color scheme:
 -- Later This Evening
 -- config.color_scheme = 'Builtin Dark'
--- config.color_scheme = 'Kolorit'
+config.color_scheme = 'Kolorit'
 -- config.color_scheme = 'ibm3270 (Gogh)'
-config.color_scheme = 'rose-pine-moon'
+-- config.color_scheme = 'rose-pine-moon'
 
 -- config.color_scheme = 'Gnometerm (terminal.sexy)'
 
 
 
-if config.color_scheme == 'rose-pine-moon' then
-  config.colors = theme.colors()
-  window_frame = theme.window_frame()
-end
+-- if config.color_scheme == 'rose-pine-moon' then
+--   local theme = wezterm.plugin.require('https://github.com/neapsix/wezterm').main
+--   config.colors = theme.colors()
+--   window_frame = theme.window_frame()
+-- end
 
 -- config.window_background_image = '/home/danialmalik/MEGAsync/imgs/1139110.jpg'
 
@@ -121,7 +148,6 @@ local keys_bindings
 
 if is_mac then
     keys_bindings = {
-        { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
         ------------- Basic navigation
         -- Rebind OPT-Left, OPT-Right as ALT-b, ALT-f respectively to match Terminal.app behavior
         {
@@ -192,15 +218,13 @@ if is_mac then
 
     }
 else -- Linux OS
-    keybindings = {
+    keys_bindings = {
         ------------- Disabled
         -- {
         --     key = 'LeftArrow',
         --     mods = 'ALT',
         --     action = act.DisableDefaultAssignment
         -- },
-        ------------- Appearance related
-        { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
 
         ------------- Switch Panes
         {
@@ -250,11 +274,13 @@ local common_bindings = {
     {key = 'p', mods = meta_key, action = act.ActivateCommandPalette},
     { key = "Escape", mods = "CTRL", action = wezterm.action.ShowDebugOverlay },
 
+    ------------- Appearance related
+    { key = "t", mods = "ALT", action = wezterm.action_callback(themeCycler) },
+
+
 
     --- CustomEventHandlers
-    {key = 'd', mods = 'LEADER', action = act.EmitEvent 'launch-dotfiles'},
-    {key = '1', mods = 'LEADER', action = act.EmitEvent 'launch-tier3'},
-    {key = '2', mods = 'LEADER', action = act.EmitEvent 'launch-unhaggle'},
+    {key = 'd', mods = 'LEADER', action = act.EmitEvent 'launch-dotfiles'}
 }
 
 config.keys = mergeTablesIntoNew(keys_bindings, common_bindings)
