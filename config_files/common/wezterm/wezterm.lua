@@ -109,7 +109,7 @@ end)
 -- For example, changing the color scheme:
 -- Later This Evening
 -- config.color_scheme = 'Builtin Dark'
-config.color_scheme = 'Kolorit'
+config.color_scheme = 'IrBlack (Gogh)'
 -- config.color_scheme = 'ibm3270 (Gogh)'
 -- config.color_scheme = 'rose-pine-moon'
 
