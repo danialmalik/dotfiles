@@ -76,9 +76,16 @@ command = "herdr-recap.open"
 key = "prefix+ctrl+d"
 type = "plugin_action"
 description = "open dagr pane"
-
 # Windows preview: invoke open-dagr-windows instead
 command = "herdr plugin action invoke open-dagr --plugin herdr-dagr"
+
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "osamahbeig.pane-mover.open"
+description = "move this pane"
+
 
 
 [session]
