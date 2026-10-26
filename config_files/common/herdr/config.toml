@@ -101,3 +101,29 @@ key = "prefix+ctrl+o"
 type = "plugin_action"
 command = "personal.customizations.open"
 description = "personal Herdr customizations"
+
+
+[[keys.command]]
+key = "prefix+ctrl+s"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.save"
+description = "resurrect: save"
+
+[[keys.command]]
+key = "prefix+ctrl+r"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.restore"
+description = "resurrect: restore"
+
+# named spaces (below)
+[[keys.command]]
+key = "prefix+S"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.save-space"
+description = "resurrect: save this space as…"
+
+[[keys.command]]
+key = "prefix+O"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.open-space"
+description = "resurrect: open saved space…"
