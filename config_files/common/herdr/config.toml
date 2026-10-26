@@ -130,7 +130,7 @@ description = "resurrect: open saved space…"
 
 
 [[keys.command]]
-key = "prefix+ctrl+m"
+key = "prefix+ctrl+u"
 type = "plugin_action"
 command = "local.herdr-marks.toggle"
 description = "Toggle agent marker"
