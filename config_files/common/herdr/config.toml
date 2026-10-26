@@ -2,8 +2,8 @@ onboarding = false
 
 
 [theme]
-name = "one-dark"
-auto_switch = false
+name = "rose-pine"
+auto_switch = true
 
 [ui]
 status_indicators = "symbols"
@@ -25,7 +25,7 @@ tab_bar_right_separator = " · "
 row_gap = 0
 rows = [
   ["state_icon", "machine", "workspace", "tab"],
-  ["agent", "terminal_title_stripped"],
+  [{ token = "$herdr_mark", fg = "#9ece6a", bold = true, dim = false }, "agent", "terminal_title_stripped"],
   ["$personal_group"],
   ["$personal_activity"],
 ]
@@ -127,3 +127,10 @@ key = "prefix+O"
 type = "plugin_action"
 command = "ntindle.herdr-resurrect.open-space"
 description = "resurrect: open saved space…"
+
+
+[[keys.command]]
+key = "prefix+ctrl+m"
+type = "plugin_action"
+command = "local.herdr-marks.toggle"
+description = "Toggle agent marker"
