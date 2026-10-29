@@ -1,0 +1,136 @@
+onboarding = false
+
+
+[theme]
+name = "rose-pine"
+auto_switch = true
+
+[ui]
+status_indicators = "symbols"
+sidebar_width = 32
+pane_borders = "auto"
+show_agent_labels_on_pane_borders = true
+tab_bar_position = "top"
+
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "hostname" },
+  { type = "datetime", format = "%H:%M" },
+  # { type = "text", text = "Hola" },
+  # { type = "command", command = "~/.config/herdr/status.sh", interval_seconds = 5, timeout_seconds = 2 },
+]
+tab_bar_right_separator = " · "
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", "machine", "workspace", "tab"],
+  [{ token = "$herdr_mark", fg = "#9ece6a", bold = true, dim = false }, "agent", "terminal_title_stripped"],
+  ["$personal_group"],
+  ["$personal_activity"],
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon", "workspace"],
+  ["branch", "git_status"],
+  ["$personal_group"],
+  ["$personal_activity"],
+  ["$personal_tab"],
+]
+
+
+
+
+[ui.toast]
+delivery = "terminal"
+
+[keys]
+switch_tab = "prefix+1..9"
+switch_workspace = "prefix+shift+1..9"
+focus_agent = "prefix+alt+1..9"
+
+[[keys.command]]
+key = "prefix+p"
+type = "plugin_action"
+command = "ray.plugin-manager.open"
+description = "open plugin manager"
+
+
+[[keys.command]]
+key = "prefix+space"
+type = "shell"
+command = "herdr plugin pane open --plugin palette --entrypoint palette"
+description = "Command palette"
+
+
+[[keys.command]]
+key = "prefix+ctrl+k"
+type = "plugin_action"
+command = "herdr-bar.open"
+description = "command bar"
+
+[[keys.command]]
+key = "prefix+alt+r"
+type = "plugin_action"
+command = "herdr-recap.open"
+
+
+[[keys.command]]
+key = "prefix+ctrl+d"
+type = "plugin_action"
+description = "open dagr pane"
+# Windows preview: invoke open-dagr-windows instead
+command = "herdr plugin action invoke open-dagr --plugin herdr-dagr"
+
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "osamahbeig.pane-mover.open"
+description = "move this pane"
+
+
+
+[session]
+resume_agents_on_restore = true
+
+[[keys.command]]
+key = "prefix+ctrl+o"
+type = "plugin_action"
+command = "personal.customizations.open"
+description = "personal Herdr customizations"
+
+
+[[keys.command]]
+key = "prefix+ctrl+s"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.save"
+description = "resurrect: save"
+
+[[keys.command]]
+key = "prefix+ctrl+r"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.restore"
+description = "resurrect: restore"
+
+# named spaces (below)
+[[keys.command]]
+key = "prefix+S"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.save-space"
+description = "resurrect: save this space as…"
+
+[[keys.command]]
+key = "prefix+O"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.open-space"
+description = "resurrect: open saved space…"
+
+
+[[keys.command]]
+key = "prefix+ctrl+u"
+type = "plugin_action"
+command = "local.herdr-marks.toggle"
+description = "Toggle agent marker"
