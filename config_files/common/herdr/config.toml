@@ -25,7 +25,7 @@ tab_bar_right_separator = " · "
 row_gap = 0
 rows = [
   ["state_icon", "machine", "workspace", "tab"],
-  [{ token = "$personal_status", bold = true, dim = false, rules = [{ equals = "! Urgent", fg = "#eb6f92" }, { equals = "✓ Done", fg = "#9ece6a" }, { equals = "× Blocked", fg = "#f6c177" }, { equals = "… Waiting", fg = "#9ccfd8" }, { equals = "↓ Low", fg = "#908caa" }] }],
+  [{ token = "$personal_priority", bold = true, dim = false, rules = [{ equals = "↑ High", fg = "#eb6f92" }, { equals = "↓ Low", fg = "#908caa" }] }, { token = "$personal_status", bold = true, dim = false, rules = [{ equals = "× Blocked", fg = "#f6c177" }, { equals = "… Waiting", fg = "#9ccfd8" }, { equals = "✓ Done", fg = "#9ece6a" }] }],
   ["agent", "terminal_title_stripped"],
   ["$personal_group"],
   ["$personal_activity"],
@@ -133,4 +133,4 @@ description = "resurrect: open saved space…"
 key = "prefix+ctrl+u"
 type = "plugin_action"
 command = "personal.customizations.status"
-description = "Set agent workflow status"
+description = "Set agent status and priority"
