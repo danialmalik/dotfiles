@@ -22,11 +22,13 @@ tab_bar_right = [
 tab_bar_right_separator = " · "
 
 [ui.sidebar.agents]
-row_gap = 0
+row_gap = 1
 rows = [
-  ["state_icon", "machine", { token = "$personal_agent_title", bold = true }, "$personal_agent_tab"],
+  ["machine"],
+  ["state_icon", "$personal_agent_icon", { token = "$personal_agent_title", bold = true }, "$personal_agent_tab"],
+  ["terminal_title_stripped"],
   [{ token = "$personal_priority", bold = true, dim = false, rules = [{ equals = "↓ Low", fg = "#908caa" }, { equals = "= Medium", fg = "#e0af68" }, { equals = "↑ High", fg = "#eb6f92" }, { equals = "‼ Critical", fg = "#f7768e" }] }, { token = "$personal_status", bold = true, dim = false, rules = [{ equals = "▶ Working", fg = "#7aa2f7" }, { equals = "× Blocked", fg = "#f6c177" }, { equals = "◇ Review", fg = "#c4a7e7" }, { equals = "… Waiting", fg = "#9ccfd8" }, { equals = "✓ Done", fg = "#9ece6a" }] }],
-  ["agent", "terminal_title_stripped"],
+
 ]
 
 [ui.sidebar.spaces]
