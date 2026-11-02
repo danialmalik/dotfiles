@@ -45,6 +45,9 @@ export NVM_DIR="$HOME/.nvm"
 ### libpq (pg_dump and pg_restore etc)
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+##### Herdr custom plugin for session restore
+source /Users/danialmalik/dotfiles/ai-space/herdr/session-resume/shell.zsh # herdr-session-resume
+
 ###### ZSH
 
 
