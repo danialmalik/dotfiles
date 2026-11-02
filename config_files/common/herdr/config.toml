@@ -22,13 +22,13 @@ tab_bar_right = [
 tab_bar_right_separator = " · "
 
 [ui.sidebar.agents]
-row_gap = 1
+row_gap = 0
 rows = [
   ["machine"],
-  ["state_icon", "$personal_agent_icon", { token = "$personal_agent_title", bold = true }, "$personal_agent_tab"],
-  ["terminal_title_stripped"],
-  [{ token = "$personal_priority", bold = true, dim = false, rules = [{ equals = "↓ Low", fg = "#908caa" }, { equals = "= Medium", fg = "#e0af68" }, { equals = "↑ High", fg = "#eb6f92" }, { equals = "‼ Critical", fg = "#f7768e" }] }, { token = "$personal_status", bold = true, dim = false, rules = [{ equals = "▶ Working", fg = "#7aa2f7" }, { equals = "× Blocked", fg = "#f6c177" }, { equals = "◇ Review", fg = "#c4a7e7" }, { equals = "… Waiting", fg = "#9ccfd8" }, { equals = "✓ Done", fg = "#9ece6a" }] }],
-
+  ["state_icon", "$personal_agent_icon", { token = "$personal_agent_tab", fg = "#89a7c2", bold = false, dim = false }],
+  [{ token = "terminal_title_stripped", bold = false, dim = true }, { token = "$personal_agent_title", bold = true }],
+  [{ token = "$personal_priority", bold = false, dim = false, rules = [{ equals = "↓ Low", fg = "#908caa" }, { equals = "= Medium", fg = "#e0af68" }, { equals = "↑ High", fg = "#eb6f92" }, { equals = "‼ Critical", fg = "#f7768e" }] }, { token = "$personal_status", bold = false, dim = false, rules = [{ equals = "▶ Working", fg = "#7aa2f7" }, { equals = "× Blocked", fg = "#f6c177" }, { equals = "◇ Review", fg = "#c4a7e7" }, { equals = "… Waiting", fg = "#9ccfd8" }, { equals = "✓ Done", fg = "#9ece6a" }] }],
+  [{ token = "$personal_agent_separator", fg = "#524f67", bold = false, dim = false }],
 ]
 
 [ui.sidebar.spaces]
@@ -130,3 +130,9 @@ key = "prefix+ctrl+u"
 type = "plugin_action"
 command = "personal.customizations.status"
 description = "Set agent status and priority"
+
+[[keys.command]]
+key = "prefix+a"
+type = "plugin_action"
+command = "personal.customizations.navigate"
+description = "Browse agents with pane preview"
