@@ -42,6 +42,8 @@ ln -sf $COMMON_CONFIG_FILES_DIR/ghostty-terminal/config $HOME/.config/ghostty/co
 
 # herdr
 ln -sf $COMMON_CONFIG_FILES_DIR/herdr/config.toml $HOME/.config/herdr/config.toml
+mkdir -p $HOME/.config/herdr-automatic-rename
+ln -sf $COMMON_CONFIG_FILES_DIR/herdr-automatic-rename/config.sh $HOME/.config/herdr-automatic-rename/config.sh
 
 # Zsh Themes
 # Directly use from this directory

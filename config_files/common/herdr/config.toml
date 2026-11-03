@@ -48,6 +48,8 @@ delivery = "terminal"
 switch_tab = "prefix+1..9"
 switch_workspace = "prefix+shift+1..9"
 focus_agent = "prefix+alt+1..9"
+next_agent = "ctrl+j"
+previous_agent = "ctrl+k"
 
 [[keys.command]]
 key = "prefix+p"
