@@ -2,8 +2,8 @@ onboarding = false
 
 
 [theme]
-name = "rose-pine"
-auto_switch = true
+name = "one-dark"
+auto_switch = false
 
 [ui]
 status_indicators = "symbols"
@@ -42,14 +42,19 @@ rows = [
 
 
 [ui.toast]
-delivery = "terminal"
+delivery = "system"
 
 [keys]
 switch_tab = "prefix+1..9"
 switch_workspace = "prefix+shift+1..9"
+
 focus_agent = "prefix+alt+1..9"
+
 next_agent = "ctrl+j"
 previous_agent = "ctrl+k"
+
+next_workspace = "alt+j"
+previous_workspace = "alt+k"
 
 [[keys.command]]
 key = "prefix+p"
