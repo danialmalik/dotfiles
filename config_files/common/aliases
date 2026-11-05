@@ -89,7 +89,7 @@ alias gmc='gitmoji -c'
 ########################################
 
 # Claude Code work/personal profiles (wclaude, pclaude, claude)
-[[ -r "$HOME/dotfiles/ai-space/configs/claude/scripts/claude-profiles.sh" ]] && source "$HOME/dotfiles/ai-space/configs/claude/scripts/claude-profiles.sh"
+[[ -r "$HOME/dotfiles/ai-space/configs/agent-profiles.sh" ]] && source "$HOME/dotfiles/ai-space/configs/agent-profiles.sh"
 
 
 ######################################
