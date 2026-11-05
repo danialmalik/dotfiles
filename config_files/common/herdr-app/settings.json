@@ -1,0 +1,9 @@
+{
+  "zoom": 1.1,
+  "sounds": {
+    "enabled": true
+  },
+  "font": "FiraCode Nerd Font",
+  "telemetry": false,
+  "minimum_contrast": 1.0
+}
