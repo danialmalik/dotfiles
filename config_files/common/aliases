@@ -127,3 +127,6 @@ fi
 ########################################
 
 alias ipconfig='ifconfig'
+
+# Claude Code work/personal profiles (wclaude, pclaude, claude)
+[[ -r "$HOME/dotfiles/ai-space/configs/claude/scripts/claude-profiles.sh" ]] && source "$HOME/dotfiles/ai-space/configs/claude/scripts/claude-profiles.sh"
