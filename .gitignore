@@ -1,1 +1,8 @@
 .DS_Store
+
+# Herdr-app writes these into every mod folder at every start; not user content.
+# The mod folders live here via symlink, so Herdr writes straight into the repo.
+config_files/macos/herdr-app/mods/*/jsconfig.json
+config_files/macos/herdr-app/mods/*/*.d.ts
+config_files/macos/herdr-app/mods/*/*.bak
+config_files/macos/herdr-app/layouts/*.bak
