@@ -1,3 +1,5 @@
 {
-  "programs": {}
+  "programs": {
+    "codex": { "run": ["codex", "--no-daemon"] }
+  }
 }

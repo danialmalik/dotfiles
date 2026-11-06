@@ -188,16 +188,6 @@
         12,
         16
       ]
-    },
-    {
-      "id": "b913fdfba92a0983fe0c1970f290879ce",
-      "type": "block",
-      "content": {
-        "mod": "agent-resume"
-      },
-      "size": {
-        "px": 1
-      }
     }
   ],
   "divider": {
